@@ -8,13 +8,12 @@
 	<link rel="stylesheet"  href="libs/jQM-flat/jquery.mobile.flatui.css">
 	<link rel="stylesheet" type="text/css" href="css/index.css" />
 
-	<script type="text/javascript" src="libs/fastclick.min.js"></script>
 	<script type="text/javascript" src="libs/jquery-2.0.3.min.js"></script>
 	<script type="text/javascript" src="libs/jQueryMobile/jquery.mobile-1.3.2.min.js"></script>
 
 	<script type="text/javascript" src="js/index.js"></script>
 	<script type="text/javascript" src="js/function.js"></script>
-    <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
+    <!--<script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
     <script type="text/javascript" charset="utf-8">
 
     // Call onDeviceReady when PhoneGap is loaded.
@@ -32,12 +31,12 @@
 		document.getElementById("app").style.display = "initial";
     }
 
-    </script>
+    </script>-->
 
 	<title>SISTEM PENCATATAN DAN PENILAIAN PERSEDIAAN PADA PERUSAHAAN DAGANG</title>
 </head>
 <body>
-    <div id="app" style="display:none;">
+    <div id="app" style="display:initial;">
 		<!--<div id="dudu-pembuka" data-role="page" style="background-image:url('img/Icon%20Materi/DEPAN.png'); background-repeat:no-repeat;background-size:100% 100%">
       		<script type="text/JavaScript">
       			setTimeout("location.href = '#Welcome-page';",5000);
@@ -62,6 +61,12 @@
 							</a>
 						</li>
 						<li class="btn-menu-utama">
+							<a href="soal.html">
+								<img src="img/Icon%20Materi/2%20evaluasi.png" alt="">
+								<h2><b>KUIS</b></h2>
+							</a>
+						</li>	
+						<li class="btn-menu-utama">
 							<a href="#evaluasi-page" onclick="resetSoal()">
 								<img src="img/Icon%20Materi/2%20evaluasi.png" alt="">
 								<h2><b>EVALUASI</b></h2>
@@ -85,7 +90,7 @@
 								<h2><b>BANTUAN</b></h2>
 							</a>
 						</li>
-						<li class="btn-menu-utama">
+						<li class="btn-menu-merah">
 							<a href="#" onclick="navigator.app.exitApp()">
 								<img src="img/Icon%20Materi/6%20exit.png" alt="">
 								<h2><b>EXIT</b></h2>
@@ -107,35 +112,35 @@
                         <ul  data-theme="a" data-role="listview">
 							<li class="btn-menu-utama">
 								<a href="#materi1"  >
-									<img src="img/Icon%20Materi/dasar%20listrk.png" alt="">
+									<img src="img/Icon%20Materi/pengertian.png" alt="">
 									<h2><b>Materi 1</b></h2>
 									<p>Pengertian Persediaan</p>
 								</a>
                             </li>	
-							<li data-theme="a" style="background-color: #3366ff">											
+							<li class="btn-menu-utama">											
 								<a href="#materi2"    >
-									<img src="img/Icon%20Materi/hukum%20ohm.png" alt="">
+									<img src="img/Icon%20Materi/sistem.png" alt="">
 									<h2>Materi 2</h2>
 									<p>Sistem Pencatatan Persediaan</p>
 								</a>
                             </li>	
-							<li data-theme="a" style="background-color: #3399ff";>
+							<li class="btn-menu-utama">
                                 <a  href="#materi3"  >
-									<img src="img/Icon%20Materi/kirchoff.png" alt="">
+									<img src="img/Icon%20Materi/metode.png" alt="">
 									<h2>Materi 3</h2>
 									<p>Metode Penilaian Persediaan</p>
 								</a>
                             </li>	
-							<li data-theme="a" style="background-color:#6699ff";>
+							<li class="btn-menu-utama">
                                 <a  href="#materi4"   >
-									<img src="img/Icon%20Materi/flaming.png" alt="">
+									<img src="img/Icon%20Materi/penilaian.png" alt="">
 									<h2>Materi 4</h2>
 									<p>Penilaian Persediaan pada Sistem Periodik</p>
 								</a>
                             </li>
-							<li data-theme="c" style="background-color:#99ccff";>
+							<li class="btn-menu-utama">
                                 <a  href="#materi5"   >
-									<img src="img/Icon%20Materi/analisis%20rangkaian.png" alt="">
+									<img src="img/Icon%20Materi/penilaian.png" alt="">
 									<h2>Materi 5</h2>
 									<p>Penilaian Persediaan pada Sistem Perseptual</p>
 								</a>
@@ -769,10 +774,6 @@
                 </div>
             </div>
         </div>
-
-        <script type="text/javascript">
-            app.initialize();
-        </script>
 				
 		<script type="text/javascript">
 			var nomorSoal = 0;
@@ -787,54 +788,54 @@
 			var soal = [
 				 	    "<b>Berikut ini merupakan kegiatan yang dilakukan dalam perusahaan dagang, kecuali...</b>",
 						"<b>Berikut ini yang bukan merupakan persediaan barang dagang adalah...</b>",
-						"<b>3.	Berikut ini bukan merupakan ciri – ciri dari sistem pencatatan periodik yaitu...</b>",
-						"<b>4.	Berikut ini bukan merupakan ciri – ciri dari sistem pencatatan perpetual yaitu...</b>",
-						"<b>5.	Apabila perusahaan menggunakan metode penilaian persediaan dengan metode FIFO maka barang dagangan yang akan keluar pertama dari gudang yaitu ...</b>",
-						"<b>6.	Apabila perusahaan menggunakan metode penilaian persediaan dengan metode LIFO maka barang dagangan yang akan keluar pertama dari gudang yaitu...</b>",
-						"<b>7.	Metode yang digunakan dalam pencatatan persediaan barang dagangan adalah metode fisik dan perpetual. Dalam metode perpetual, jika terjadi pembelian barang dagangan maka akan dicatat dalam rekening...</b>",
-						"<b>8.	Dalam IFRS penggunaan LIFO tidak diizinkan, hal tersebut dikarenakan...</b>",
-						"<b>9.	Dalam sistem perpetual, transaksi yang berkaitan dengan mutasi persediaan akan dicatat secara langsung dalam akun persediaan. Berikut ini pernyataan terkait sistem tersebut kecuali...</b>",
-						"<b>10.	PT. Jaya Karya membeli barang dagangan sebesar Rp 3.250.000,00, termin 2/10, n/30. Buatlah jurnal yang diperlukan jika menggunakan sistem pencatatan periodik!</b>",
-						"<b>11.	PT. Jaya Karya membeli barang dagangan sebesar Rp 3.250.000,00, termin 2/10, n/30. Buatlah jurnal yang diperlukan jika menggunakan sistem pencatatan perpetual!</b>",
-						"<b>12.	PT. Mekar Jaya membeli barang dagangan sebesar Rp 9.500.000,00 secara tunai dengan potongan 2%. Buatlah jurnal yang diperlukan jika menggunakan sistem pencatatan perpetual!</b>",
-						"<b>13.	PT. Mekar Jaya membeli barang dagangan sebesar Rp 9.500.000,00 secara tunai dengan potongan 2%. Buatlah jurnal yang diperlukan jika menggunakan sistem pencatatan periodik!</b>",
-						"<b>14.	Setelah dilakukan pengecekan terhadap barang yang dibeli secara kredit, terdapat barang yang tidak sesuai dengan pesanan sebesar Rp 750.000,00 dan dikembalikan ke penjual. Buatlah jurnal yang diperlukan jika perusahaan menggunakan sistem pencatatan periodik.</b>",
-						"<b>15.	Setelah dilakukan pengecekan terhadap barang yang dibeli secara kredit, terdapat barang yang tidak sesuai dengan pesanan sebesar Rp 750.000,00 dan dikembalikan ke penjual. Buatlah jurnal yang diperlukan jika perusahaan menggunakan sistem pencatatan periodik.</b>",
-						"<b>16.	Terdapat barang cacat atas pembelian tunai senilai Rp 500.000,00 dan dikembalikan ke penjual. Buatlah jurnal yang diperlukan jika perusahaan menggunakan sistem pencatatan perpetual.</b>",
-						"<b>17.	Terdapat barang cacat atas pembelian tunai senilai Rp 500.000,00 dan dikembalikan ke penjual. Buatlah jurnal yang diperlukan jika perusahaan menggunakan sistem pencatatan periodik.</b>",
-						"<b>18.	Dibayar Biaya angkut pembelian atas pembelian barang dagangan secara kredit sebesar Rp 450.000,00. Buatlah jurnal jika perusahaan menggunakan sistem pencatatan perpetual.</b>",
-						"<b>19.	Dibayar Biaya angkut atas pembelian barang dagangan Rp 450.000,00. Buatlah jurnal jika perusahaan menggunakan sistem pencatatan periodik.</b>",
-						"<b>20.	PT. Jaya Karya membayar hutang pada periode diskon atas pembelian barang dagangan sebesar Rp 3.250.000,00, termin 2/10, n/30. Buatlah jurnal yang diperlukan jika menggunakan sistem pencatatan periodik.</b>",
-						"<b>21.	PT. Jaya Karya membayar hutang pada periode diskon atas pembelian barang dagangan sebesar Rp 3.250.000,00, termin 2/10, n/30. Buatlah jurnal yang diperlukan jika menggunakan sistem pencatatan perpetual.</b>",
-						"<b>22.	Pada tanggal 20 januari PT. Abadi Jaya membayar hutang dagang atas pembelian barang dagangan tanggal 5 januari senilai Rp 12.000.000,00 dengan termin 2/10, n/30. Buatlah jurnal yang diperlukan jika perusahaan menggunakan sistem pencatatan periodik.</b>",
-						"<b>23.	Pada tanggal 20 januari PT. Abadi Jaya membayar hutang dagang atas pembelian barang dagangan tanggal 5 januari senilai Rp 12.000.000,00 dengan termin 2/10, n/30. Buatlah jurnal yang diperlukan jika perusahaan menggunakan sistem pencatatan perpetual.</b>",
-						"<b>24.	PT. Mekar Jaya menjual barang dagangan senilai Rp 4.500.000,00 termin 2/5, n/60 dengan harga pokok penjualan sebesar Rp 3.750.000,00. Buatlah jurnal yang diperlukan jika menggunakan sistem periodik.</b>",
-						"<b>25.	PT. Mekar Jaya menjual barang dagangan senilai Rp 4.500.000,00 termin 2/5, n/60 dengan harga pokok penjualan sebesar Rp 3.750.000,00. Buatlah jurnal yang diperlukan jika menggunakan sistem perpetual.</b>",
-						"<b>26.	Dijual barang dagangan secara tunai senilai Rp 5.525.000,00 dengan harga pokok penjualan sebesar Rp 4.000.000,00. Buatlah jurnal untuk mencatat transaksi tersebut dengan sistem pencatatan perpetual.</b>",
-						"<b>27.	Dijual barang dagangan secara tunai senilai Rp 5.525.000,00 dengan harga pokok penjualan sebesar Rp 4.000.000,00. Buatlah jurnal untuk mencatat transaksi tersebut dengan sistem pencatatan perpetual.</b>",
-						"<b>28.	Menerima retur atas penjualan kredit senilai Rp 500.000,00 dengan harga pokok penjualan sebesar Rp 400.000,00. Buatlah jurnal yang diperlukan menggunakan sistem periodik.</b>",
-						"<b>29.	Menerima retur atas penjualan kredit senilai Rp 500.000,00 dengan harga pokok penjualan sebesar Rp 400.000,00. Buatlah jurnal yang diperlukan menggunakan sistem perpetual.</b>",
-						"<b>30.	PT. Medika Permai menerima pelunasan piutang Toko Citra Medika sebesar Rp 7.500.000,00 dengan potongan 2%. Buatlah jurnal yang diperlukan dengan sistem pencatatan periodik.</b>",
-						"<b>31.	PT. Medika Permai menerima pelunasan piutang Toko Citra Medika sebesar Rp 7.500.000,00 dengan potongan 2%. Buatlah jurnal yang diperlukan dengan sistem pencatatan perpetual.</b>",
-						"<b>32.	Berikut ini data UD Nusa Indah pada 31 Maret 2016:<br/><table><tr><td>Persediaan awal </td><td>Rp </td><td class='uang'>12.100.000,00</td></tr><tr><td>Pembelian </td><td>Rp </td><td class='uang'>192.400.000,00</td></tr><tr><td>Retur Pembelian </td><td>Rp </td><td class='uang'>9.500.000,00</td></tr><tr><td>Potongan Pembelian </td><td>Rp </td><td class='uang'>12.750.000,00</td></tr><tr><td>Biaya angkut pembelian </td><td>Rp </td><td class='uang'>12.500.000,00</td></tr><tr><td>Persediaan akhir </td><td>Rp </td><td class='uang'>15.550.000,00</td></tr></table>Jurnal yang dibutuhkan untuk menyesuaikan persediaan akhir periode pada sistem periodik yaitu:</b>",
-						"<b>33.	Berikut ini data UD Nusa Indah pada 31 Maret 2016:<br/><table><tr><td>Persediaan awal </td><td>Rp </td><td class='uang'>12.100.000,00</td></tr><tr><td>Pembelian </td><td>Rp </td><td class='uang'>192.400.000,00</td></tr><tr><td>Retur Pembelian </td><td>Rp </td><td class='uang'>9.500.000,00</td></tr><tr><td>Potongan Pembelian </td><td>Rp </td><td class='uang'>12.750.000,00</td></tr><tr><td>Biaya angkut pembelian </td><td>Rp </td><td class='uang'>12.500.000,00</td></tr><tr><td>Persediaan akhir </td><td>Rp </td><td class='uang'>15.550.000,00</td></tr></table>Buatlah jurnal yang dibutuhkan untuk menyesuaikan persediaan akhir periode pada sistem perpetual yaitu:</b>",
-						"<b>34.	Berikut ini terkait persediaan pada Toko Elka pada 31 Desember 2015:<br/><table><tr><td>Persediaan awal </td><td>Rp </td><td class='uang'>2.450.000,00</td></tr><tr><td>Pembelian </td><td>Rp </td><td class='uang'>14.650.000,00</td></tr><tr><td>Potongan Pembelian </td><td>Rp </td><td class='uang'>1.500.000,00</td></tr><tr><td>Persediaan akhir </td><td>Rp </td><td class='uang'>2.950.000,00</td></tr></table>Jurnal yang dibutuhkan untuk menyesuaikan persediaan akhir periode pada sistem periodik yaitu:</b>",
-						"<b>35.	Berikut ini terkait persediaan pada Toko Elka pada 31 Desember 2015:<br/><table><tr><td>Persediaan awal </td><td>Rp </td><td class='uang'>2.450.000,00</td></tr><tr><td>Pembelian </td><td>Rp </td><td class='uang'>14.650.000,00</td></tr><tr><td>Potongan Pembelian </td><td>Rp </td><td class='uang'>1.500.000,00</td></tr><tr><td>Persediaan akhir </td><td>Rp </td><td class='uang'>2.950.000,00</td></tr></table>Buatlah jurnal yang dibutuhkan untuk menyesuaikan persediaan akhir periode pada sistem perpetual yaitu:/b>",
-						"<b>36.	UD Makmur menggunakan sistem pencatatan periodik. Berikut ini data UD Makmur pada bulan Desember 2015:<table><tr><td>2 Des</td><td>Jual</td><td>400 @Rp 8.000,00</td></tr><tr><td>5 Des</td><td>Beli</td><td>500 @Rp 4.500,00</td></tr><tr><td>7 Des</td><td>Beli</td><td>200 @Rp 4.000,00</td></tr><tr><td>15 Des</td><td>Jual</td><td>500 @Rp 8.000,00</td></tr><tr><td>20 Des</td><td>Beli</td><td>300 @Rp 4.750,00</td></tr><tr><td>25 Des</td><td>Jual</td><td>350 @Rp 8.000,00</td></tr><tr><td>30 Des</td><td>Beli</td><td>100 @Rp 5.000,00</td></tr></table>Diketahui persediaan awalnya sebanyak 450 unit @Rp3.900,00.<br/>Berdasarkan data tersebut, nilai HPP jika menggunakan metode penilaian persediaan FIFO adalah...</b>",
-						"<b>37.	UD Makmur menggunakan sistem pencatatan periodik. Berikut ini data UD Makmur pada bulan Desember 2015:<table><tr><td>2 Des</td><td>Jual</td><td>400 @Rp 8.000,00</td></tr><tr><td>5 Des</td><td>Beli</td><td>500 @Rp 4.500,00</td></tr><tr><td>7 Des</td><td>Beli</td><td>200 @Rp 4.000,00</td></tr><tr><td>15 Des</td><td>Jual</td><td>500 @Rp 8.000,00</td></tr><tr><td>20 Des</td><td>Beli</td><td>300 @Rp 4.750,00</td></tr><tr><td>25 Des</td><td>Jual</td><td>350 @Rp 8.000,00</td></tr><tr><td>30 Des</td><td>Beli</td><td>100 @Rp 5.000,00</td></tr></table>Diketahui persediaan awalnya sebanyak 450 unit @Rp3.900,00.<br/>Nilai persediaan akhir jika menggunakan metode penilaian persediaan FIFO adalah...</b>",
-						"<b>38.	UD Makmur menggunakan sistem pencatatan periodik. Berikut ini data UD Makmur pada bulan Desember 2015:<table><tr><td>2 Des</td><td>Jual</td><td>400 @Rp 8.000,00</td></tr><tr><td>5 Des</td><td>Beli</td><td>500 @Rp 4.500,00</td></tr><tr><td>7 Des</td><td>Beli</td><td>200 @Rp 4.000,00</td></tr><tr><td>15 Des</td><td>Jual</td><td>500 @Rp 8.000,00</td></tr><tr><td>20 Des</td><td>Beli</td><td>300 @Rp 4.750,00</td></tr><tr><td>25 Des</td><td>Jual</td><td>350 @Rp 8.000,00</td></tr><tr><td>30 Des</td><td>Beli</td><td>100 @Rp 5.000,00</td></tr></table>Diketahui persediaan awalnya sebanyak 450 unit @Rp3.900,00.<br/>Nilai HPP jika menggunakan metode penilaian persediaan LIFO adalah...</b>",
-						"<b>39.	UD Makmur menggunakan sistem pencatatan periodik. Berikut ini data UD Makmur pada bulan Desember 2015:<table><tr><td>2 Des</td><td>Jual</td><td>400 @Rp 8.000,00</td></tr><tr><td>5 Des</td><td>Beli</td><td>500 @Rp 4.500,00</td></tr><tr><td>7 Des</td><td>Beli</td><td>200 @Rp 4.000,00</td></tr><tr><td>15 Des</td><td>Jual</td><td>500 @Rp 8.000,00</td></tr><tr><td>20 Des</td><td>Beli</td><td>300 @Rp 4.750,00</td></tr><tr><td>25 Des</td><td>Jual</td><td>350 @Rp 8.000,00</td></tr><tr><td>30 Des</td><td>Beli</td><td>100 @Rp 5.000,00</td></tr></table>Diketahui persediaan awalnya sebanyak 450 unit @Rp3.900,00.<br/>Nilai persediaan akhir jika menggunakan metode penilaian persediaan LIFO adalah...</b>",
-						"<b>40.	UD Makmur menggunakan sistem pencatatan periodik. Berikut ini data UD Makmur pada bulan Desember 2015:<table><tr><td>2 Des</td><td>Jual</td><td>400 @Rp 8.000,00</td></tr><tr><td>5 Des</td><td>Beli</td><td>500 @Rp 4.500,00</td></tr><tr><td>7 Des</td><td>Beli</td><td>200 @Rp 4.000,00</td></tr><tr><td>15 Des</td><td>Jual</td><td>500 @Rp 8.000,00</td></tr><tr><td>20 Des</td><td>Beli</td><td>300 @Rp 4.750,00</td></tr><tr><td>25 Des</td><td>Jual</td><td>350 @Rp 8.000,00</td></tr><tr><td>30 Des</td><td>Beli</td><td>100 @Rp 5.000,00</td></tr></table>Diketahui persediaan awalnya sebanyak 450 unit @Rp3.900,00.<br/>Biaya per unit jika menggunakan metode penilaian persediaan rata-rata sederhana adalah...</b>",
-						"<b>41.	UD Makmur menggunakan sistem pencatatan periodik. Berikut ini data UD Makmur pada bulan Desember 2015:<table><tr><td>2 Des</td><td>Jual</td><td>400 @Rp 8.000,00</td></tr><tr><td>5 Des</td><td>Beli</td><td>500 @Rp 4.500,00</td></tr><tr><td>7 Des</td><td>Beli</td><td>200 @Rp 4.000,00</td></tr><tr><td>15 Des</td><td>Jual</td><td>500 @Rp 8.000,00</td></tr><tr><td>20 Des</td><td>Beli</td><td>300 @Rp 4.750,00</td></tr><tr><td>25 Des</td><td>Jual</td><td>350 @Rp 8.000,00</td></tr><tr><td>30 Des</td><td>Beli</td><td>100 @Rp 5.000,00</td></tr></table>Diketahui persediaan awalnya sebanyak 450 unit @Rp3.900,00.<br/>Nilai HPP jika menggunakan metode penilaian persediaan rata – rata sederhana adalah...</b>",
-						"<b>42.	UD Makmur menggunakan sistem pencatatan periodik. Berikut ini data UD Makmur pada bulan Desember 2015:<table><tr><td>2 Des</td><td>Jual</td><td>400 @Rp 8.000,00</td></tr><tr><td>5 Des</td><td>Beli</td><td>500 @Rp 4.500,00</td></tr><tr><td>7 Des</td><td>Beli</td><td>200 @Rp 4.000,00</td></tr><tr><td>15 Des</td><td>Jual</td><td>500 @Rp 8.000,00</td></tr><tr><td>20 Des</td><td>Beli</td><td>300 @Rp 4.750,00</td></tr><tr><td>25 Des</td><td>Jual</td><td>350 @Rp 8.000,00</td></tr><tr><td>30 Des</td><td>Beli</td><td>100 @Rp 5.000,00</td></tr></table>Diketahui persediaan awalnya sebanyak 450 unit @Rp3.900,00.<br/>Nilai persediaan akhir jika menggunakan metode penilaian persediaan rata-rata sederhana adalah...</b>",
-						"<b>43.	UD Makmur menggunakan sistem pencatatan periodik. Berikut ini data UD Makmur pada bulan Desember 2015:<table><tr><td>2 Des</td><td>Jual</td><td>400 @Rp 8.000,00</td></tr><tr><td>5 Des</td><td>Beli</td><td>500 @Rp 4.500,00</td></tr><tr><td>7 Des</td><td>Beli</td><td>200 @Rp 4.000,00</td></tr><tr><td>15 Des</td><td>Jual</td><td>500 @Rp 8.000,00</td></tr><tr><td>20 Des</td><td>Beli</td><td>300 @Rp 4.750,00</td></tr><tr><td>25 Des</td><td>Jual</td><td>350 @Rp 8.000,00</td></tr><tr><td>30 Des</td><td>Beli</td><td>100 @Rp 5.000,00</td></tr></table>Diketahui persediaan awalnya sebanyak 450 unit @Rp3.900,00.<br/>Biaya per unit jika menggunakan metode penilaian persediaan rata-rata tertimbang adalah...</b>",
-						"<b>44.	UD Makmur menggunakan sistem pencatatan periodik. Berikut ini data UD Makmur pada bulan Desember 2015:<table><tr><td>2 Des</td><td>Jual</td><td>400 @Rp 8.000,00</td></tr><tr><td>5 Des</td><td>Beli</td><td>500 @Rp 4.500,00</td></tr><tr><td>7 Des</td><td>Beli</td><td>200 @Rp 4.000,00</td></tr><tr><td>15 Des</td><td>Jual</td><td>500 @Rp 8.000,00</td></tr><tr><td>20 Des</td><td>Beli</td><td>300 @Rp 4.750,00</td></tr><tr><td>25 Des</td><td>Jual</td><td>350 @Rp 8.000,00</td></tr><tr><td>30 Des</td><td>Beli</td><td>100 @Rp 5.000,00</td></tr></table>Diketahui persediaan awalnya sebanyak 450 unit @Rp3.900,00.<br/>Nilai HPP jika menggunakan metode penilaian persediaan rata – rata tertimbang adalah...</b>",
-						"<b>45.	UD Makmur menggunakan sistem pencatatan periodik. Berikut ini data UD Makmur pada bulan Desember 2015:<table><tr><td>2 Des</td><td>Jual</td><td>400 @Rp 8.000,00</td></tr><tr><td>5 Des</td><td>Beli</td><td>500 @Rp 4.500,00</td></tr><tr><td>7 Des</td><td>Beli</td><td>200 @Rp 4.000,00</td></tr><tr><td>15 Des</td><td>Jual</td><td>500 @Rp 8.000,00</td></tr><tr><td>20 Des</td><td>Beli</td><td>300 @Rp 4.750,00</td></tr><tr><td>25 Des</td><td>Jual</td><td>350 @Rp 8.000,00</td></tr><tr><td>30 Des</td><td>Beli</td><td>100 @Rp 5.000,00</td></tr></table>Diketahui persediaan awalnya sebanyak 450 unit @Rp3.900,00.<br/>Nilai persediaan akhir jika menggunakan metode penilaian persediaan rata-rata tertimbang adalah...</b>",
-						"<b>46.	Diketahui UD. Makmur memiliki persediaan di gudang sebanyak 400 unit dengan harga R 1.200,00. Pada tanggal 2 membeli barang dagangan sebanyak 1.000 unit dengan harga Rp 1.350,00 dan pada tanggal 3 menjual barang dagangan dengan termin 2/10, n/30 sebanyak 900 unit dengan harga Rp 2.100,00. Buatlah jurnal yang diperlukan pada saat penjualan jika perusahaan menggunakan sistem pencatatan periodik dengan metode penilaian FIFO!</b>",
-						"<b>47.	Diketahui UD. Makmur memiliki persediaan di gudang sebanyak 400 unit dengan harga R 1.200,00. Pada tanggal 2 membeli barang dagangan sebanyak 1.000 unit dengan harga Rp 1.350,00 dan pada tanggal 3 menjual barang dagangan dengan termin 2/10, n/30 sebanyak 900 unit dengan harga Rp 2.100,00. Buatlah jurnal yang diperlukan pada saat penjualan jika perusahaan menggunakan sistem pencatatan periodik dengan metode penilaian LIFO!</b>",
-						"<b>48.	Diketahui UD. Makmur memiliki persediaan di gudang sebanyak 400 unit dengan harga R 1.200,00. Pada tanggal 2 membeli barang dagangan sebanyak 1.000 unit dengan harga Rp 1.350,00 dan pada tanggal 3 menjual barang dagangan dengan termin 2/10, n/30 sebanyak 900 unit dengan harga Rp 2.100,00. Buatlah jurnal yang diperlukan pada saat penjualan jika perusahaan menggunakan sistem pencatatan perpetual dengan metode penilaian FIFO!</b>",
-						"<b>49.	Diketahui UD. Makmur memiliki persediaan di gudang sebanyak 400 unit dengan harga R 1.200,00. Pada tanggal 2 membeli barang dagangan sebanyak 1.000 unit dengan harga Rp 1.350,00 dan pada tanggal 3 menjual barang dagangan dengan termin 2/10, n/30 sebanyak 900 unit dengan harga Rp 2.100,00. Buatlah jurnal yang diperlukan pada saat penjualan jika perusahaan menggunakan sistem pencatatan perpetual dengan metode penilaian LIFO!</b>",
-						"<b>50.	Diketahui UD. Makmur memiliki persediaan di gudang sebanyak 400 unit dengan harga R 1.200,00. Pada tanggal 2 membeli barang dagangan sebanyak 1.000 unit dengan harga Rp 1.350,00 dan pada tanggal 3 menjual barang dagangan dengan termin 2/10, n/30 sebanyak 900 unit dengan harga Rp 2.100,00. Buatlah jurnal yang diperlukan pada saat penjualan jika perusahaan menggunakan sistem pencatatan perpetual dengan metode penilaian Rata – rata bergerak!</b>"    
+						"<b>Berikut ini bukan merupakan ciri – ciri dari sistem pencatatan periodik yaitu...</b>",
+						"<b>Berikut ini bukan merupakan ciri – ciri dari sistem pencatatan perpetual yaitu...</b>",
+						"<b>Apabila perusahaan menggunakan metode penilaian persediaan dengan metode FIFO maka barang dagangan yang akan keluar pertama dari gudang yaitu ...</b>",
+						"<b>Apabila perusahaan menggunakan metode penilaian persediaan dengan metode LIFO maka barang dagangan yang akan keluar pertama dari gudang yaitu...</b>",
+						"<b>Metode yang digunakan dalam pencatatan persediaan barang dagangan adalah metode fisik dan perpetual. Dalam metode perpetual, jika terjadi pembelian barang dagangan maka akan dicatat dalam rekening...</b>",
+						"<b>Dalam IFRS penggunaan LIFO tidak diizinkan, hal tersebut dikarenakan...</b>",
+						"<b>Dalam sistem perpetual, transaksi yang berkaitan dengan mutasi persediaan akan dicatat secara langsung dalam akun persediaan. Berikut ini pernyataan terkait sistem tersebut kecuali...</b>",
+						"<b>PT. Jaya Karya membeli barang dagangan sebesar Rp 3.250.000,00, termin 2/10, n/30. Buatlah jurnal yang diperlukan jika menggunakan sistem pencatatan periodik!</b>",
+						"<b>PT. Jaya Karya membeli barang dagangan sebesar Rp 3.250.000,00, termin 2/10, n/30. Buatlah jurnal yang diperlukan jika menggunakan sistem pencatatan perpetual!</b>",
+						"<b>PT. Mekar Jaya membeli barang dagangan sebesar Rp 9.500.000,00 secara tunai dengan potongan 2%. Buatlah jurnal yang diperlukan jika menggunakan sistem pencatatan perpetual!</b>",
+						"<b>PT. Mekar Jaya membeli barang dagangan sebesar Rp 9.500.000,00 secara tunai dengan potongan 2%. Buatlah jurnal yang diperlukan jika menggunakan sistem pencatatan periodik!</b>",
+						"<b>Setelah dilakukan pengecekan terhadap barang yang dibeli secara kredit, terdapat barang yang tidak sesuai dengan pesanan sebesar Rp 750.000,00 dan dikembalikan ke penjual. Buatlah jurnal yang diperlukan jika perusahaan menggunakan sistem pencatatan periodik.</b>",
+						"<b>Setelah dilakukan pengecekan terhadap barang yang dibeli secara kredit, terdapat barang yang tidak sesuai dengan pesanan sebesar Rp 750.000,00 dan dikembalikan ke penjual. Buatlah jurnal yang diperlukan jika perusahaan menggunakan sistem pencatatan periodik.</b>",
+						"<b>Terdapat barang cacat atas pembelian tunai senilai Rp 500.000,00 dan dikembalikan ke penjual. Buatlah jurnal yang diperlukan jika perusahaan menggunakan sistem pencatatan perpetual.</b>",
+						"<b>Terdapat barang cacat atas pembelian tunai senilai Rp 500.000,00 dan dikembalikan ke penjual. Buatlah jurnal yang diperlukan jika perusahaan menggunakan sistem pencatatan periodik.</b>",
+						"<b>Dibayar Biaya angkut pembelian atas pembelian barang dagangan secara kredit sebesar Rp 450.000,00. Buatlah jurnal jika perusahaan menggunakan sistem pencatatan perpetual.</b>",
+						"<b>Dibayar Biaya angkut atas pembelian barang dagangan Rp 450.000,00. Buatlah jurnal jika perusahaan menggunakan sistem pencatatan periodik.</b>",
+						"<b>PT. Jaya Karya membayar hutang pada periode diskon atas pembelian barang dagangan sebesar Rp 3.250.000,00, termin 2/10, n/30. Buatlah jurnal yang diperlukan jika menggunakan sistem pencatatan periodik.</b>",
+						"<b>PT. Jaya Karya membayar hutang pada periode diskon atas pembelian barang dagangan sebesar Rp 3.250.000,00, termin 2/10, n/30. Buatlah jurnal yang diperlukan jika menggunakan sistem pencatatan perpetual.</b>",
+						"<b>Pada tanggal 20 januari PT. Abadi Jaya membayar hutang dagang atas pembelian barang dagangan tanggal 5 januari senilai Rp 12.000.000,00 dengan termin 2/10, n/30. Buatlah jurnal yang diperlukan jika perusahaan menggunakan sistem pencatatan periodik.</b>",
+						"<b>Pada tanggal 20 januari PT. Abadi Jaya membayar hutang dagang atas pembelian barang dagangan tanggal 5 januari senilai Rp 12.000.000,00 dengan termin 2/10, n/30. Buatlah jurnal yang diperlukan jika perusahaan menggunakan sistem pencatatan perpetual.</b>",
+						"<b>PT. Mekar Jaya menjual barang dagangan senilai Rp 4.500.000,00 termin 2/5, n/60 dengan harga pokok penjualan sebesar Rp 3.750.000,00. Buatlah jurnal yang diperlukan jika menggunakan sistem periodik.</b>",
+						"<b>PT. Mekar Jaya menjual barang dagangan senilai Rp 4.500.000,00 termin 2/5, n/60 dengan harga pokok penjualan sebesar Rp 3.750.000,00. Buatlah jurnal yang diperlukan jika menggunakan sistem perpetual.</b>",
+						"<b>Dijual barang dagangan secara tunai senilai Rp 5.525.000,00 dengan harga pokok penjualan sebesar Rp 4.000.000,00. Buatlah jurnal untuk mencatat transaksi tersebut dengan sistem pencatatan perpetual.</b>",
+						"<b>Dijual barang dagangan secara tunai senilai Rp 5.525.000,00 dengan harga pokok penjualan sebesar Rp 4.000.000,00. Buatlah jurnal untuk mencatat transaksi tersebut dengan sistem pencatatan perpetual.</b>",
+						"<b>Menerima retur atas penjualan kredit senilai Rp 500.000,00 dengan harga pokok penjualan sebesar Rp 400.000,00. Buatlah jurnal yang diperlukan menggunakan sistem periodik.</b>",
+						"<b>Menerima retur atas penjualan kredit senilai Rp 500.000,00 dengan harga pokok penjualan sebesar Rp 400.000,00. Buatlah jurnal yang diperlukan menggunakan sistem perpetual.</b>",
+						"<b>PT. Medika Permai menerima pelunasan piutang Toko Citra Medika sebesar Rp 7.500.000,00 dengan potongan 2%. Buatlah jurnal yang diperlukan dengan sistem pencatatan periodik.</b>",
+						"<b>PT. Medika Permai menerima pelunasan piutang Toko Citra Medika sebesar Rp 7.500.000,00 dengan potongan 2%. Buatlah jurnal yang diperlukan dengan sistem pencatatan perpetual.</b>",
+						"<b>Berikut ini data UD Nusa Indah pada 31 Maret 2016:<br/><table><tr><td>Persediaan awal </td><td>Rp </td><td class='uang'>12.100.000,00</td></tr><tr><td>Pembelian </td><td>Rp </td><td class='uang'>192.400.000,00</td></tr><tr><td>Retur Pembelian </td><td>Rp </td><td class='uang'>9.500.000,00</td></tr><tr><td>Potongan Pembelian </td><td>Rp </td><td class='uang'>12.750.000,00</td></tr><tr><td>Biaya angkut pembelian </td><td>Rp </td><td class='uang'>12.500.000,00</td></tr><tr><td>Persediaan akhir </td><td>Rp </td><td class='uang'>15.550.000,00</td></tr></table>Jurnal yang dibutuhkan untuk menyesuaikan persediaan akhir periode pada sistem periodik yaitu:</b>",
+						"<b>Berikut ini data UD Nusa Indah pada 31 Maret 2016:<br/><table><tr><td>Persediaan awal </td><td>Rp </td><td class='uang'>12.100.000,00</td></tr><tr><td>Pembelian </td><td>Rp </td><td class='uang'>192.400.000,00</td></tr><tr><td>Retur Pembelian </td><td>Rp </td><td class='uang'>9.500.000,00</td></tr><tr><td>Potongan Pembelian </td><td>Rp </td><td class='uang'>12.750.000,00</td></tr><tr><td>Biaya angkut pembelian </td><td>Rp </td><td class='uang'>12.500.000,00</td></tr><tr><td>Persediaan akhir </td><td>Rp </td><td class='uang'>15.550.000,00</td></tr></table>Buatlah jurnal yang dibutuhkan untuk menyesuaikan persediaan akhir periode pada sistem perpetual yaitu:</b>",
+						"<b>Berikut ini terkait persediaan pada Toko Elka pada 31 Desember 2015:<br/><table><tr><td>Persediaan awal </td><td>Rp </td><td class='uang'>2.450.000,00</td></tr><tr><td>Pembelian </td><td>Rp </td><td class='uang'>14.650.000,00</td></tr><tr><td>Potongan Pembelian </td><td>Rp </td><td class='uang'>1.500.000,00</td></tr><tr><td>Persediaan akhir </td><td>Rp </td><td class='uang'>2.950.000,00</td></tr></table>Jurnal yang dibutuhkan untuk menyesuaikan persediaan akhir periode pada sistem periodik yaitu:</b>",
+						"<b>Berikut ini terkait persediaan pada Toko Elka pada 31 Desember 2015:<br/><table><tr><td>Persediaan awal </td><td>Rp </td><td class='uang'>2.450.000,00</td></tr><tr><td>Pembelian </td><td>Rp </td><td class='uang'>14.650.000,00</td></tr><tr><td>Potongan Pembelian </td><td>Rp </td><td class='uang'>1.500.000,00</td></tr><tr><td>Persediaan akhir </td><td>Rp </td><td class='uang'>2.950.000,00</td></tr></table>Buatlah jurnal yang dibutuhkan untuk menyesuaikan persediaan akhir periode pada sistem perpetual yaitu:/b>",
+						"<b>UD Makmur menggunakan sistem pencatatan periodik. Berikut ini data UD Makmur pada bulan Desember 2015:<table><tr><td>2 Des</td><td>Jual</td><td>400 @Rp 8.000,00</td></tr><tr><td>5 Des</td><td>Beli</td><td>500 @Rp 4.500,00</td></tr><tr><td>7 Des</td><td>Beli</td><td>200 @Rp 4.000,00</td></tr><tr><td>15 Des</td><td>Jual</td><td>500 @Rp 8.000,00</td></tr><tr><td>20 Des</td><td>Beli</td><td>300 @Rp 4.750,00</td></tr><tr><td>25 Des</td><td>Jual</td><td>350 @Rp 8.000,00</td></tr><tr><td>30 Des</td><td>Beli</td><td>100 @Rp 5.000,00</td></tr></table>Diketahui persediaan awalnya sebanyak 450 unit @Rp3.900,00.<br/>Berdasarkan data tersebut, nilai HPP jika menggunakan metode penilaian persediaan FIFO adalah...</b>",
+						"<b>UD Makmur menggunakan sistem pencatatan periodik. Berikut ini data UD Makmur pada bulan Desember 2015:<table><tr><td>2 Des</td><td>Jual</td><td>400 @Rp 8.000,00</td></tr><tr><td>5 Des</td><td>Beli</td><td>500 @Rp 4.500,00</td></tr><tr><td>7 Des</td><td>Beli</td><td>200 @Rp 4.000,00</td></tr><tr><td>15 Des</td><td>Jual</td><td>500 @Rp 8.000,00</td></tr><tr><td>20 Des</td><td>Beli</td><td>300 @Rp 4.750,00</td></tr><tr><td>25 Des</td><td>Jual</td><td>350 @Rp 8.000,00</td></tr><tr><td>30 Des</td><td>Beli</td><td>100 @Rp 5.000,00</td></tr></table>Diketahui persediaan awalnya sebanyak 450 unit @Rp3.900,00.<br/>Nilai persediaan akhir jika menggunakan metode penilaian persediaan FIFO adalah...</b>",
+						"<b>UD Makmur menggunakan sistem pencatatan periodik. Berikut ini data UD Makmur pada bulan Desember 2015:<table><tr><td>2 Des</td><td>Jual</td><td>400 @Rp 8.000,00</td></tr><tr><td>5 Des</td><td>Beli</td><td>500 @Rp 4.500,00</td></tr><tr><td>7 Des</td><td>Beli</td><td>200 @Rp 4.000,00</td></tr><tr><td>15 Des</td><td>Jual</td><td>500 @Rp 8.000,00</td></tr><tr><td>20 Des</td><td>Beli</td><td>300 @Rp 4.750,00</td></tr><tr><td>25 Des</td><td>Jual</td><td>350 @Rp 8.000,00</td></tr><tr><td>30 Des</td><td>Beli</td><td>100 @Rp 5.000,00</td></tr></table>Diketahui persediaan awalnya sebanyak 450 unit @Rp3.900,00.<br/>Nilai HPP jika menggunakan metode penilaian persediaan LIFO adalah...</b>",
+						"<b>UD Makmur menggunakan sistem pencatatan periodik. Berikut ini data UD Makmur pada bulan Desember 2015:<table><tr><td>2 Des</td><td>Jual</td><td>400 @Rp 8.000,00</td></tr><tr><td>5 Des</td><td>Beli</td><td>500 @Rp 4.500,00</td></tr><tr><td>7 Des</td><td>Beli</td><td>200 @Rp 4.000,00</td></tr><tr><td>15 Des</td><td>Jual</td><td>500 @Rp 8.000,00</td></tr><tr><td>20 Des</td><td>Beli</td><td>300 @Rp 4.750,00</td></tr><tr><td>25 Des</td><td>Jual</td><td>350 @Rp 8.000,00</td></tr><tr><td>30 Des</td><td>Beli</td><td>100 @Rp 5.000,00</td></tr></table>Diketahui persediaan awalnya sebanyak 450 unit @Rp3.900,00.<br/>Nilai persediaan akhir jika menggunakan metode penilaian persediaan LIFO adalah...</b>",
+						"<b>UD Makmur menggunakan sistem pencatatan periodik. Berikut ini data UD Makmur pada bulan Desember 2015:<table><tr><td>2 Des</td><td>Jual</td><td>400 @Rp 8.000,00</td></tr><tr><td>5 Des</td><td>Beli</td><td>500 @Rp 4.500,00</td></tr><tr><td>7 Des</td><td>Beli</td><td>200 @Rp 4.000,00</td></tr><tr><td>15 Des</td><td>Jual</td><td>500 @Rp 8.000,00</td></tr><tr><td>20 Des</td><td>Beli</td><td>300 @Rp 4.750,00</td></tr><tr><td>25 Des</td><td>Jual</td><td>350 @Rp 8.000,00</td></tr><tr><td>30 Des</td><td>Beli</td><td>100 @Rp 5.000,00</td></tr></table>Diketahui persediaan awalnya sebanyak 450 unit @Rp3.900,00.<br/>Biaya per unit jika menggunakan metode penilaian persediaan rata-rata sederhana adalah...</b>",
+						"<b>UD Makmur menggunakan sistem pencatatan periodik. Berikut ini data UD Makmur pada bulan Desember 2015:<table><tr><td>2 Des</td><td>Jual</td><td>400 @Rp 8.000,00</td></tr><tr><td>5 Des</td><td>Beli</td><td>500 @Rp 4.500,00</td></tr><tr><td>7 Des</td><td>Beli</td><td>200 @Rp 4.000,00</td></tr><tr><td>15 Des</td><td>Jual</td><td>500 @Rp 8.000,00</td></tr><tr><td>20 Des</td><td>Beli</td><td>300 @Rp 4.750,00</td></tr><tr><td>25 Des</td><td>Jual</td><td>350 @Rp 8.000,00</td></tr><tr><td>30 Des</td><td>Beli</td><td>100 @Rp 5.000,00</td></tr></table>Diketahui persediaan awalnya sebanyak 450 unit @Rp3.900,00.<br/>Nilai HPP jika menggunakan metode penilaian persediaan rata – rata sederhana adalah...</b>",
+						"<b>UD Makmur menggunakan sistem pencatatan periodik. Berikut ini data UD Makmur pada bulan Desember 2015:<table><tr><td>2 Des</td><td>Jual</td><td>400 @Rp 8.000,00</td></tr><tr><td>5 Des</td><td>Beli</td><td>500 @Rp 4.500,00</td></tr><tr><td>7 Des</td><td>Beli</td><td>200 @Rp 4.000,00</td></tr><tr><td>15 Des</td><td>Jual</td><td>500 @Rp 8.000,00</td></tr><tr><td>20 Des</td><td>Beli</td><td>300 @Rp 4.750,00</td></tr><tr><td>25 Des</td><td>Jual</td><td>350 @Rp 8.000,00</td></tr><tr><td>30 Des</td><td>Beli</td><td>100 @Rp 5.000,00</td></tr></table>Diketahui persediaan awalnya sebanyak 450 unit @Rp3.900,00.<br/>Nilai persediaan akhir jika menggunakan metode penilaian persediaan rata-rata sederhana adalah...</b>",
+						"<b>UD Makmur menggunakan sistem pencatatan periodik. Berikut ini data UD Makmur pada bulan Desember 2015:<table><tr><td>2 Des</td><td>Jual</td><td>400 @Rp 8.000,00</td></tr><tr><td>5 Des</td><td>Beli</td><td>500 @Rp 4.500,00</td></tr><tr><td>7 Des</td><td>Beli</td><td>200 @Rp 4.000,00</td></tr><tr><td>15 Des</td><td>Jual</td><td>500 @Rp 8.000,00</td></tr><tr><td>20 Des</td><td>Beli</td><td>300 @Rp 4.750,00</td></tr><tr><td>25 Des</td><td>Jual</td><td>350 @Rp 8.000,00</td></tr><tr><td>30 Des</td><td>Beli</td><td>100 @Rp 5.000,00</td></tr></table>Diketahui persediaan awalnya sebanyak 450 unit @Rp3.900,00.<br/>Biaya per unit jika menggunakan metode penilaian persediaan rata-rata tertimbang adalah...</b>",
+						"<b>UD Makmur menggunakan sistem pencatatan periodik. Berikut ini data UD Makmur pada bulan Desember 2015:<table><tr><td>2 Des</td><td>Jual</td><td>400 @Rp 8.000,00</td></tr><tr><td>5 Des</td><td>Beli</td><td>500 @Rp 4.500,00</td></tr><tr><td>7 Des</td><td>Beli</td><td>200 @Rp 4.000,00</td></tr><tr><td>15 Des</td><td>Jual</td><td>500 @Rp 8.000,00</td></tr><tr><td>20 Des</td><td>Beli</td><td>300 @Rp 4.750,00</td></tr><tr><td>25 Des</td><td>Jual</td><td>350 @Rp 8.000,00</td></tr><tr><td>30 Des</td><td>Beli</td><td>100 @Rp 5.000,00</td></tr></table>Diketahui persediaan awalnya sebanyak 450 unit @Rp3.900,00.<br/>Nilai HPP jika menggunakan metode penilaian persediaan rata – rata tertimbang adalah...</b>",
+						"<b>UD Makmur menggunakan sistem pencatatan periodik. Berikut ini data UD Makmur pada bulan Desember 2015:<table><tr><td>2 Des</td><td>Jual</td><td>400 @Rp 8.000,00</td></tr><tr><td>5 Des</td><td>Beli</td><td>500 @Rp 4.500,00</td></tr><tr><td>7 Des</td><td>Beli</td><td>200 @Rp 4.000,00</td></tr><tr><td>15 Des</td><td>Jual</td><td>500 @Rp 8.000,00</td></tr><tr><td>20 Des</td><td>Beli</td><td>300 @Rp 4.750,00</td></tr><tr><td>25 Des</td><td>Jual</td><td>350 @Rp 8.000,00</td></tr><tr><td>30 Des</td><td>Beli</td><td>100 @Rp 5.000,00</td></tr></table>Diketahui persediaan awalnya sebanyak 450 unit @Rp3.900,00.<br/>Nilai persediaan akhir jika menggunakan metode penilaian persediaan rata-rata tertimbang adalah...</b>",
+						"<b>Diketahui UD. Makmur memiliki persediaan di gudang sebanyak 400 unit dengan harga R 1.200,00. Pada tanggal 2 membeli barang dagangan sebanyak 1.000 unit dengan harga Rp 1.350,00 dan pada tanggal 3 menjual barang dagangan dengan termin 2/10, n/30 sebanyak 900 unit dengan harga Rp 2.100,00. Buatlah jurnal yang diperlukan pada saat penjualan jika perusahaan menggunakan sistem pencatatan periodik dengan metode penilaian FIFO!</b>",
+						"<b>Diketahui UD. Makmur memiliki persediaan di gudang sebanyak 400 unit dengan harga R 1.200,00. Pada tanggal 2 membeli barang dagangan sebanyak 1.000 unit dengan harga Rp 1.350,00 dan pada tanggal 3 menjual barang dagangan dengan termin 2/10, n/30 sebanyak 900 unit dengan harga Rp 2.100,00. Buatlah jurnal yang diperlukan pada saat penjualan jika perusahaan menggunakan sistem pencatatan periodik dengan metode penilaian LIFO!</b>",
+						"<b>Diketahui UD. Makmur memiliki persediaan di gudang sebanyak 400 unit dengan harga R 1.200,00. Pada tanggal 2 membeli barang dagangan sebanyak 1.000 unit dengan harga Rp 1.350,00 dan pada tanggal 3 menjual barang dagangan dengan termin 2/10, n/30 sebanyak 900 unit dengan harga Rp 2.100,00. Buatlah jurnal yang diperlukan pada saat penjualan jika perusahaan menggunakan sistem pencatatan perpetual dengan metode penilaian FIFO!</b>",
+						"<b>Diketahui UD. Makmur memiliki persediaan di gudang sebanyak 400 unit dengan harga R 1.200,00. Pada tanggal 2 membeli barang dagangan sebanyak 1.000 unit dengan harga Rp 1.350,00 dan pada tanggal 3 menjual barang dagangan dengan termin 2/10, n/30 sebanyak 900 unit dengan harga Rp 2.100,00. Buatlah jurnal yang diperlukan pada saat penjualan jika perusahaan menggunakan sistem pencatatan perpetual dengan metode penilaian LIFO!</b>",
+						"<b>Diketahui UD. Makmur memiliki persediaan di gudang sebanyak 400 unit dengan harga R 1.200,00. Pada tanggal 2 membeli barang dagangan sebanyak 1.000 unit dengan harga Rp 1.350,00 dan pada tanggal 3 menjual barang dagangan dengan termin 2/10, n/30 sebanyak 900 unit dengan harga Rp 2.100,00. Buatlah jurnal yang diperlukan pada saat penjualan jika perusahaan menggunakan sistem pencatatan perpetual dengan metode penilaian Rata – rata bergerak!</b>"    
 					];
 			var opsiA = [									 	   
 						"Menjual barang dagangan yang dibeli.",
@@ -889,7 +890,7 @@
 						"Kas (D) Rp 1.176.426,00<br/> Penjualan (K) Rp 1.176.426,00"
 					];
 			var opsiB = [									 	   
-						" Menjual barang yang telah selesai diproduksi.",
+						"Menjual barang yang telah selesai diproduksi.",
 						"Barang yang dibeli dan disimpan untuk dijual kembali.",
 						"Menjurnal setiap pembelian persediaan pada akun pembelian.",
 						"Penjualan barang dagangan langsung menjurnal harga pokok penjualanya.",
@@ -898,99 +899,99 @@
 						"Pembelian.",
 						"Barang yang disimpan terlalu lama akan kadaluarsa.",
 						"Nilai persediaan diketahui setiap waktu.",
-						"Pembelian (D)   Rp 3.250.000,00 Hutang Dagang  (K)    Rp 3.250.000,00",
-						"Pembelian  (D)    Rp 3.250.000,00 Hutang Dagang (K)       Rp 3.250.000,00",
-						"Persediaan Barang Dagangan (D)Rp 9.500.000,00 Potongan Pembelian (K)      Rp   190.000,00",
-						"Persediaan Barang Dagangan (D)Rp 9.500.000,00 Potongan Pembelian (K)   Rp   190.000,00 Kas (K)     Rp 9.310.000,00",
-						"Kas  (D)    Rp 750.000,00 Retur pembelian (K)      Rp 750.000,00",
-						"Kas  (D)    Rp 750.000,00 Retur pembelian  (K)    Rp 750.000,00",
-						"Kas (D)    Rp 500.000,00 Retur Pembelian (K)    Rp 500.000,00",
-						"Kas (D)    Rp 500.000,00 Retur Pembelian (K)    Rp 500.000,00",
-						"Biaya angkut Pembelian  (D) Rp 450.000,00 Hutang Dagang (K)    Rp 450.000,00",
-						"Biaya angkut Pembelian (D) Rp 450.000,00 Hutang Dagang (K)    Rp 450.000,00",
-						"Hutang Dagang (D)   Rp 3.250.000,00 Persediaan Barang Dagangan (K)  Rp       65.000,00 Kas (K)                Rp  3.185.000,00",
-						"Hutang Dagang (D)   Rp 3.250.000,00 Persediaan Barang Dagangan (K)  Rp       65.000,00 Kas (K)                Rp  3.185.000,00",
-						"Hutang Dagang (D)  Rp 12.000.000,00 Potongan Pembelian (K)   Rp      240.000,00 Kas (K)     Rp 11.760.000,00",
-						"Hutang Dagang (D)  Rp 12.000.000,00 Potongan Pembelian (K)   Rp      240.000,00 Kas  (K)     Rp 11.760.000,00",
-						"Piutang Dagang (D)  Rp 4.500.000,00 Penjualan  (K)     Rp 4.500.000,00",
-						"Piutang Dagang (D)  Rp 4.500.000,00 Penjualan (K)      Rp 4.500.000,00",
-						"Kas (D)      Rp 4.000.000,00 Harga Pokok Penjualan (D) Rp 5.525.000,00 Persediaan Barang Dagangan (K)  Rp 5.525.000,00 Penjualan (K)     Rp 4.000.000,00",
-						"Kas  (D)    Rp 4.000.000,00 Harga Pokok Penjualan (D) Rp 5.525.000,00 Persediaan Barang Dagangan (K)  Rp 5.525.000,00 Penjualan (K)     Rp 4.000.000,00",
-						"Retur penjualan (D)  Rp 500.000,00 Hutang Dagang (K)    Rp 500.000,00",
-						"Retur penjualan (D)  Rp 500.000,00 Hutang Dagang (K)    Rp 500.000,00",
-						"Kas (D)    Rp 7.350.000,00 Persediaan Barang Dagangan (D) Rp    150.000,00 Piutang Dagang (K)    Rp 7.500.000,00",
-						"Kas (D)    Rp 7.350.000,00 Persediaan Barang Dagangan (D) Rp    150.000,00 Piutang Dagang (K)    Rp 7.500.000,00",
-						"Persediaan (D)   Rp   15.550.000,00 Retur pembelian (D)  Rp     9.500.000,00 Potongan pembelian (D)  Rp   12.750.000,00 Harga Pokok Pembelian (D) Rp 179.200.000,00 Persediaan (K)     Rp   12.100.000,00 Pembelian (K)     Rp 192.400.000,00 Biaya angkut pembelian (K)   Rp   12.500.000,00",
-						"Persediaan (D)   Rp   15.550.000,00 Retur pembelian (D)  Rp     9.500.000,00 Potongan pembelian (D)  Rp   12.750.000,00 Harga Pokok Pembelian (D) Rp 179.200.000,00 Persediaan (K)     Rp   12.100.000,00 Pembelian (K)     Rp 192.400.000,00 Biaya angkut pembelian (K)   Rp   12.500.000,00",
-						"Persediaan (D)   Rp   2.450.000,00 Potongan pembelian (D)  Rp   1.500.000,00 Harga Pokok Penjualan (D) Rp 12.650.000,00  Persediaan (K)     Rp   2.950.000,00  Pembelian (K)     Rp 14.650.000,00",
-						"Persediaan (D)   Rp   2.450.000,00 Potongan pembelian (D)  Rp   1.500.000,00 Harga Pokok Penjualan (D) Rp 12.650.000,00  Persediaan (K)     Rp   2.950.000,00  Pembelian (K)     Rp 14.650.000,00",
+						"Pembelian (D) Rp 3.250.000,00<br/> Hutang Dagang (K) Rp 3.250.000,00",
+						"Pembelian (D) Rp 3.250.000,00<br/> Hutang Dagang (K) Rp 3.250.000,00",
+						"Persediaan Barang Dagangan (D) Rp 9.500.000,00<br/> Potongan Pembelian (K) Rp 190.000,00",
+						"Persediaan Barang Dagangan (D) Rp 9.500.000,00<br/> Potongan Pembelian (K) Rp 190.000,00<br/> Kas (K) Rp 9.310.000,00",
+						"Kas (D) Rp 750.000,00<br/> Retur pembelian (K) Rp 750.000,00",
+						"Kas (D) Rp 750.000,00<br/> Retur pembelian (K) Rp 750.000,00",
+						"Kas (D) Rp 500.000,00<br/> Retur Pembelian (K) Rp 500.000,00",
+						"Kas (D) Rp 500.000,00<br/> Retur Pembelian (K) Rp 500.000,00",
+						"Biaya angkut Pembelian  (D) Rp 450.000,00<br/> Hutang Dagang (K)    Rp 450.000,00",
+						"Biaya angkut Pembelian (D) Rp 450.000,00<br/> Hutang Dagang (K)    Rp 450.000,00",
+						"Hutang Dagang (D)   Rp 3.250.000,00<br/> Persediaan Barang Dagangan (K)  Rp       65.000,00<br/> Kas (K)                Rp  3.185.000,00",
+						"Hutang Dagang (D)   Rp 3.250.000,00<br/> Persediaan Barang Dagangan (K)  Rp       65.000,00<br/> Kas (K)                Rp  3.185.000,00",
+						"Hutang Dagang (D)  Rp 12.000.000,00<br/> Potongan Pembelian (K)   Rp      240.000,00<br/> Kas (K)     Rp 11.760.000,00",
+						"Hutang Dagang (D)  Rp 12.000.000,00<br/> Potongan Pembelian (K)   Rp      240.000,00<br/> Kas  (K)     Rp 11.760.000,00",
+						"Piutang Dagang (D)  Rp 4.500.000,00<br/> Penjualan  (K)     Rp 4.500.000,00",
+						"Piutang Dagang (D)  Rp 4.500.000,00<br/> Penjualan (K)      Rp 4.500.000,00",
+						"Kas (D)      Rp 4.000.000,00<br/> Harga Pokok Penjualan (D) Rp 5.525.000,00<br/> Persediaan Barang Dagangan (K)  Rp 5.525.000,00<br/> Penjualan (K)     Rp 4.000.000,00",
+						"Kas  (D)    Rp 4.000.000,00<br/> Harga Pokok Penjualan (D) Rp 5.525.000,00<br/> Persediaan Barang Dagangan (K)  Rp 5.525.000,00<br/> Penjualan (K)     Rp 4.000.000,00",
+						"Retur penjualan (D)  Rp 500.000,00<br/> Hutang Dagang (K)    Rp 500.000,00",
+						"Retur penjualan (D)  Rp 500.000,00<br/> Hutang Dagang (K)    Rp 500.000,00",
+						"Kas (D)    Rp 7.350.000,00<br/> Persediaan Barang Dagangan (D) Rp    150.000,00<br/> Piutang Dagang (K)    Rp 7.500.000,00",
+						"Kas (D)    Rp 7.350.000,00<br/> Persediaan Barang Dagangan (D) Rp    150.000,00<br/> Piutang Dagang (K)    Rp 7.500.000,00",
+						"Persediaan (D)   Rp   15.550.000,00<br/> Retur pembelian (D)  Rp     9.500.000,00<br/> Potongan pembelian (D)  Rp   12.750.000,00<br/> Harga Pokok Pembelian (D) Rp 179.200.000,00<br/> Persediaan (K)     Rp   12.100.000,00<br/> Pembelian (K)     Rp 192.400.000,00<br/> Biaya angkut pembelian (K)   Rp   12.500.000,00",
+						"Persediaan (D)   Rp   15.550.000,00<br/> Retur pembelian (D)  Rp     9.500.000,00<br/> Potongan pembelian (D)  Rp   12.750.000,00<br/> Harga Pokok Pembelian (D) Rp 179.200.000,00<br/> Persediaan (K)     Rp   12.100.000,00<br/> Pembelian (K)     Rp 192.400.000,00<br/> Biaya angkut pembelian (K)   Rp   12.500.000,00",
+						"Persediaan (D)   Rp   2.450.000,00<br/> Potongan pembelian (D)  Rp   1.500.000,00<br/> Harga Pokok Penjualan (D) Rp 12.650.000,00<br/>  Persediaan (K)     Rp   2.950.000,00<br/>  Pembelian (K)     Rp 14.650.000,00",
+						"Persediaan (D)   Rp   2.450.000,00<br/> Potongan pembelian (D)  Rp   1.500.000,00<br/> Harga Pokok Penjualan (D) Rp 12.650.000,00<br/>  Persediaan (K)     Rp   2.950.000,00<br/>  Pembelian (K)     Rp 14.650.000,00",
 						"Rp 5.280.000,00",
 						"Rp 1.329.000,00",
 						"Rp 5.280.000,00",
-						"Rp 1.329.000,00",
-						"Rp 4.431,94",
-						" Rp 5.401.000,00",
 						"Rp 1.329.000,00",
 						"Rp 4.431,94",
 						"Rp 5.401.000,00",
 						"Rp 1.329.000,00",
-						"Piutang Dagang (D)  Rp 1.890.000,00 Penjualan (K)     Rp 1.890.000,00",
-						"Piutang Dagang (D)  Rp 1.890.000,00 Penjualan (K)     Rp 1.890.000,00",
-						"Piutang Dagang (D)  Rp 1.890.000,00 Penjualan (K)     Rp 1.890.000,00",
-						"Piutang Dagang (D)  Rp 1.890.000,00 Penjualan (K)     Rp 1.890.000,00",
-						"Piutang Dagang (D)  Rp 1.890.000,00 Penjualan (K)     Rp 1.890.000,00"
+						"Rp 4.431,94",
+						"Rp 5.401.000,00",
+						"Rp 1.329.000,00",
+						"Piutang Dagang (D)  Rp 1.890.000,00<br/> Penjualan (K) Rp 1.890.000,00",
+						"Piutang Dagang (D)  Rp 1.890.000,00<br/> Penjualan (K) Rp 1.890.000,00",
+						"Piutang Dagang (D)  Rp 1.890.000,00<br/> Penjualan (K) Rp 1.890.000,00",
+						"Piutang Dagang (D)  Rp 1.890.000,00<br/> Penjualan (K) Rp 1.890.000,00",
+						"Piutang Dagang (D)  Rp 1.890.000,00<br/> Penjualan (K) Rp 1.890.000,00"
 					];
 			var opsiC = [									 	   
-						"  Membeli barang tanpa diolah lebih lanjut.",
-						" Barang yang dijual untuk kegiatan produksi.",
-						" Membuat jurnal penyesuaian sesilih persediaan pada akhir periode.",
+						"Membeli barang tanpa diolah lebih lanjut.",
+						"Barang yang dijual untuk kegiatan produksi.",
+						"Membuat jurnal penyesuaian sesilih persediaan pada akhir periode.",
 						"Memerlukan perhitungan fisik akhir periode.",
 						"Barang yang mendekati kadaluarsa.",
 						"Barang yang mendekati kadaluarsa.",
 						"Nama barang yang dibeli.",
 						"Nilai barang tidak akan relevan dengan nilai pasar.",
-						" Pengembalian barang cacat yang  dibeli akan dicatat ke retur pembelian.",
-						"Persediaan Barang Dagangan (D) Rp 3.250.000,00 Kas (K)     Rp 3.250.000,00",
-						"Persediaan Barang Dagangan (D) Rp 3.250.000,00 Kas (K)     Rp 3.250.000,00",
-						"Pembelian (D)     Rp 9.500.000,00 Kas (K)     Rp 9.500.000,00",
-						"Pembelian (D)    Rp 9.500.000,00 Kas (K)     Rp 9.500.000,00",
-						"Hutang Dagang (D)  Rp 750.000,00 Retur Pembelian  (K)     Rp 750.000,00",
-						"Hutang Dagang (D)  Rp 750.000,00 Retur Pembelian  (K)     Rp 750.000,00",
-						"Kas (D)    Rp 500.000,00 Pembelian (K)     Rp 500.000,00",
-						"Kas (D)    Rp 500.000,00 Pembelian (K)     Rp 500.000,00",
-						"Persediaan Barang Dagangan (D) Rp 450.000,00 Kas (K)     Rp 450.000,00",
-						"Persediaan Barang Dagangan (D) Rp 450.000,00 Kas (K)     Rp 450.000,00",
-						"Hutang Dagang (D)  Rp 3.250.000,00 Kas (K)     Rp  3.250.000,00",
-						"Hutang Dagang (D)  Rp 3.250.000,00 Kas (K)     Rp  3.250.000,00",
-						"Kas  (D)    Rp 11.760.000,00 Piutang Dagang (K)     Rp 11.760.000,00",
-						"Kas  (D)    Rp 11.760.000,00 Piutang Dagang (K)     Rp 11.760.000,00",
-						"Piutang Dagang (D)  Rp 3.750.000,00 Persediaan Barang Dagangan (K)  Rp 3.750.000,00",
-						"Piutang Dagang (D)  Rp 3.750.000,00 Persediaan Barang Dagangan (K)  Rp 3.750.000,00",
-						"Kas  (D)    Rp 5.525.000,00 Persediaan Barang Dagangan (D) Rp 4.000.000,00 Harga Pokok Penjualan (K)    Rp 4.000.000,00 Penjualan (K)     Rp 5.525.000,00",
-						"Kas  (D)    Rp 5.525.000,00 Persediaan Barang Dagangan (D) Rp 4.000.000,00 Harga Pokok Penjualan (K)    Rp 4.000.000,00 Penjualan (K)     Rp 5.525.000,00",
-						"Retur penjualan (D)  Rp 500.000,00 Persediaan barang dagangan (D) Rp 400.000,00 Harga pokok penjualan (K)   Rp 400.000,00 Piutang dagang (K)    Rp 500.000,00",
-						"Retur penjualan (D)  Rp 500.000,00 Persediaan barang dagangan (D) Rp 400.000,00 Harga pokok penjualan (K)   Rp 400.000,00 Piutang dagang (K)    Rp 500.000,00",
-						"Kas (D)    Rp 7.350.000,00 Persediaan Barang Dagangan (D) Rp    150.000,00 Harga Pokok Penjualan (K)   Rp    150.000,00 Piutang Dagang (K)    Rp 7.350.000,00",
-						"Kas (D)    Rp 7.350.000,00 Persediaan Barang Dagangan (D) Rp    150.000,00 Harga Pokok Penjualan (K)   Rp    150.000,00 Piutang Dagang (K)    Rp 7.350.000,00",
-						"Persediaan (D)   Rp   12.100.000,00 Retur pembelian (D)  Rp     9.500.000,00 Potongan pembelian(D)  Rp   12.750.000,00 Harga Pokok Pembelian (D) Rp 196.650.000,00 Persediaan (K)     Rp   15.550.000,00 Pembelian (K)     Rp 192.400.000,00 Biaya angkut pembelian (K)   Rp   12.500.000,00",
-						"Persediaan (D)   Rp   12.100.000,00 Retur pembelian (D)  Rp     9.500.000,00 Potongan pembelian(D)  Rp   12.750.000,00 Harga Pokok Pembelian (D) Rp 196.650.000,00 Persediaan (K)     Rp   15.550.000,00 Pembelian (K)     Rp 192.400.000,00 Biaya angkut pembelian (K)   Rp   12.500.000,00",
-						"Persediaan (D)   Rp   2.450.000,00 Potongan pembelian (D)  Rp   1.500.000,00 Harga Pokok Penjualan (D) Rp 13.650.000,00  Persediaan (K)     Rp   2.950.000,00  Pembelian (K)     Rp 14.650.000,00",
-						"Persediaan (D)   Rp   2.450.000,00 Potongan pembelian (D)  Rp   1.500.000,00 Harga Pokok Penjualan (D) Rp 13.650.000,00  Persediaan (K)     Rp   2.950.000,00  Pembelian (K)     Rp 14.650.000,00",
-						"'Rp5.820.000,00 ",
-						"'Rp 1.450.000,00",
-						"'Rp 5.820.000,00",
-						"'Rp 1.450.000,00",
-						"'Rp 4.430,94",
-						"'Rp 5.427.419,35",
-						"'Rp1.302.580,65 ",
-						"'Rp4.430,94 ",
-						"'Rp5.427.419,35 ",
-						"'Rp1.302.580,65 ",
-						"Kas (D)    Rp 1.890.000,00 Harga Pokok Penjualan (D) Rp 1.155.000,00  Persediaan (K)     Rp 1.155.000,00 Penjualan (K)     Rp 1.890.000,00",
-						"Kas (D)    Rp 1.890.000,00 Harga Pokok Penjualan (D) Rp 1.215.000,00  Persediaan (K)     Rp 1.215.000,00 Penjualan (K)     Rp 1.890.000,00",
-						"Kas (D)   Rp 1.890.000,00 Harga Pokok Penjualan (D) Rp 1.155.000,00  Persediaan (K)     Rp 1.155.000,00 Penjualan (K)     Rp 1.890.000,00",
-						"Kas (D)    Rp 1.890.000,00 Harga Pokok Penjualan (D) Rp 1.215.000,00  Persediaan (K)     Rp 1.215.000,00 Penjualan (K)     Rp 1.890.000,00",
-						"Kas (D)    Rp 1.890.000,00 Harga Pokok Penjualan (D) Rp 1.176.426,00  Persediaan (K)     Rp 1.176.426,00 Penjualan (K)      Rp 1.890.000,00"
+						"Pengembalian barang cacat yang  dibeli akan dicatat ke retur pembelian.",
+						"Persediaan Barang Dagangan (D) Rp 3.250.000,00<br/> Kas (K) Rp 3.250.000,00",
+						"Persediaan Barang Dagangan (D) Rp 3.250.000,00<br/> Kas (K) Rp 3.250.000,00",
+						"Pembelian (D) Rp 9.500.000,00<br/> Kas (K) Rp 9.500.000,00",
+						"Pembelian (D) Rp 9.500.000,00<br/> Kas (K) Rp 9.500.000,00",
+						"Hutang Dagang (D) Rp 750.000,00<br/> Retur Pembelian  (K) Rp 750.000,00",
+						"Hutang Dagang (D) Rp 750.000,00<br/> Retur Pembelian  (K) Rp 750.000,00",
+						"Kas (D) Rp 500.000,00<br/> Pembelian (K) Rp 500.000,00",
+						"Kas (D) Rp 500.000,00<br/> Pembelian (K) Rp 500.000,00",
+						"Persediaan Barang Dagangan (D) Rp 450.000,00<br/> Kas (K) Rp 450.000,00",
+						"Persediaan Barang Dagangan (D) Rp 450.000,00<br/> Kas (K) Rp 450.000,00",
+						"Hutang Dagang (D) Rp 3.250.000,00<br/> Kas (K) Rp  3.250.000,00",
+						"Hutang Dagang (D) Rp 3.250.000,00<br/> Kas (K) Rp  3.250.000,00",
+						"Kas (D)    Rp 11.760.000,00<br/> Piutang Dagang (K)     Rp 11.760.000,00",
+						"Kas (D)    Rp 11.760.000,00<br/> Piutang Dagang (K)     Rp 11.760.000,00",
+						"Piutang Dagang (D)  Rp 3.750.000,00<br/> Persediaan Barang Dagangan (K)  Rp 3.750.000,00",
+						"Piutang Dagang (D)  Rp 3.750.000,00<br/> Persediaan Barang Dagangan (K)  Rp 3.750.000,00",
+						"Kas  (D)    Rp 5.525.000,00<br/> Persediaan Barang Dagangan (D) Rp 4.000.000,00<br/> Harga Pokok Penjualan (K)    Rp 4.000.000,00<br/> Penjualan (K)     Rp 5.525.000,00",
+						"Kas  (D)    Rp 5.525.000,00<br/> Persediaan Barang Dagangan (D) Rp 4.000.000,00<br/> Harga Pokok Penjualan (K)    Rp 4.000.000,00<br/> Penjualan (K)     Rp 5.525.000,00",
+						"Retur penjualan (D)  Rp 500.000,00<br/> Persediaan barang dagangan (D) Rp 400.000,00<br/> Harga pokok penjualan (K)   Rp 400.000,00<br/> Piutang dagang (K)    Rp 500.000,00",
+						"Retur penjualan (D)  Rp 500.000,00<br/> Persediaan barang dagangan (D) Rp 400.000,00<br/> Harga pokok penjualan (K)   Rp 400.000,00<br/> Piutang dagang (K)    Rp 500.000,00",
+						"Kas (D)    Rp 7.350.000,00<br/> Persediaan Barang Dagangan (D) Rp    150.000,00<br/> Harga Pokok Penjualan (K)   Rp    150.000,00<br/> Piutang Dagang (K)    Rp 7.350.000,00",
+						"Kas (D)    Rp 7.350.000,00<br/> Persediaan Barang Dagangan (D) Rp    150.000,00<br/> Harga Pokok Penjualan (K)   Rp    150.000,00<br/> Piutang Dagang (K)    Rp 7.350.000,00",
+						"Persediaan (D)   Rp   12.100.000,00<br/> Retur pembelian (D)  Rp     9.500.000,00<br/> Potongan pembelian(D)  Rp   12.750.000,00<br/> Harga Pokok Pembelian (D) Rp 196.650.000,00<br/> Persediaan (K)     Rp   15.550.000,00<br/> Pembelian (K)     Rp 192.400.000,00<br/> Biaya angkut pembelian (K)   Rp   12.500.000,00",
+						"Persediaan (D)   Rp   12.100.000,00<br/> Retur pembelian (D)  Rp     9.500.000,00<br/> Potongan pembelian(D)  Rp   12.750.000,00<br/> Harga Pokok Pembelian (D) Rp 196.650.000,00<br/> Persediaan (K)     Rp   15.550.000,00<br/> Pembelian (K)     Rp 192.400.000,00<br/> Biaya angkut pembelian (K)   Rp   12.500.000,00",
+						"Persediaan (D)   Rp   2.450.000,00<br/> Potongan pembelian (D)  Rp   1.500.000,00<br/> Harga Pokok Penjualan (D) Rp 13.650.000,00<br/>  Persediaan (K)     Rp   2.950.000,00<br/>  Pembelian (K)     Rp 14.650.000,00",
+						"Persediaan (D)   Rp   2.450.000,00<br/> Potongan pembelian (D)  Rp   1.500.000,00<br/> Harga Pokok Penjualan (D) Rp 13.650.000,00<br/>  Persediaan (K)     Rp   2.950.000,00<br/>  Pembelian (K)     Rp 14.650.000,00",
+						"Rp5.820.000,00 ",
+						"Rp 1.450.000,00",
+						"Rp 5.820.000,00",
+						"Rp 1.450.000,00",
+						"Rp 4.430,94",
+						"Rp 5.427.419,35",
+						"Rp1.302.580,65 ",
+						"Rp4.430,94 ",
+						"Rp5.427.419,35 ",
+						"Rp1.302.580,65 ",
+						"Kas (D)    Rp 1.890.000,00<br/> Harga Pokok Penjualan (D) Rp 1.155.000,00<br/>  Persediaan (K)     Rp 1.155.000,00<br/> Penjualan (K)     Rp 1.890.000,00",
+						"Kas (D)    Rp 1.890.000,00<br/> Harga Pokok Penjualan (D) Rp 1.215.000,00<br/>  Persediaan (K)     Rp 1.215.000,00<br/> Penjualan (K)     Rp 1.890.000,00",
+						"Kas (D)   Rp 1.890.000,00<br/> Harga Pokok Penjualan (D) Rp 1.155.000,00<br/>  Persediaan (K)     Rp 1.155.000,00<br/> Penjualan (K)     Rp 1.890.000,00",
+						"Kas (D)    Rp 1.890.000,00<br/> Harga Pokok Penjualan (D) Rp 1.215.000,00<br/>  Persediaan (K)     Rp 1.215.000,00<br/> Penjualan (K)     Rp 1.890.000,00",
+						"Kas (D)    Rp 1.890.000,00<br/> Harga Pokok Penjualan (D) Rp 1.176.426,00<br/>  Persediaan (K)     Rp 1.176.426,00<br/> Penjualan (K)      Rp 1.890.000,00"
 					];
 			var opsiD = [									 	   
 						"Menyimpan persediaan barang untuk dijual.",
@@ -1002,47 +1003,47 @@
 						"Bahan baku.",
 						"Menyebabkan perbedaan laba yang signifikan.",
 						"Harga pokok penjualan dicatat saat terjadi penjualan.",
-						"Persediaan Barang Dagangan (D)  Rp 3.250.000,00 Hutang Dagang (K)    Rp 3.250.000,00",
-						"Persediaan Barang Dagangan (D)  Rp 3.250.000,00 Hutang Dagang (K)    Rp 3.250.000,00",
-						"Persediaan Barang Dagangan (D)Rp 9.500.000,00 Kas (K)     Rp 9.500.000,00",
-						"Persediaan Barang Dagangan (D)Rp 9.500.000,00 Kas (K)     Rp 9.500.000,00",
-						"Retur Pembelian (D)    Rp 750.000,00 Persediaan Barang Dagangan (K)   Rp 750.000,00",
-						"Retur Pembelian (D)    Rp 750.000,00 Persediaan Barang Dagangan (K)   Rp 750.000,00",
-						"Retur Pembelian (D)  Rp 500.000,00 Persediaan Barang Dagangan  (K)  Rp 500.000,00",
-						"Retur Pembelian (D)  Rp 500.000,00 Persediaan Barang Dagangan  (K)  Rp 500.000,00",
-						"Persediaan Barang Dagangan (D) Rp 450.000,00 Hutang Dagang (K)    Rp 450.000,00",
-						"Persediaan Barang Dagangan (D) Rp 450.000,00 Hutang Dagang (K)    Rp 450.000,00",
-						"Hutang Dagang (D)  Rp  3.185.000,00 Potongan Pembelian (D)  Rp       65.000,00 Kas (K)     Rp 3.250.000,00",
-						"Hutang Dagang (D)  Rp  3.185.000,00 Potongan Pembelian (D)  Rp       65.000,00 Kas (K)     Rp 3.250.000,00",
-						"Hutang Dagang (D)  Rp 12.000.000,00 Persediaan Barang Dagangan (K)   Rp      240.000,00 Kas (K)     Rp 11.760.000,00",
-						"Hutang Dagang (D)  Rp 12.000.000,00 Persediaan Barang Dagangan (K)   Rp      240.000,00 Kas (K)     Rp 11.760.000,00",
-						"Piutang Dagang (D)  Rp 4.500.000,00 Penjualan (K) Rp 4.500.000,00 Harga Pokok Penjualan (D) Rp 3.750.000,00 Persediaan Barang Dagangan (K)   Rp 3.750.000,00",
-						"Piutang Dagang (D)  Rp 4.500.000,00 Penjualan (K)      Rp 4.500.000,00 Harga Pokok Penjualan (D) Rp 3.750.000,00 Persediaan Barang Dagangan (K)   Rp 3.750.000,00",
-						"Kas  (D)     Rp 5.525.000,00 Penjualan (K)     Rp 5.525.000,00",
-						"Kas  (D)     Rp 5.525.000,00 Penjualan (K)     Rp 5.525.000,00",
-						"Retur penjualan (D)  Rp 400.000,00 Persediaan barang dagangan (D) Rp 500.000,00 Harga pokok penjualan (K)   Rp 400.000,00 Hutang dagang (K)    Rp 500.000,00 ",
-						"Retur penjualan (D)  Rp 400.000,00 Persediaan barang dagangan (D) Rp 500.000,00 Harga pokok penjualan (K)   Rp 400.000,00 Hutang dagang (K)    Rp 500.000,00 ",
-						"Kas (D)    Rp 7.350.000,00 Potongan penjualan (D)  Rp    150.000,00 Piutang Dagang (K)    Rp 7.500.000,00",
-						"Kas (D)    Rp 7.350.000,00 Potongan penjualan (D)  Rp    150.000,00 Piutang Dagang (K)    Rp 7.500.000,00",
-						"Persediaan (D)   Rp   15.550.000,00 Retur pembelian (D)  Rp     9.500.000,00 Potongan pembelian (D)  Rp   12.750.000,00 Harga Pokok Pembelian (D) Rp 180.700.000,00 Persediaan (K)     Rp   12.100.000,00 Pembelian (K)     Rp 192.400.000,00",
-						"Persediaan (D)   Rp   15.550.000,00 Retur pembelian (D)  Rp     9.500.000,00 Potongan pembelian (D)  Rp   12.750.000,00 Harga Pokok Pembelian (D) Rp 180.700.000,00 Persediaan (K)     Rp   12.100.000,00 Pembelian (K)     Rp 192.400.000,00",
-						"Persediaan (D)   Rp   2.950.000,00 Potongan pembelian (D)  Rp   1.500.000,00 Harga Pokok Penjualan (D) Rp 13.650.000,00  Persediaan (K)     Rp   2.450.000,00  Pembelian (K)     Rp 14.650.000,00",
-						"Persediaan (D)   Rp   2.950.000,00 Potongan pembelian (D)  Rp   1.500.000,00 Harga Pokok Penjualan (D) Rp 13.650.000,00  Persediaan (K)     Rp   2.450.000,00  Pembelian (K)     Rp 14.650.000,00",
-						"'Rp 5.560.000,00",
-						"'Rp1.540.000,00 ",
-						"'Rp 5.560.000,00",
-						"'Rp1.540.000,00 ",
-						"'Rp4.430,00 ",
-						"'Rp 5. 247.419,35",
-						"'Rp1.203.580,65 ",
-						"'Rp4.430,94 ",
-						"'Rp 5. 247.419,35",
-						"'Rp1.203.580,65",
-						"Piutang Dagang (D)  Rp 1.890.000,00 Harga Pokok Penjualan (D) Rp 1.155.000,00  Persediaan (K)     Rp 1.155.000,00 Penjualan (K)     Rp 1.890.000,00",
-						"Piutang Dagang (D)  Rp 1.890.000,00 Harga Pokok Penjualan (D) Rp 1.215.000,00  Persediaan (K)     Rp 1.215.000,00 Penjualan (K)     Rp 1.890.000,00",
-						"Piutang Dagang (D)  Rp 1.890.000,00 Harga Pokok Penjualan (D) Rp 1.155.000,00 Persediaan (K)     Rp 1.155.000,00 Penjualan (K)     Rp 1.890.000,00",
-						"Piutang Dagang (D)  Rp 1.215.000,00  Harga Pokok Penjualan (D) Rp 1.890.000,00  Persediaan (K)     Rp 1.890.000,00 Penjualan (K)     Rp 1.215.000,00",
-						"Piutang Dagang (D)  Rp 1.215.000,00  Harga Pokok Penjualan (D) Rp 1.176.246,00  Persediaan (K)     Rp 1.176.246,00 Penjualan (K)     Rp 1.215.000,00"
+						"Persediaan Barang Dagangan (D)  Rp 3.250.000,00<br/> Hutang Dagang (K)    Rp 3.250.000,00",
+						"Persediaan Barang Dagangan (D)  Rp 3.250.000,00<br/> Hutang Dagang (K)    Rp 3.250.000,00",
+						"Persediaan Barang Dagangan (D)Rp 9.500.000,00<br/> Kas (K)     Rp 9.500.000,00",
+						"Persediaan Barang Dagangan (D)Rp 9.500.000,00<br/> Kas (K)     Rp 9.500.000,00",
+						"Retur Pembelian (D)    Rp 750.000,00<br/> Persediaan Barang Dagangan (K)   Rp 750.000,00",
+						"Retur Pembelian (D)    Rp 750.000,00<br/> Persediaan Barang Dagangan (K)   Rp 750.000,00",
+						"Retur Pembelian (D)  Rp 500.000,00<br/> Persediaan Barang Dagangan  (K)  Rp 500.000,00",
+						"Retur Pembelian (D)  Rp 500.000,00<br/> Persediaan Barang Dagangan  (K)  Rp 500.000,00",
+						"Persediaan Barang Dagangan (D) Rp 450.000,00<br/> Hutang Dagang (K)    Rp 450.000,00",
+						"Persediaan Barang Dagangan (D) Rp 450.000,00<br/> Hutang Dagang (K)    Rp 450.000,00",
+						"Hutang Dagang (D)  Rp  3.185.000,00<br/> Potongan Pembelian (D)  Rp       65.000,00<br/> Kas (K)     Rp 3.250.000,00",
+						"Hutang Dagang (D)  Rp  3.185.000,00<br/> Potongan Pembelian (D)  Rp       65.000,00<br/> Kas (K)     Rp 3.250.000,00",
+						"Hutang Dagang (D)  Rp 12.000.000,00<br/> Persediaan Barang Dagangan (K)   Rp      240.000,00<br/> Kas (K)     Rp 11.760.000,00",
+						"Hutang Dagang (D)  Rp 12.000.000,00<br/> Persediaan Barang Dagangan (K)   Rp      240.000,00<br/> Kas (K)     Rp 11.760.000,00",
+						"Piutang Dagang (D)  Rp 4.500.000,00<br/> Penjualan (K) Rp 4.500.000,00<br/> Harga Pokok Penjualan (D) Rp 3.750.000,00<br/> Persediaan Barang Dagangan (K)   Rp 3.750.000,00",
+						"Piutang Dagang (D)  Rp 4.500.000,00<br/> Penjualan (K)      Rp 4.500.000,00<br/> Harga Pokok Penjualan (D) Rp 3.750.000,00<br/> Persediaan Barang Dagangan (K)   Rp 3.750.000,00",
+						"Kas  (D)     Rp 5.525.000,00<br/> Penjualan (K)     Rp 5.525.000,00",
+						"Kas  (D)     Rp 5.525.000,00<br/> Penjualan (K)     Rp 5.525.000,00",
+						"Retur penjualan (D)  Rp 400.000,00<br/> Persediaan barang dagangan (D) Rp 500.000,00<br/> Harga pokok penjualan (K)   Rp 400.000,00<br/> Hutang dagang (K)    Rp 500.000,00 ",
+						"Retur penjualan (D)  Rp 400.000,00<br/> Persediaan barang dagangan (D) Rp 500.000,00<br/> Harga pokok penjualan (K)   Rp 400.000,00<br/> Hutang dagang (K)    Rp 500.000,00 ",
+						"Kas (D)    Rp 7.350.000,00<br/> Potongan penjualan (D)  Rp    150.000,00<br/> Piutang Dagang (K)    Rp 7.500.000,00",
+						"Kas (D)    Rp 7.350.000,00<br/> Potongan penjualan (D)  Rp    150.000,00<br/> Piutang Dagang (K)    Rp 7.500.000,00",
+						"Persediaan (D)   Rp   15.550.000,00<br/> Retur pembelian (D)  Rp     9.500.000,00<br/> Potongan pembelian (D)  Rp   12.750.000,00<br/> Harga Pokok Pembelian (D) Rp 180.700.000,00<br/> Persediaan (K)     Rp   12.100.000,00<br/> Pembelian (K)     Rp 192.400.000,00",
+						"Persediaan (D)   Rp   15.550.000,00<br/> Retur pembelian (D)  Rp     9.500.000,00<br/> Potongan pembelian (D)  Rp   12.750.000,00<br/> Harga Pokok Pembelian (D) Rp 180.700.000,00<br/> Persediaan (K)     Rp   12.100.000,00<br/> Pembelian (K)     Rp 192.400.000,00",
+						"Persediaan (D)   Rp   2.950.000,00<br/> Potongan pembelian (D)  Rp   1.500.000,00<br/> Harga Pokok Penjualan (D) Rp 13.650.000,00<br/> Persediaan (K)     Rp   2.450.000,00<br/>  Pembelian (K)     Rp 14.650.000,00",
+						"Persediaan (D)   Rp   2.950.000,00<br/> Potongan pembelian (D)  Rp   1.500.000,00<br/> Harga Pokok Penjualan (D) Rp 13.650.000,00<br/>  Persediaan (K)     Rp   2.450.000,00<br/>  Pembelian (K)     Rp 14.650.000,00",
+						"Rp 5.560.000,00",
+						"Rp1.540.000,00 ",
+						"Rp 5.560.000,00",
+						"Rp1.540.000,00 ",
+						"Rp4.430,00 ",
+						"Rp 5. 247.419,35",
+						"Rp1.203.580,65 ",
+						"Rp4.430,94 ",
+						"Rp 5. 247.419,35",
+						"Rp1.203.580,65",
+						"Piutang Dagang (D)  Rp 1.890.000,00<br/> Harga Pokok Penjualan (D) Rp 1.155.000,00<br/>  Persediaan (K)     Rp 1.155.000,00<br/> Penjualan (K)     Rp 1.890.000,00",
+						"Piutang Dagang (D)  Rp 1.890.000,00<br/> Harga Pokok Penjualan (D) Rp 1.215.000,00<br/>  Persediaan (K)     Rp 1.215.000,00<br/> Penjualan (K)     Rp 1.890.000,00",
+						"Piutang Dagang (D)  Rp 1.890.000,00<br/> Harga Pokok Penjualan (D) Rp 1.155.000,00<br/> Persediaan (K)     Rp 1.155.000,00<br/> Penjualan (K)     Rp 1.890.000,00",
+						"Piutang Dagang (D)  Rp 1.215.000,00<br/>  Harga Pokok Penjualan (D) Rp 1.890.000,00<br/>  Persediaan (K)     Rp 1.890.000,00<br/> Penjualan (K)     Rp 1.215.000,00",
+						"Piutang Dagang (D)  Rp 1.215.000,00<br/>  Harga Pokok Penjualan (D) Rp 1.176.246,00<br/>  Persediaan (K)     Rp 1.176.246,00<br/> Penjualan (K)     Rp 1.215.000,00"
 					];
 			var opsiE = [									 	   
 						"Menjual barang konsinyasi.",
@@ -1203,15 +1204,8 @@
 				}else{
 					document.getElementById("divSoal").style.display = "none";
 					document.getElementById("divSekor").style.display = "initial";
-					document.getElementById("sekor").innerHTML = (sekor/3).toFixed(2);
+					document.getElementById("sekor").innerHTML = (sekor/2).toFixed(2);
 					var keterangan;
-					if(sekor>=210){
-						keterangan = "Selamat anda berhasil mengerjakan dengan baik";
-					    document.getElementById("btn-pembahasan").style.visibility = "visible";
-					}else{
-						keterangan = "Maaf anda belum lulus, silakan pelajari lagi pada Menu Materi";
-					    document.getElementById("btn-pembahasan").style.visibility = "hidden";
-					}
 					document.getElementById("keterangan").innerHTML = keterangan;
 				}
 			}

@@ -115,6 +115,10 @@ margin: .8em 30% .8em;
 	background: url("../img/button/menu-utama.png") repeat-x;
 	background-size: contain;
 }
+.btn-menu-merah{
+	background: url("../img/button/btn-red.png") repeat-x;
+	background-size: contain;
+}
 .txt-indent {
 	padding-left: 50px;
 }

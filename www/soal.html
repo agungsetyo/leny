@@ -7,6 +7,13 @@
 
 	<link rel="stylesheet"  href="libs/jQM-flat/jquery.mobile.flatui.css">
 	<link rel="stylesheet" type="text/css" href="css/index.css" />
+	
+	<script type="text/javascript" src="libs/fastclick.min.js"></script>
+	<script type="text/javascript" src="phonegap.js"></script>
+	<script type="text/javascript" src="libs/jquery-2.0.3.min.js"></script>
+	<script type="text/javascript" src="libs/jQueryMobile/jquery.mobile-1.3.2.min.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+	<script type="text/javascript" src="js/function.js"></script>
 
 	<title>SISTEM PENCATATAN DAN PENILAIAN PERSEDIAAN PADA PERUSAHAAN DAGANG</title>
 </head>
@@ -21,40 +28,895 @@
 				<!-- Isi konten di sini --> 
 				<p>PT Adhi Tech merupakan perusahaan dagang yang memperdagangkan TV yang beralamat di JL Fatmawati no 20, Jakarta 12410 Telp: 012-7502457. Seluruh pembelian yang dilakukan oleh perusahaan dengan cara kredit. Penjualan yang dilakukan secara kredit perusahaan mengeluarkan kas untuk membayar biaya angkut sebesar 1% dari harga jual.</p>
 				<p>Barang Dagangan</p>
+				<table>
+					<tr>
+						<th>Kode Barang</th>
+						<th>Merk</th>
+						<th>Harga Beli</th>
+						<th>Harga Jual</th>
+						<th>Stok</th>
+					</tr>
+					<tr>
+						<td>MI-001</td>
+						<td>LG</td>
+						<td>Rp 1.586.000,00</td>
+						<td>RP 2.440.000,00</td>
+						<td>45</td>
+					</tr>
+					<tr>
+						<td>MI-002</td>
+						<td>Samsung</td>
+						<td>Rp 1.430.000,00</td>
+						<td>RP 2.200.000,00</td>
+						<td>30</td>
+					</tr>
+					<tr>
+						<td>MI-003</td>
+						<td>Sony</td>
+						<td>Rp 1.787.500,00</td>
+						<td>RP 2.750.000,00</td>
+						<td>10</td>
+					</tr>
+				</table>
+
 				<p>Buatlah jurnal yang diperlukan selama bulan februari terkait dengan persediaan. Berikut transaksi bulan februari:</p>
 				<div data-role="collapsible" data-collapsed-icon="arrow-d" data-expanded-icon="arrow-u" data-iconpos="right" data-theme="b">
 					<h3><b>Sistem Periodik</b></h3>
-					<a href="#" data-theme="a"  data-role="button">FIFO (<i>First In First Out</i>)</a>
-					<a href="#" data-theme="a"  data-role="button">LIFO (<i>Last In First Out</i>)</a>
-					<a href="#" data-theme="a"  data-role="button">Rata-Rata Sederhana</a>
-					<a href="#" data-theme="a"  data-role="button">Rata-Rata Tertimbang</a>
+					<a href="#periodik-fifo-page" data-theme="a"  data-role="button" onmousedown="mulaiSoalPeriodikFIFO()">FIFO (<i>First In First Out</i>)</a>
+					<a href="#periodik-lifo-page" data-theme="a"  data-role="button" onmousedown="mulaiSoalPeriodikLIFO()">LIFO (<i>Last In First Out</i>)</a>
+					<a href="#periodik-sederhana-page" data-theme="a"  data-role="button" onmousedown="mulaiSoalPeriodikSederhana()">Rata-Rata Sederhana</a>
+					<a href="#periodik-tertimbang-page" data-theme="a"  data-role="button" onmousedown="mulaiSoalPeriodikTertimbang()">Rata-Rata Tertimbang</a>
 				</div>
 				<div data-role="collapsible" data-collapsed-icon="arrow-d" data-expanded-icon="arrow-u" data-iconpos="right" data-theme="b">
 					<h3><b>Sistem Perpetual</b></h3>
-					<a href="#" data-theme="a"  data-role="button">FIFO (<i>First In First Out</i>)</a>
-					<a href="#" data-theme="a"  data-role="button">LIFO (<i>Last In First Out</i>)</a>
-					<a href="#" data-theme="a"  data-role="button">Rata-Rata Bergerak</a>
+					<a href="#perpetual-fifo-page" data-theme="a"  data-role="button" onmousedown="mulaiSoalPerpetualFIFO()">FIFO (<i>First In First Out</i>)</a>
+					<a href="#perpetual-lifo-page" data-theme="a"  data-role="button" onmousedown="mulaiSoalPerpetualLIFO()">LIFO (<i>Last In First Out</i>)</a>
+					<a href="#perpetual-bergerak-page" data-theme="a"  data-role="button" onmousedown="mulaiSoalPerpetualBergerak()">Rata-Rata Bergerak</a>
 				</div>
 			</div>
 		</div>
 		
-		<div  id="eval2-page" data-role="page" style="background: url('img/bg/bg-profil.png'); background-repeat: repeat-x repeat-y;">
+		<div  id="periodik-fifo-page" data-role="page" style="background: url('img/bg/bg-profil.png'); background-repeat: repeat-x repeat-y;">
 			<div data-role="header" data-id="header1" data-position="fixed" class="ui-header">
 				<a href="#" data-rel="back" data-role="button" data-icon="arrow-l" data-inline="true" >Back</a>
 				<h1>Periodik FIFO</h1>
 			</div>
-			<div data-role="content" align="center" style="font-size: 16px;">
-				<!-- Isi konten di sini --> 
+			<div data-role="content" style="font-size: 16px;">
+				<!-- Isi konten di sini -->
+				<center><b id="periodik-fifo-soal">Tanggal 3 Januari</b></center>
+				<table>
+					<tr>
+						<td>
+							<select id="select-priodik-fifo-0">
+								<option value="0">Pilih</option>
+								<option value="1">Kas (D)</option>
+								<option value="2">Kas (K)</option>
+								<option value="3">Piutang Dagang (D)</option>
+								<option value="4">Piutang Dagang (K)</option>
+								<option value="5">Persediaan Barang Dagangan (D)</option>
+								<option value="6">Persediaan Barang Dagangan (K)</option>
+								<option value="7">Hutang Dagang (D)</option>
+								<option value="8">Hutang Dagang (K)</option>
+								<option value="9">Penjualan (D)</option>
+								<option value="10">Penjualan (K)</option>
+								<option value="11">Pembelian (D)</option>
+								<option value="12">Pembelian (K)</option>
+								<option value="13">Biaya Angkut Penjualan (D)</option>
+								<option value="14">Biaya Angkut Penjualan (K)</option>
+								<option value="15">Harga Pokok Penjualan (D)</option>
+								<option value="16">Harga Pokok Penjualan (K)</option>
+							</select>
+						</td>
+						<td><input type="text" class="uang" id="uang-periodik-fifo-0"></input></td>
+					</tr>
+				</table>
+				<table>
+					<tr>
+						<td>
+							<select id="select-priodik-fifo-1">
+								<option value="0">Pilih</option>
+								<option value="1">Kas (D)</option>
+								<option value="2">Kas (K)</option>
+								<option value="3">Piutang Dagang (D)</option>
+								<option value="4">Piutang Dagang (K)</option>
+								<option value="5">Persediaan Barang Dagangan (D)</option>
+								<option value="6">Persediaan Barang Dagangan (K)</option>
+								<option value="7">Hutang Dagang (D)</option>
+								<option value="8">Hutang Dagang (K)</option>
+								<option value="9">Penjualan (D)</option>
+								<option value="10">Penjualan (K)</option>
+								<option value="11">Pembelian (D)</option>
+								<option value="12">Pembelian (K)</option>
+								<option value="13">Biaya Angkut Penjualan (D)</option>
+								<option value="14">Biaya Angkut Penjualan (K)</option>
+								<option value="15">Harga Pokok Penjualan (D)</option>
+								<option value="16">Harga Pokok Penjualan (K)</option>
+							</select>
+						</td>
+						<td><input type="text" class="uang" id="uang-periodik-fifo-1"></input></td>
+					</tr>
+				</table>
+				<table>
+					<tr>
+						<td>
+							<select id="select-priodik-fifo-2">
+								<option value="0">Pilih</option>
+								<option value="1">Kas (D)</option>
+								<option value="2">Kas (K)</option>
+								<option value="3">Piutang Dagang (D)</option>
+								<option value="4">Piutang Dagang (K)</option>
+								<option value="5">Persediaan Barang Dagangan (D)</option>
+								<option value="6">Persediaan Barang Dagangan (K)</option>
+								<option value="7">Hutang Dagang (D)</option>
+								<option value="8">Hutang Dagang (K)</option>
+								<option value="9">Penjualan (D)</option>
+								<option value="10">Penjualan (K)</option>
+								<option value="11">Pembelian (D)</option>
+								<option value="12">Pembelian (K)</option>
+								<option value="13">Biaya Angkut Penjualan (D)</option>
+								<option value="14">Biaya Angkut Penjualan (K)</option>
+								<option value="15">Harga Pokok Penjualan (D)</option>
+								<option value="16">Harga Pokok Penjualan (K)</option>
+							</select>
+						</td>
+						<td><input type="text" class="uang" id="uang-periodik-fifo-2"></input></td>
+					</tr>
+				</table>
+				<table>
+					<tr>
+						<td>
+							<select id="select-priodik-fifo-3">
+								<option value="0">Pilih</option>
+								<option value="1">Kas (D)</option>
+								<option value="2">Kas (K)</option>
+								<option value="3">Piutang Dagang (D)</option>
+								<option value="4">Piutang Dagang (K)</option>
+								<option value="5">Persediaan Barang Dagangan (D)</option>
+								<option value="6">Persediaan Barang Dagangan (K)</option>
+								<option value="7">Hutang Dagang (D)</option>
+								<option value="8">Hutang Dagang (K)</option>
+								<option value="9">Penjualan (D)</option>
+								<option value="10">Penjualan (K)</option>
+								<option value="11">Pembelian (D)</option>
+								<option value="12">Pembelian (K)</option>
+								<option value="13">Biaya Angkut Penjualan (D)</option>
+								<option value="14">Biaya Angkut Penjualan (K)</option>
+								<option value="15">Harga Pokok Penjualan (D)</option>
+								<option value="16">Harga Pokok Penjualan (K)</option>
+							</select>
+						</td>
+						<td><input type="text" class="uang" id="uang-periodik-fifo-3"></input></td>
+					</tr>
+				</table>
+				<button id="periodik-fifo-btn-cek">Cek Jawaban</button>
+				<p id="periodik-fifo-cek-jawaban"></p>
+				<div id="div-periodik-fifo-next">
+					<button id="periodik-fifo-btn-next">Data Selanjutnya</button>
+				</div>
+			</div>
+		</div>
+		
+		<div  id="periodik-lifo-page" data-role="page" style="background: url('img/bg/bg-profil.png'); background-repeat: repeat-x repeat-y;">
+			<div data-role="header" data-id="header1" data-position="fixed" class="ui-header">
+				<a href="#" data-rel="back" data-role="button" data-icon="arrow-l" data-inline="true" >Back</a>
+				<h1>Periodik lifo</h1>
+			</div>
+			<div data-role="content" style="font-size: 16px;">
+				<!-- Isi konten di sini -->
+				<center><b id="periodik-lifo-soal">Tanggal 3 Januari</b></center>
+				<table>
+					<tr>
+						<td>
+							<select id="select-priodik-lifo-0">
+								<option value="0">Pilih</option>
+								<option value="1">Kas (D)</option>
+								<option value="2">Kas (K)</option>
+								<option value="3">Piutang Dagang (D)</option>
+								<option value="4">Piutang Dagang (K)</option>
+								<option value="5">Persediaan Barang Dagangan (D)</option>
+								<option value="6">Persediaan Barang Dagangan (K)</option>
+								<option value="7">Hutang Dagang (D)</option>
+								<option value="8">Hutang Dagang (K)</option>
+								<option value="9">Penjualan (D)</option>
+								<option value="10">Penjualan (K)</option>
+								<option value="11">Pembelian (D)</option>
+								<option value="12">Pembelian (K)</option>
+								<option value="13">Biaya Angkut Penjualan (D)</option>
+								<option value="14">Biaya Angkut Penjualan (K)</option>
+								<option value="15">Harga Pokok Penjualan (D)</option>
+								<option value="16">Harga Pokok Penjualan (K)</option>
+							</select>
+						</td>
+						<td><input type="text" class="uang" id="uang-periodik-lifo-0"></input></td>
+					</tr>
+				</table>
+				<table>
+					<tr>
+						<td>
+							<select id="select-priodik-lifo-1">
+								<option value="0">Pilih</option>
+								<option value="1">Kas (D)</option>
+								<option value="2">Kas (K)</option>
+								<option value="3">Piutang Dagang (D)</option>
+								<option value="4">Piutang Dagang (K)</option>
+								<option value="5">Persediaan Barang Dagangan (D)</option>
+								<option value="6">Persediaan Barang Dagangan (K)</option>
+								<option value="7">Hutang Dagang (D)</option>
+								<option value="8">Hutang Dagang (K)</option>
+								<option value="9">Penjualan (D)</option>
+								<option value="10">Penjualan (K)</option>
+								<option value="11">Pembelian (D)</option>
+								<option value="12">Pembelian (K)</option>
+								<option value="13">Biaya Angkut Penjualan (D)</option>
+								<option value="14">Biaya Angkut Penjualan (K)</option>
+								<option value="15">Harga Pokok Penjualan (D)</option>
+								<option value="16">Harga Pokok Penjualan (K)</option>
+							</select>
+						</td>
+						<td><input type="text" class="uang" id="uang-periodik-lifo-1"></input></td>
+					</tr>
+				</table>
+				<table>
+					<tr>
+						<td>
+							<select id="select-priodik-lifo-2">
+								<option value="0">Pilih</option>
+								<option value="1">Kas (D)</option>
+								<option value="2">Kas (K)</option>
+								<option value="3">Piutang Dagang (D)</option>
+								<option value="4">Piutang Dagang (K)</option>
+								<option value="5">Persediaan Barang Dagangan (D)</option>
+								<option value="6">Persediaan Barang Dagangan (K)</option>
+								<option value="7">Hutang Dagang (D)</option>
+								<option value="8">Hutang Dagang (K)</option>
+								<option value="9">Penjualan (D)</option>
+								<option value="10">Penjualan (K)</option>
+								<option value="11">Pembelian (D)</option>
+								<option value="12">Pembelian (K)</option>
+								<option value="13">Biaya Angkut Penjualan (D)</option>
+								<option value="14">Biaya Angkut Penjualan (K)</option>
+								<option value="15">Harga Pokok Penjualan (D)</option>
+								<option value="16">Harga Pokok Penjualan (K)</option>
+							</select>
+						</td>
+						<td><input type="text" class="uang" id="uang-periodik-lifo-2"></input></td>
+					</tr>
+				</table>
+				<table>
+					<tr>
+						<td>
+							<select id="select-priodik-lifo-3">
+								<option value="0">Pilih</option>
+								<option value="1">Kas (D)</option>
+								<option value="2">Kas (K)</option>
+								<option value="3">Piutang Dagang (D)</option>
+								<option value="4">Piutang Dagang (K)</option>
+								<option value="5">Persediaan Barang Dagangan (D)</option>
+								<option value="6">Persediaan Barang Dagangan (K)</option>
+								<option value="7">Hutang Dagang (D)</option>
+								<option value="8">Hutang Dagang (K)</option>
+								<option value="9">Penjualan (D)</option>
+								<option value="10">Penjualan (K)</option>
+								<option value="11">Pembelian (D)</option>
+								<option value="12">Pembelian (K)</option>
+								<option value="13">Biaya Angkut Penjualan (D)</option>
+								<option value="14">Biaya Angkut Penjualan (K)</option>
+								<option value="15">Harga Pokok Penjualan (D)</option>
+								<option value="16">Harga Pokok Penjualan (K)</option>
+							</select>
+						</td>
+						<td><input type="text" class="uang" id="uang-periodik-lifo-3"></input></td>
+					</tr>
+				</table>
+				<button id="periodik-lifo-btn-cek">Cek Jawaban</button>
+				<p id="periodik-lifo-cek-jawaban"></p>
+				<div id="div-periodik-lifo-next">
+					<button id="periodik-lifo-btn-next">Transaksi Selanjutnya</button>
+				</div>
+			</div>
+		</div>
+		
+		
+		<div  id="periodik-sederhana-page" data-role="page" style="background: url('img/bg/bg-profil.png'); background-repeat: repeat-x repeat-y;">
+			<div data-role="header" data-id="header1" data-position="fixed" class="ui-header">
+				<a href="#" data-rel="back" data-role="button" data-icon="arrow-l" data-inline="true" >Back</a>
+				<h1>Periodik sederhana</h1>
+			</div>
+			<div data-role="content" style="font-size: 16px;">
+				<!-- Isi konten di sini -->
+				<center><b id="periodik-sederhana-soal">Tanggal 3 Januari</b></center>
+				<table>
+					<tr>
+						<td>
+							<select id="select-priodik-sederhana-0">
+								<option value="0">Pilih</option>
+								<option value="1">Kas (D)</option>
+								<option value="2">Kas (K)</option>
+								<option value="3">Piutang Dagang (D)</option>
+								<option value="4">Piutang Dagang (K)</option>
+								<option value="5">Persediaan Barang Dagangan (D)</option>
+								<option value="6">Persediaan Barang Dagangan (K)</option>
+								<option value="7">Hutang Dagang (D)</option>
+								<option value="8">Hutang Dagang (K)</option>
+								<option value="9">Penjualan (D)</option>
+								<option value="10">Penjualan (K)</option>
+								<option value="11">Pembelian (D)</option>
+								<option value="12">Pembelian (K)</option>
+								<option value="13">Biaya Angkut Penjualan (D)</option>
+								<option value="14">Biaya Angkut Penjualan (K)</option>
+								<option value="15">Harga Pokok Penjualan (D)</option>
+								<option value="16">Harga Pokok Penjualan (K)</option>
+							</select>
+						</td>
+						<td><input type="text" class="uang" id="uang-periodik-sederhana-0"></input></td>
+					</tr>
+				</table>
+				<table>
+					<tr>
+						<td>
+							<select id="select-priodik-sederhana-1">
+								<option value="0">Pilih</option>
+								<option value="1">Kas (D)</option>
+								<option value="2">Kas (K)</option>
+								<option value="3">Piutang Dagang (D)</option>
+								<option value="4">Piutang Dagang (K)</option>
+								<option value="5">Persediaan Barang Dagangan (D)</option>
+								<option value="6">Persediaan Barang Dagangan (K)</option>
+								<option value="7">Hutang Dagang (D)</option>
+								<option value="8">Hutang Dagang (K)</option>
+								<option value="9">Penjualan (D)</option>
+								<option value="10">Penjualan (K)</option>
+								<option value="11">Pembelian (D)</option>
+								<option value="12">Pembelian (K)</option>
+								<option value="13">Biaya Angkut Penjualan (D)</option>
+								<option value="14">Biaya Angkut Penjualan (K)</option>
+								<option value="15">Harga Pokok Penjualan (D)</option>
+								<option value="16">Harga Pokok Penjualan (K)</option>
+							</select>
+						</td>
+						<td><input type="text" class="uang" id="uang-periodik-sederhana-1"></input></td>
+					</tr>
+				</table>
+				<table>
+					<tr>
+						<td>
+							<select id="select-priodik-sederhana-2">
+								<option value="0">Pilih</option>
+								<option value="1">Kas (D)</option>
+								<option value="2">Kas (K)</option>
+								<option value="3">Piutang Dagang (D)</option>
+								<option value="4">Piutang Dagang (K)</option>
+								<option value="5">Persediaan Barang Dagangan (D)</option>
+								<option value="6">Persediaan Barang Dagangan (K)</option>
+								<option value="7">Hutang Dagang (D)</option>
+								<option value="8">Hutang Dagang (K)</option>
+								<option value="9">Penjualan (D)</option>
+								<option value="10">Penjualan (K)</option>
+								<option value="11">Pembelian (D)</option>
+								<option value="12">Pembelian (K)</option>
+								<option value="13">Biaya Angkut Penjualan (D)</option>
+								<option value="14">Biaya Angkut Penjualan (K)</option>
+								<option value="15">Harga Pokok Penjualan (D)</option>
+								<option value="16">Harga Pokok Penjualan (K)</option>
+							</select>
+						</td>
+						<td><input type="text" class="uang" id="uang-periodik-sederhana-2"></input></td>
+					</tr>
+				</table>
+				<table>
+					<tr>
+						<td>
+							<select id="select-priodik-sederhana-3">
+								<option value="0">Pilih</option>
+								<option value="1">Kas (D)</option>
+								<option value="2">Kas (K)</option>
+								<option value="3">Piutang Dagang (D)</option>
+								<option value="4">Piutang Dagang (K)</option>
+								<option value="5">Persediaan Barang Dagangan (D)</option>
+								<option value="6">Persediaan Barang Dagangan (K)</option>
+								<option value="7">Hutang Dagang (D)</option>
+								<option value="8">Hutang Dagang (K)</option>
+								<option value="9">Penjualan (D)</option>
+								<option value="10">Penjualan (K)</option>
+								<option value="11">Pembelian (D)</option>
+								<option value="12">Pembelian (K)</option>
+								<option value="13">Biaya Angkut Penjualan (D)</option>
+								<option value="14">Biaya Angkut Penjualan (K)</option>
+								<option value="15">Harga Pokok Penjualan (D)</option>
+								<option value="16">Harga Pokok Penjualan (K)</option>
+							</select>
+						</td>
+						<td><input type="text" class="uang" id="uang-periodik-sederhana-3"></input></td>
+					</tr>
+				</table>
+				<button id="periodik-sederhana-btn-cek">Cek Jawaban</button>
+				<p id="periodik-sederhana-cek-jawaban"></p>
+				<div id="div-periodik-sederhana-next">
+					<button id="periodik-sederhana-btn-next">Data Selanjutnya</button>
+				</div>
+			</div>
+		</div>
+		
+		
+		<div  id="periodik-tertimbang-page" data-role="page" style="background: url('img/bg/bg-profil.png'); background-repeat: repeat-x repeat-y;">
+			<div data-role="header" data-id="header1" data-position="fixed" class="ui-header">
+				<a href="#" data-rel="back" data-role="button" data-icon="arrow-l" data-inline="true" >Back</a>
+				<h1>Periodik tertimbang</h1>
+			</div>
+			<div data-role="content" style="font-size: 16px;">
+				<!-- Isi konten di sini -->
+				<center><b id="periodik-tertimbang-soal">Tanggal 3 Januari</b></center>
+				<table>
+					<tr>
+						<td>
+							<select id="select-priodik-tertimbang-0">
+								<option value="0">Pilih</option>
+								<option value="1">Kas (D)</option>
+								<option value="2">Kas (K)</option>
+								<option value="3">Piutang Dagang (D)</option>
+								<option value="4">Piutang Dagang (K)</option>
+								<option value="5">Persediaan Barang Dagangan (D)</option>
+								<option value="6">Persediaan Barang Dagangan (K)</option>
+								<option value="7">Hutang Dagang (D)</option>
+								<option value="8">Hutang Dagang (K)</option>
+								<option value="9">Penjualan (D)</option>
+								<option value="10">Penjualan (K)</option>
+								<option value="11">Pembelian (D)</option>
+								<option value="12">Pembelian (K)</option>
+								<option value="13">Biaya Angkut Penjualan (D)</option>
+								<option value="14">Biaya Angkut Penjualan (K)</option>
+								<option value="15">Harga Pokok Penjualan (D)</option>
+								<option value="16">Harga Pokok Penjualan (K)</option>
+							</select>
+						</td>
+						<td><input type="text" class="uang" id="uang-periodik-tertimbang-0"></input></td>
+					</tr>
+				</table>
+				<table>
+					<tr>
+						<td>
+							<select id="select-priodik-tertimbang-1">
+								<option value="0">Pilih</option>
+								<option value="1">Kas (D)</option>
+								<option value="2">Kas (K)</option>
+								<option value="3">Piutang Dagang (D)</option>
+								<option value="4">Piutang Dagang (K)</option>
+								<option value="5">Persediaan Barang Dagangan (D)</option>
+								<option value="6">Persediaan Barang Dagangan (K)</option>
+								<option value="7">Hutang Dagang (D)</option>
+								<option value="8">Hutang Dagang (K)</option>
+								<option value="9">Penjualan (D)</option>
+								<option value="10">Penjualan (K)</option>
+								<option value="11">Pembelian (D)</option>
+								<option value="12">Pembelian (K)</option>
+								<option value="13">Biaya Angkut Penjualan (D)</option>
+								<option value="14">Biaya Angkut Penjualan (K)</option>
+								<option value="15">Harga Pokok Penjualan (D)</option>
+								<option value="16">Harga Pokok Penjualan (K)</option>
+							</select>
+						</td>
+						<td><input type="text" class="uang" id="uang-periodik-tertimbang-1"></input></td>
+					</tr>
+				</table>
+				<table>
+					<tr>
+						<td>
+							<select id="select-priodik-tertimbang-2">
+								<option value="0">Pilih</option>
+								<option value="1">Kas (D)</option>
+								<option value="2">Kas (K)</option>
+								<option value="3">Piutang Dagang (D)</option>
+								<option value="4">Piutang Dagang (K)</option>
+								<option value="5">Persediaan Barang Dagangan (D)</option>
+								<option value="6">Persediaan Barang Dagangan (K)</option>
+								<option value="7">Hutang Dagang (D)</option>
+								<option value="8">Hutang Dagang (K)</option>
+								<option value="9">Penjualan (D)</option>
+								<option value="10">Penjualan (K)</option>
+								<option value="11">Pembelian (D)</option>
+								<option value="12">Pembelian (K)</option>
+								<option value="13">Biaya Angkut Penjualan (D)</option>
+								<option value="14">Biaya Angkut Penjualan (K)</option>
+								<option value="15">Harga Pokok Penjualan (D)</option>
+								<option value="16">Harga Pokok Penjualan (K)</option>
+							</select>
+						</td>
+						<td><input type="text" class="uang" id="uang-periodik-tertimbang-2"></input></td>
+					</tr>
+				</table>
+				<table>
+					<tr>
+						<td>
+							<select id="select-priodik-tertimbang-3">
+								<option value="0">Pilih</option>
+								<option value="1">Kas (D)</option>
+								<option value="2">Kas (K)</option>
+								<option value="3">Piutang Dagang (D)</option>
+								<option value="4">Piutang Dagang (K)</option>
+								<option value="5">Persediaan Barang Dagangan (D)</option>
+								<option value="6">Persediaan Barang Dagangan (K)</option>
+								<option value="7">Hutang Dagang (D)</option>
+								<option value="8">Hutang Dagang (K)</option>
+								<option value="9">Penjualan (D)</option>
+								<option value="10">Penjualan (K)</option>
+								<option value="11">Pembelian (D)</option>
+								<option value="12">Pembelian (K)</option>
+								<option value="13">Biaya Angkut Penjualan (D)</option>
+								<option value="14">Biaya Angkut Penjualan (K)</option>
+								<option value="15">Harga Pokok Penjualan (D)</option>
+								<option value="16">Harga Pokok Penjualan (K)</option>
+							</select>
+						</td>
+						<td><input type="text" class="uang" id="uang-periodik-tertimbang-3"></input></td>
+					</tr>
+				</table>
+				<button id="periodik-tertimbang-btn-cek">Cek Jawaban</button>
+				<p id="periodik-tertimbang-cek-jawaban"></p>
+				<div id="div-periodik-tertimbang-next">
+					<button id="periodik-tertimbang-btn-next">Transaksi Selanjutnya</button>
+				</div>
+			</div>
+		</div>
+				<div  id="perpetual-fifo-page" data-role="page" style="background: url('img/bg/bg-profil.png'); background-repeat: repeat-x repeat-y;">
+			<div data-role="header" data-id="header1" data-position="fixed" class="ui-header">
+				<a href="#" data-rel="back" data-role="button" data-icon="arrow-l" data-inline="true" >Back</a>
+				<h1>Periodik FIFO</h1>
+			</div>
+			<div data-role="content" style="font-size: 16px;">
+				<!-- Isi konten di sini -->
+				<center><b id="perpetual-fifo-soal">Tanggal 3 Januari</b></center>
+				<table>
+					<tr>
+						<td>
+							<select id="select-perpetual-fifo-0">
+								<option value="0">Pilih</option>
+								<option value="1">Kas (D)</option>
+								<option value="2">Kas (K)</option>
+								<option value="3">Piutang Dagang (D)</option>
+								<option value="4">Piutang Dagang (K)</option>
+								<option value="5">Persediaan Barang Dagangan (D)</option>
+								<option value="6">Persediaan Barang Dagangan (K)</option>
+								<option value="7">Hutang Dagang (D)</option>
+								<option value="8">Hutang Dagang (K)</option>
+								<option value="9">Penjualan (D)</option>
+								<option value="10">Penjualan (K)</option>
+								<option value="11">Pembelian (D)</option>
+								<option value="12">Pembelian (K)</option>
+								<option value="13">Biaya Angkut Penjualan (D)</option>
+								<option value="14">Biaya Angkut Penjualan (K)</option>
+								<option value="15">Harga Pokok Penjualan (D)</option>
+								<option value="16">Harga Pokok Penjualan (K)</option>
+							</select>
+						</td>
+						<td><input type="text" class="uang" id="uang-perpetual-fifo-0"></input></td>
+					</tr>
+				</table>
+				<table>
+					<tr>
+						<td>
+							<select id="select-perpetual-fifo-1">
+								<option value="0">Pilih</option>
+								<option value="1">Kas (D)</option>
+								<option value="2">Kas (K)</option>
+								<option value="3">Piutang Dagang (D)</option>
+								<option value="4">Piutang Dagang (K)</option>
+								<option value="5">Persediaan Barang Dagangan (D)</option>
+								<option value="6">Persediaan Barang Dagangan (K)</option>
+								<option value="7">Hutang Dagang (D)</option>
+								<option value="8">Hutang Dagang (K)</option>
+								<option value="9">Penjualan (D)</option>
+								<option value="10">Penjualan (K)</option>
+								<option value="11">Pembelian (D)</option>
+								<option value="12">Pembelian (K)</option>
+								<option value="13">Biaya Angkut Penjualan (D)</option>
+								<option value="14">Biaya Angkut Penjualan (K)</option>
+								<option value="15">Harga Pokok Penjualan (D)</option>
+								<option value="16">Harga Pokok Penjualan (K)</option>
+							</select>
+						</td>
+						<td><input type="text" class="uang" id="uang-perpetual-fifo-1"></input></td>
+					</tr>
+				</table>
+				<table>
+					<tr>
+						<td>
+							<select id="select-perpetual-fifo-2">
+								<option value="0">Pilih</option>
+								<option value="1">Kas (D)</option>
+								<option value="2">Kas (K)</option>
+								<option value="3">Piutang Dagang (D)</option>
+								<option value="4">Piutang Dagang (K)</option>
+								<option value="5">Persediaan Barang Dagangan (D)</option>
+								<option value="6">Persediaan Barang Dagangan (K)</option>
+								<option value="7">Hutang Dagang (D)</option>
+								<option value="8">Hutang Dagang (K)</option>
+								<option value="9">Penjualan (D)</option>
+								<option value="10">Penjualan (K)</option>
+								<option value="11">Pembelian (D)</option>
+								<option value="12">Pembelian (K)</option>
+								<option value="13">Biaya Angkut Penjualan (D)</option>
+								<option value="14">Biaya Angkut Penjualan (K)</option>
+								<option value="15">Harga Pokok Penjualan (D)</option>
+								<option value="16">Harga Pokok Penjualan (K)</option>
+							</select>
+						</td>
+						<td><input type="text" class="uang" id="uang-perpetual-fifo-2"></input></td>
+					</tr>
+				</table>
+				<table>
+					<tr>
+						<td>
+							<select id="select-perpetual-fifo-3">
+								<option value="0">Pilih</option>
+								<option value="1">Kas (D)</option>
+								<option value="2">Kas (K)</option>
+								<option value="3">Piutang Dagang (D)</option>
+								<option value="4">Piutang Dagang (K)</option>
+								<option value="5">Persediaan Barang Dagangan (D)</option>
+								<option value="6">Persediaan Barang Dagangan (K)</option>
+								<option value="7">Hutang Dagang (D)</option>
+								<option value="8">Hutang Dagang (K)</option>
+								<option value="9">Penjualan (D)</option>
+								<option value="10">Penjualan (K)</option>
+								<option value="11">Pembelian (D)</option>
+								<option value="12">Pembelian (K)</option>
+								<option value="13">Biaya Angkut Penjualan (D)</option>
+								<option value="14">Biaya Angkut Penjualan (K)</option>
+								<option value="15">Harga Pokok Penjualan (D)</option>
+								<option value="16">Harga Pokok Penjualan (K)</option>
+							</select>
+						</td>
+						<td><input type="text" class="uang" id="uang-perpetual-fifo-3"></input></td>
+					</tr>
+				</table>
+				<button id="perpetual-fifo-btn-cek">Cek Jawaban</button>
+				<p id="perpetual-fifo-cek-jawaban"></p>
+				<div id="div-perpetual-fifo-next">
+					<button id="perpetual-fifo-btn-next">Data Selanjutnya</button>
+				</div>
+			</div>
+		</div>
+		
+				<div  id="perpetual-lifo-page" data-role="page" style="background: url('img/bg/bg-profil.png'); background-repeat: repeat-x repeat-y;">
+			<div data-role="header" data-id="header1" data-position="fixed" class="ui-header">
+				<a href="#" data-rel="back" data-role="button" data-icon="arrow-l" data-inline="true" >Back</a>
+				<h1>Periodik FIFO</h1>
+			</div>
+			<div data-role="content" style="font-size: 16px;">
+				<!-- Isi konten di sini -->
+				<center><b id="perpetual-lifo-soal">Tanggal 3 Januari</b></center>
+				<table>
+					<tr>
+						<td>
+							<select id="select-perpetual-lifo-0">
+								<option value="0">Pilih</option>
+								<option value="1">Kas (D)</option>
+								<option value="2">Kas (K)</option>
+								<option value="3">Piutang Dagang (D)</option>
+								<option value="4">Piutang Dagang (K)</option>
+								<option value="5">Persediaan Barang Dagangan (D)</option>
+								<option value="6">Persediaan Barang Dagangan (K)</option>
+								<option value="7">Hutang Dagang (D)</option>
+								<option value="8">Hutang Dagang (K)</option>
+								<option value="9">Penjualan (D)</option>
+								<option value="10">Penjualan (K)</option>
+								<option value="11">Pembelian (D)</option>
+								<option value="12">Pembelian (K)</option>
+								<option value="13">Biaya Angkut Penjualan (D)</option>
+								<option value="14">Biaya Angkut Penjualan (K)</option>
+								<option value="15">Harga Pokok Penjualan (D)</option>
+								<option value="16">Harga Pokok Penjualan (K)</option>
+							</select>
+						</td>
+						<td><input type="text" class="uang" id="uang-perpetual-lifo-0"></input></td>
+					</tr>
+				</table>
+				<table>
+					<tr>
+						<td>
+							<select id="select-perpetual-lifo-1">
+								<option value="0">Pilih</option>
+								<option value="1">Kas (D)</option>
+								<option value="2">Kas (K)</option>
+								<option value="3">Piutang Dagang (D)</option>
+								<option value="4">Piutang Dagang (K)</option>
+								<option value="5">Persediaan Barang Dagangan (D)</option>
+								<option value="6">Persediaan Barang Dagangan (K)</option>
+								<option value="7">Hutang Dagang (D)</option>
+								<option value="8">Hutang Dagang (K)</option>
+								<option value="9">Penjualan (D)</option>
+								<option value="10">Penjualan (K)</option>
+								<option value="11">Pembelian (D)</option>
+								<option value="12">Pembelian (K)</option>
+								<option value="13">Biaya Angkut Penjualan (D)</option>
+								<option value="14">Biaya Angkut Penjualan (K)</option>
+								<option value="15">Harga Pokok Penjualan (D)</option>
+								<option value="16">Harga Pokok Penjualan (K)</option>
+							</select>
+						</td>
+						<td><input type="text" class="uang" id="uang-perpetual-lifo-1"></input></td>
+					</tr>
+				</table>
+				<table>
+					<tr>
+						<td>
+							<select id="select-perpetual-lifo-2">
+								<option value="0">Pilih</option>
+								<option value="1">Kas (D)</option>
+								<option value="2">Kas (K)</option>
+								<option value="3">Piutang Dagang (D)</option>
+								<option value="4">Piutang Dagang (K)</option>
+								<option value="5">Persediaan Barang Dagangan (D)</option>
+								<option value="6">Persediaan Barang Dagangan (K)</option>
+								<option value="7">Hutang Dagang (D)</option>
+								<option value="8">Hutang Dagang (K)</option>
+								<option value="9">Penjualan (D)</option>
+								<option value="10">Penjualan (K)</option>
+								<option value="11">Pembelian (D)</option>
+								<option value="12">Pembelian (K)</option>
+								<option value="13">Biaya Angkut Penjualan (D)</option>
+								<option value="14">Biaya Angkut Penjualan (K)</option>
+								<option value="15">Harga Pokok Penjualan (D)</option>
+								<option value="16">Harga Pokok Penjualan (K)</option>
+							</select>
+						</td>
+						<td><input type="text" class="uang" id="uang-perpetual-lifo-2"></input></td>
+					</tr>
+				</table>
+				<table>
+					<tr>
+						<td>
+							<select id="select-perpetual-lifo-3">
+								<option value="0">Pilih</option>
+								<option value="1">Kas (D)</option>
+								<option value="2">Kas (K)</option>
+								<option value="3">Piutang Dagang (D)</option>
+								<option value="4">Piutang Dagang (K)</option>
+								<option value="5">Persediaan Barang Dagangan (D)</option>
+								<option value="6">Persediaan Barang Dagangan (K)</option>
+								<option value="7">Hutang Dagang (D)</option>
+								<option value="8">Hutang Dagang (K)</option>
+								<option value="9">Penjualan (D)</option>
+								<option value="10">Penjualan (K)</option>
+								<option value="11">Pembelian (D)</option>
+								<option value="12">Pembelian (K)</option>
+								<option value="13">Biaya Angkut Penjualan (D)</option>
+								<option value="14">Biaya Angkut Penjualan (K)</option>
+								<option value="15">Harga Pokok Penjualan (D)</option>
+								<option value="16">Harga Pokok Penjualan (K)</option>
+							</select>
+						</td>
+						<td><input type="text" class="uang" id="uang-perpetual-lifo-3"></input></td>
+					</tr>
+				</table>
+				<button id="perpetual-lifo-btn-cek">Cek Jawaban</button>
+				<p id="perpetual-lifo-cek-jawaban"></p>
+				<div id="div-perpetual-lifo-next">
+					<button id="perpetual-lifo-btn-next">Data Selanjutnya</button>
+				</div>
+			</div>
+		</div>
+		
+				<div  id="perpetual-bergerak-page" data-role="page" style="background: url('img/bg/bg-profil.png'); background-repeat: repeat-x repeat-y;">
+			<div data-role="header" data-id="header1" data-position="fixed" class="ui-header">
+				<a href="#" data-rel="back" data-role="button" data-icon="arrow-l" data-inline="true" >Back</a>
+				<h1>Periodik FIFO</h1>
+			</div>
+			<div data-role="content" style="font-size: 16px;">
+				<!-- Isi konten di sini -->
+				<center><b id="perpetual-bergerak-soal">Tanggal 3 Januari</b></center>
+				<table>
+					<tr>
+						<td>
+							<select id="select-perpetual-bergerak-0">
+								<option value="0">Pilih</option>
+								<option value="1">Kas (D)</option>
+								<option value="2">Kas (K)</option>
+								<option value="3">Piutang Dagang (D)</option>
+								<option value="4">Piutang Dagang (K)</option>
+								<option value="5">Persediaan Barang Dagangan (D)</option>
+								<option value="6">Persediaan Barang Dagangan (K)</option>
+								<option value="7">Hutang Dagang (D)</option>
+								<option value="8">Hutang Dagang (K)</option>
+								<option value="9">Penjualan (D)</option>
+								<option value="10">Penjualan (K)</option>
+								<option value="11">Pembelian (D)</option>
+								<option value="12">Pembelian (K)</option>
+								<option value="13">Biaya Angkut Penjualan (D)</option>
+								<option value="14">Biaya Angkut Penjualan (K)</option>
+								<option value="15">Harga Pokok Penjualan (D)</option>
+								<option value="16">Harga Pokok Penjualan (K)</option>
+							</select>
+						</td>
+						<td><input type="text" class="uang" id="uang-perpetual-bergerak-0"></input></td>
+					</tr>
+				</table>
+				<table>
+					<tr>
+						<td>
+							<select id="select-perpetual-bergerak-1">
+								<option value="0">Pilih</option>
+								<option value="1">Kas (D)</option>
+								<option value="2">Kas (K)</option>
+								<option value="3">Piutang Dagang (D)</option>
+								<option value="4">Piutang Dagang (K)</option>
+								<option value="5">Persediaan Barang Dagangan (D)</option>
+								<option value="6">Persediaan Barang Dagangan (K)</option>
+								<option value="7">Hutang Dagang (D)</option>
+								<option value="8">Hutang Dagang (K)</option>
+								<option value="9">Penjualan (D)</option>
+								<option value="10">Penjualan (K)</option>
+								<option value="11">Pembelian (D)</option>
+								<option value="12">Pembelian (K)</option>
+								<option value="13">Biaya Angkut Penjualan (D)</option>
+								<option value="14">Biaya Angkut Penjualan (K)</option>
+								<option value="15">Harga Pokok Penjualan (D)</option>
+								<option value="16">Harga Pokok Penjualan (K)</option>
+							</select>
+						</td>
+						<td><input type="text" class="uang" id="uang-perpetual-bergerak-1"></input></td>
+					</tr>
+				</table>
+				<table>
+					<tr>
+						<td>
+							<select id="select-perpetual-bergerak-2">
+								<option value="0">Pilih</option>
+								<option value="1">Kas (D)</option>
+								<option value="2">Kas (K)</option>
+								<option value="3">Piutang Dagang (D)</option>
+								<option value="4">Piutang Dagang (K)</option>
+								<option value="5">Persediaan Barang Dagangan (D)</option>
+								<option value="6">Persediaan Barang Dagangan (K)</option>
+								<option value="7">Hutang Dagang (D)</option>
+								<option value="8">Hutang Dagang (K)</option>
+								<option value="9">Penjualan (D)</option>
+								<option value="10">Penjualan (K)</option>
+								<option value="11">Pembelian (D)</option>
+								<option value="12">Pembelian (K)</option>
+								<option value="13">Biaya Angkut Penjualan (D)</option>
+								<option value="14">Biaya Angkut Penjualan (K)</option>
+								<option value="15">Harga Pokok Penjualan (D)</option>
+								<option value="16">Harga Pokok Penjualan (K)</option>
+							</select>
+						</td>
+						<td><input type="text" class="uang" id="uang-perpetual-bergerak-2"></input></td>
+					</tr>
+				</table>
+				<table>
+					<tr>
+						<td>
+							<select id="select-perpetual-bergerak-3">
+								<option value="0">Pilih</option>
+								<option value="1">Kas (D)</option>
+								<option value="2">Kas (K)</option>
+								<option value="3">Piutang Dagang (D)</option>
+								<option value="4">Piutang Dagang (K)</option>
+								<option value="5">Persediaan Barang Dagangan (D)</option>
+								<option value="6">Persediaan Barang Dagangan (K)</option>
+								<option value="7">Hutang Dagang (D)</option>
+								<option value="8">Hutang Dagang (K)</option>
+								<option value="9">Penjualan (D)</option>
+								<option value="10">Penjualan (K)</option>
+								<option value="11">Pembelian (D)</option>
+								<option value="12">Pembelian (K)</option>
+								<option value="13">Biaya Angkut Penjualan (D)</option>
+								<option value="14">Biaya Angkut Penjualan (K)</option>
+								<option value="15">Harga Pokok Penjualan (D)</option>
+								<option value="16">Harga Pokok Penjualan (K)</option>
+							</select>
+						</td>
+						<td><input type="text" class="uang" id="uang-perpetual-bergerak-3"></input></td>
+					</tr>
+				</table>
+				<button id="perpetual-bergerak-btn-cek">Cek Jawaban</button>
+				<p id="perpetual-bergerak-cek-jawaban"></p>
+				<div id="div-perpetual-bergerak-next">
+					<button id="perpetual-bergerak-btn-next">Data Selanjutnya</button>
+				</div>
 			</div>
 		</div>
     </div>
-
-	<script type="text/javascript" src="libs/fastclick.min.js"></script>
-	<script type="text/javascript" src="phonegap.js"></script>
-	<script type="text/javascript" src="libs/jquery-2.0.3.min.js"></script>
-	<script type="text/javascript" src="libs/jQueryMobile/jquery.mobile-1.3.2.min.js"></script>
-	<script type="text/javascript" src="js/index.js"></script>
-	<script type="text/javascript" src="js/function.js"></script>
 	
 	<script>
 		var sndClick = new Audio();
@@ -62,6 +924,1036 @@
 		$("a").mousedown(function() {
 			sndClick.play();
 		});
+	</script>
+	<script>	
+		function getUang(str) {
+			var res = str.replace(/[^\d.,-]/g, '');
+			res = res.replace(/\./g, "");
+			//res = res.replace(",", "");
+			return res;
+		}
+	</script>
+	<script>
+		var nomorSoal = 0;
+		var periodikFIFO = [
+							[
+							  "3 Januari",
+							  1,
+							  10,
+							  0,
+							  0,
+							  "152600000,00",
+							  "152600000,00",
+							  "",
+							  ""
+							],
+							[
+							  "7 Januari",
+							  11,
+							  8,
+							  0,
+							  0,
+							  "154470000,00",
+							  "154470000,00",
+							  "",
+							  ""
+							],
+							[
+							  "9 Januari",
+							  3,
+							  13,
+							  2,
+							  10,
+							  "108100000,00",
+							  "1081000,00",
+							  "1081000,00",
+							  "108100000,00"
+							],
+							[
+							  "13 Januari",
+							  11,
+							  8,
+							  0,
+							  0,
+							  "93124000,00",
+							  "93124000,00",
+							  "",
+							  ""
+							],
+							[
+							  "17 Januari",
+							  3,
+							  13,
+							  2,
+							  10,
+							  "193350000,00",
+							  "1933500,00",
+							  "1933500,00",
+							  "193350000,00"
+							],
+							[
+							  "22 Januari",
+							  11,
+							  8,
+							  0,
+							  0,
+							  "73150000,00",
+							  "73150000,00",
+							  "",
+							  ""
+							],
+							[
+							  "25 Januari",
+							  3,
+							  13,
+							  2,
+							  10,
+							  "82150000,00",
+							  "821500,00",
+							  "821500,00",
+							  "82150000,00"
+							],
+							[
+							  "Penyesuaian akhir periode",
+							  5,
+							  15,
+							  12,
+							  6,
+							  "101345000,00",
+							  "351544000,00",
+							  "320744000,00",
+							  "132145000,00"
+							]
+						   ];
+		
+		function mulaiSoalPeriodikFIFO(){
+			nomorSoal = 0;
+			$("#div-periodik-fifo-next").hide();
+			tampilkanSoalPeriodikFIFO();
+		}
+		
+		function tampilkanSoalPeriodikFIFO(){
+			$("#select-priodik-fifo-0").val(0).change();
+			$("#select-priodik-fifo-1").val(0).change();
+			$("#select-priodik-fifo-2").val(0).change();
+			$("#select-priodik-fifo-3").val(0).change();
+			$("#uang-periodik-fifo-0").val("");
+			$("#uang-periodik-fifo-1").val("");
+			$("#uang-periodik-fifo-2").val("");
+			$("#uang-periodik-fifo-3").val("");
+			$("#div-periodik-fifo-next").hide();
+			$("#periodik-fifo-cek-jawaban").html("");
+			$("#periodik-fifo-soal").html(periodikFIFO[nomorSoal][0]);
+		}
+		
+		$("#periodik-fifo-btn-cek").click( function() {
+			var cek = true;
+			cek &= ($("#select-priodik-fifo-0").val() == periodikFIFO[nomorSoal][1]);
+			cek &= ($("#select-priodik-fifo-1").val() == periodikFIFO[nomorSoal][2]);
+			cek &= ($("#select-priodik-fifo-2").val() == periodikFIFO[nomorSoal][3]);
+			cek &= ($("#select-priodik-fifo-3").val() == periodikFIFO[nomorSoal][4]);
+			cek &= (getUang($("#uang-periodik-fifo-0").val()) == periodikFIFO[nomorSoal][5]);
+			cek &= (getUang($("#uang-periodik-fifo-1").val()) == periodikFIFO[nomorSoal][6]);
+			cek &= (getUang($("#uang-periodik-fifo-2").val()) == periodikFIFO[nomorSoal][7]);
+			cek &= (getUang($("#uang-periodik-fifo-3").val()) == periodikFIFO[nomorSoal][8]);
+			console.log(cek);
+			console.log($("#select-priodik-fifo-0").val())
+			if (cek) {
+				console.log("Jawaban Benar");
+				$("#periodik-fifo-cek-jawaban").html("Jawabanmu Benar. Klik tombol di bawah untuk data selanjutnya!");
+				$("#div-periodik-fifo-next").show();
+			} else {
+				console.log("Jawaban Salah");
+				mulaiSoalPeriodikFIFO();
+			}
+		});
+		
+		$("#periodik-fifo-btn-next").click( function() {
+			nomorSoal++;
+			tampilkanSoalPeriodikFIFO();
+		});
+		
+		var periodikLIFO = [
+							[
+							  "3 Januari",
+							  1,
+							  10,
+							  0,
+							  0,
+							  "152600000,00",
+							  "152600000,00",
+							  "",
+							  ""
+							],
+							[
+							  "7 Januari",
+							  11,
+							  8,
+							  0,
+							  0,
+							  "154470000,00",
+							  "154470000,00",
+							  "",
+							  ""
+							],
+							[
+							  "9 Januari",
+							  3,
+							  13,
+							  2,
+							  10,
+							  "108100000,00",
+							  "1081000,00",
+							  "1081000,00",
+							  "108100000,00"
+							],
+							[
+							  "13 Januari",
+							  11,
+							  8,
+							  0,
+							  0,
+							  "93124000,00",
+							  "93124000,00",
+							  "",
+							  ""
+							],
+							[
+							  "17 Januari",
+							  3,
+							  13,
+							  2,
+							  10,
+							  "193350000,00",
+							  "1933500,00",
+							  "1933500,00",
+							  "193350000,00"
+							],
+							[
+							  "22 Januari",
+							  11,
+							  8,
+							  0,
+							  0,
+							  "73150000,00",
+							  "73150000,00",
+							  "",
+							  ""
+							],
+							[
+							  "25 Januari",
+							  3,
+							  13,
+							  2,
+							  10,
+							  "82150000,00",
+							  "821500,00",
+							  "821500,00",
+							  "82150000,00"
+							],
+							[
+							  "Penyesuaian akhir periode",
+							  5,
+							  15,
+							  12,
+							  6,
+							  "96575000,00",
+							  "356314000,00",
+							  "320744000,00",
+							  "132145000,00"
+							]
+						   ];
+		
+		function mulaiSoalPeriodikLIFO(){
+			nomorSoal = 0;
+			$("#div-periodik-lifo-next").hide();
+			tampilkanSoalPeriodikLIFO();
+		}
+		
+		function tampilkanSoalPeriodikLIFO(){
+			$("#select-priodik-lifo-0").val(0).change();
+			$("#select-priodik-lifo-1").val(0).change();
+			$("#select-priodik-lifo-2").val(0).change();
+			$("#select-priodik-lifo-3").val(0).change();
+			$("#uang-periodik-lifo-0").val("");
+			$("#uang-periodik-lifo-1").val("");
+			$("#uang-periodik-lifo-2").val("");
+			$("#uang-periodik-lifo-3").val("");
+			$("#div-periodik-lifo-next").hide();
+			$("#periodik-lifo-cek-jawaban").html("");
+			$("#periodik-lifo-soal").html(periodikLIFO[nomorSoal][0]);
+		}
+		
+		$("#periodik-lifo-btn-cek").click( function() {
+			var cek = true;
+			cek &= ($("#select-priodik-lifo-0").val() == periodikLIFO[nomorSoal][1]);
+			cek &= ($("#select-priodik-lifo-1").val() == periodikLIFO[nomorSoal][2]);
+			cek &= ($("#select-priodik-lifo-2").val() == periodikLIFO[nomorSoal][3]);
+			cek &= ($("#select-priodik-lifo-3").val() == periodikLIFO[nomorSoal][4]);
+			cek &= (getUang($("#uang-periodik-lifo-0").val()) == periodikLIFO[nomorSoal][5]);
+			cek &= (getUang($("#uang-periodik-lifo-1").val()) == periodikLIFO[nomorSoal][6]);
+			cek &= (getUang($("#uang-periodik-lifo-2").val()) == periodikLIFO[nomorSoal][7]);
+			cek &= (getUang($("#uang-periodik-lifo-3").val()) == periodikLIFO[nomorSoal][8]);
+			console.log(cek);
+			console.log($("#select-priodik-lifo-0").val())
+			if (cek) {
+				console.log("Jawaban Benar");
+				$("#periodik-lifo-cek-jawaban").html("Jawabanmu Benar. Klik tombol di bawah untuk data selanjutnya!");
+				$("#div-periodik-lifo-next").show();
+			} else {
+				console.log("Jawaban Salah");
+				mulaiSoalPeriodikLIFO();
+			}
+		});
+		
+		$("#periodik-lifo-btn-next").click( function() {
+			nomorSoal++;
+			tampilkanSoalPeriodikLIFO();
+		});
+						   
+		var periodikSederhana = [
+							[
+							  "3 Januari",
+							  1,
+							  10,
+							  0,
+							  0,
+							  "152600000,00",
+							  "152600000,00",
+							  "",
+							  ""
+							],
+							[
+							  "7 Januari",
+							  11,
+							  8,
+							  0,
+							  0,
+							  "154470000,00",
+							  "154470000,00",
+							  "",
+							  ""
+							],
+							[
+							  "9 Januari",
+							  3,
+							  13,
+							  2,
+							  10,
+							  "108100000,00",
+							  "1081000,00",
+							  "1081000,00",
+							  "108100000,00"
+							],
+							[
+							  "13 Januari",
+							  11,
+							  8,
+							  0,
+							  0,
+							  "93124000,00",
+							  "93124000,00",
+							  "",
+							  ""
+							],
+							[
+							  "17 Januari",
+							  3,
+							  13,
+							  2,
+							  10,
+							  "193350000,00",
+							  "1933500,00",
+							  "1933500,00",
+							  "193350000,00"
+							],
+							[
+							  "22 Januari",
+							  11,
+							  8,
+							  0,
+							  0,
+							  "73150000,00",
+							  "73150000,00",
+							  "",
+							  ""
+							],
+							[
+							  "25 Januari",
+							  3,
+							  13,
+							  2,
+							  10,
+							  "82150000,00",
+							  "821500,00",
+							  "821500,00",
+							  "82150000,00"
+							],
+							[
+							  "Penyesuaian akhir periode",
+							  5,
+							  15,
+							  12,
+							  6,
+							  "96845833,33",
+							  "356043166,67",
+							  "320744000,00",
+							  "132145000,00"
+							]
+						   ];
+		
+		function mulaiSoalPeriodikSederhana(){
+			nomorSoal = 0;
+			$("#div-periodik-sederhana-next").hide();
+			tampilkanSoalPeriodikSederhana();
+		}
+		
+		function tampilkanSoalPeriodikSederhana(){
+			$("#select-priodik-sederhana-0").val(0).change();
+			$("#select-priodik-sederhana-1").val(0).change();
+			$("#select-priodik-sederhana-2").val(0).change();
+			$("#select-priodik-sederhana-3").val(0).change();
+			$("#uang-periodik-sederhana-0").val("");
+			$("#uang-periodik-sederhana-1").val("");
+			$("#uang-periodik-sederhana-2").val("");
+			$("#uang-periodik-sederhana-3").val("");
+			$("#div-periodik-sederhana-next").hide();
+			$("#periodik-sederhana-cek-jawaban").html("");
+			$("#periodik-sederhana-soal").html(periodikSederhana[nomorSoal][0]);
+		}
+		
+		$("#periodik-sederhana-btn-cek").click( function() {
+			var cek = true;
+			cek &= ($("#select-priodik-sederhana-0").val() == periodikSederhana[nomorSoal][1]);
+			cek &= ($("#select-priodik-sederhana-1").val() == periodikSederhana[nomorSoal][2]);
+			cek &= ($("#select-priodik-sederhana-2").val() == periodikSederhana[nomorSoal][3]);
+			cek &= ($("#select-priodik-sederhana-3").val() == periodikSederhana[nomorSoal][4]);
+			cek &= (getUang($("#uang-periodik-sederhana-0").val()) == periodikSederhana[nomorSoal][5]);
+			cek &= (getUang($("#uang-periodik-sederhana-1").val()) == periodikSederhana[nomorSoal][6]);
+			cek &= (getUang($("#uang-periodik-sederhana-2").val()) == periodikSederhana[nomorSoal][7]);
+			cek &= (getUang($("#uang-periodik-sederhana-3").val()) == periodikSederhana[nomorSoal][8]);
+			console.log(cek);
+			console.log($("#select-priodik-sederhana-0").val())
+			if (cek) {
+				console.log("Jawaban Benar");
+				$("#periodik-sederhana-cek-jawaban").html("Jawabanmu Benar. Klik tombol di bawah untuk data selanjutnya!");
+				$("#div-periodik-sederhana-next").show();
+			} else {
+				console.log("Jawaban Salah");
+				mulaiSoalPeriodikSederhana();
+			}
+		});
+		
+		$("#periodik-sederhana-btn-next").click( function() {
+			nomorSoal++;
+			tampilkanSoalPeriodikSederhana();
+		});
+						   
+		var periodikTertimbang = [
+							[
+							  "3 Januari",
+							  1,
+							  10,
+							  0,
+							  0,
+							  "152600000,00",
+							  "152600000,00",
+							  "",
+							  ""
+							],
+							[
+							  "7 Januari",
+							  11,
+							  8,
+							  0,
+							  0,
+							  "154470000,00",
+							  "154470000,00",
+							  "",
+							  ""
+							],
+							[
+							  "9 Januari",
+							  3,
+							  13,
+							  2,
+							  10,
+							  "108100000,00",
+							  "1081000,00",
+							  "1081000,00",
+							  "108100000,00"
+							],
+							[
+							  "13 Januari",
+							  11,
+							  8,
+							  0,
+							  0,
+							  "93124000,00",
+							  "93124000,00",
+							  "",
+							  ""
+							],
+							[
+							  "17 Januari",
+							  3,
+							  13,
+							  2,
+							  10,
+							  "193350000,00",
+							  "1933500,00",
+							  "1933500,00",
+							  "193350000,00"
+							],
+							[
+							  "22 Januari",
+							  11,
+							  8,
+							  0,
+							  0,
+							  "73150000,00",
+							  "73150000,00",
+							  "",
+							  ""
+							],
+							[
+							  "25 Januari",
+							  3,
+							  13,
+							  2,
+							  10,
+							  "82150000,00",
+							  "821500,00",
+							  "821500,00",
+							  "82150000,00"
+							],
+							[
+							  "Penyesuaian akhir periode",
+							  5,
+							  15,
+							  12,
+							  6,
+							  "96526221,53",
+							  "356362778,47",
+							  "320744000,00",
+							  "132145000,00"
+							]
+						];
+						   
+		
+		function mulaiSoalPeriodikTertimbang(){
+			nomorSoal = 0;
+			$("#div-periodik-tertimbang-next").hide();
+			tampilkanSoalPeriodikTertimbang();
+		}
+		
+		function tampilkanSoalPeriodikTertimbang(){
+			$("#select-priodik-tertimbang-0").val(0).change();
+			$("#select-priodik-tertimbang-1").val(0).change();
+			$("#select-priodik-tertimbang-2").val(0).change();
+			$("#select-priodik-tertimbang-3").val(0).change();
+			$("#uang-periodik-tertimbang-0").val("");
+			$("#uang-periodik-tertimbang-1").val("");
+			$("#uang-periodik-tertimbang-2").val("");
+			$("#uang-periodik-tertimbang-3").val("");
+			$("#div-periodik-tertimbang-next").hide();
+			$("#periodik-tertimbang-cek-jawaban").html("");
+			$("#periodik-tertimbang-soal").html(periodikTertimbang[nomorSoal][0]);
+		}
+		
+		$("#periodik-tertimbang-btn-cek").click( function() {
+			var cek = true;
+			cek &= ($("#select-priodik-tertimbang-0").val() == periodikTertimbang[nomorSoal][1]);
+			cek &= ($("#select-priodik-tertimbang-1").val() == periodikTertimbang[nomorSoal][2]);
+			cek &= ($("#select-priodik-tertimbang-2").val() == periodikTertimbang[nomorSoal][3]);
+			cek &= ($("#select-priodik-tertimbang-3").val() == periodikTertimbang[nomorSoal][4]);
+			cek &= (getUang($("#uang-periodik-tertimbang-0").val()) == periodikTertimbang[nomorSoal][5]);
+			cek &= (getUang($("#uang-periodik-tertimbang-1").val()) == periodikTertimbang[nomorSoal][6]);
+			cek &= (getUang($("#uang-periodik-tertimbang-2").val()) == periodikTertimbang[nomorSoal][7]);
+			cek &= (getUang($("#uang-periodik-tertimbang-3").val()) == periodikTertimbang[nomorSoal][8]);
+			console.log(cek);
+			console.log($("#select-priodik-tertimbang-0").val())
+			if (cek) {
+				console.log("Jawaban Benar");
+				$("#periodik-tertimbang-cek-jawaban").html("Jawabanmu Benar. Klik tombol di bawah untuk data selanjutnya!");
+				$("#div-periodik-tertimbang-next").show();
+			} else {
+				console.log("Jawaban Salah");
+				mulaiSoalPeriodikTertimbang();
+			}
+		});
+		
+		$("#periodik-tertimbang-btn-next").click( function() {
+			nomorSoal++;
+			tampilkanSoalPeriodikTertimbang();
+		});
+		
+		///////////////////// perpetual ////////////////////////////
+		var perpetualFIFO = [
+							 [
+							  "3 Januari",
+							  1,
+							  15,
+							  6,
+							  10,
+							  0,
+							  0,
+							  "152600000,00",
+							  "99190000,00",
+							  "99190000,00",
+							  "152600000,00",
+							  "",
+							  ""
+							 ],
+							 [
+							  "7 Januari",
+							  11,
+							  8,
+							  0,
+							  0,
+							  0,
+							  0,
+							  "154470000,00",
+							  "154470000,00",
+							  "",
+							  "",
+							  "",
+							  ""
+							 ],
+							 [
+							  "9 Januari",
+							  3,
+							  13,
+							  15,
+							  6,
+							  2,
+							  10,
+							  "108100000,00",
+							  "1081000,00",
+							  "67395000,00",
+							  "67395000,00",
+							  "1081000,00",
+							  "108100000,00"
+							 ],
+							 [
+							  "13 Januari",
+							  11,
+							  8,
+							  0,
+							  0,
+							  0,
+							  0,
+							  "93124000,00",
+							  "93124000,00",
+							  "",
+							  "",
+							  "",
+							  ""
+							 ],
+							 [
+							  "17 Januari",
+							  3,
+							  13,
+							  15,
+							  6,
+							  2,
+							  10,
+							  "193350000,00",
+							  "1933500,00",
+							  "116670000,00",
+							  "116670000,00",
+							  "1933500,00",
+							  "193350000,00"
+							 ],
+							 [
+							  "22 Januari",
+							  11,
+							  8,
+							  0,
+							  0,
+							  0,
+							  0,
+							  "73150000,00",
+							  "73150000,00",
+							  "",
+							  "",
+							  "",
+							  ""
+							 ],
+							 [
+							  "25 Januari",
+							  3,
+							  13,
+							  15,
+							  6,
+							  2,
+							  10,
+							  "82150000,00",
+							  "821500,00",
+							  "68289000,00",
+							  "68289000,00",
+							  "821500,00",
+							  "82150000,00"
+							 ],
+							];
+		
+		function mulaiSoalPerpetualFIFO(){
+			nomorSoal = 0;
+			$("#div-perpetual-fifo-next").hide();
+			tampilkanSoalPerpetualFIFO();
+		}
+		
+		function tampilkanSoalPerpetualFIFO(){
+			$("#select-perpetual-fifo-0").val(0).change();
+			$("#select-perpetual-fifo-1").val(0).change();
+			$("#select-perpetual-fifo-2").val(0).change();
+			$("#select-perpetual-fifo-3").val(0).change();
+			$("#uang-perpetual-fifo-0").val("");
+			$("#uang-perpetual-fifo-1").val("");
+			$("#uang-perpetual-fifo-2").val("");
+			$("#uang-perpetual-fifo-3").val("");
+			$("#div-perpetual-fifo-next").hide();
+			$("#perpetual-fifo-cek-jawaban").html("");
+			$("#perpetual-fifo-soal").html(perpetualFIFO[nomorSoal][0]);
+		}
+		
+		$("#perpetual-fifo-btn-cek").click( function() {
+			var cek = true;
+			cek &= ($("#select-perpetual-fifo-0").val() == perpetualFIFO[nomorSoal][1]);
+			cek &= ($("#select-perpetual-fifo-1").val() == perpetualFIFO[nomorSoal][2]);
+			cek &= ($("#select-perpetual-fifo-2").val() == perpetualFIFO[nomorSoal][3]);
+			cek &= ($("#select-perpetual-fifo-3").val() == perpetualFIFO[nomorSoal][4]);
+			cek &= (getUang($("#uang-perpetual-fifo-0").val()) == perpetualFIFO[nomorSoal][5]);
+			cek &= (getUang($("#uang-perpetual-fifo-1").val()) == perpetualFIFO[nomorSoal][6]);
+			cek &= (getUang($("#uang-perpetual-fifo-2").val()) == perpetualFIFO[nomorSoal][7]);
+			cek &= (getUang($("#uang-perpetual-fifo-3").val()) == perpetualFIFO[nomorSoal][8]);
+			console.log(cek);
+			console.log($("#select-perpetual-fifo-0").val())
+			if (cek) {
+				console.log("Jawaban Benar");
+				$("#perpetual-fifo-cek-jawaban").html("Jawabanmu Benar. Klik tombol di bawah untuk data selanjutnya!");
+				$("#div-perpetual-fifo-next").show();
+			} else {
+				console.log("Jawaban Salah");
+				mulaiSoalPerpetualFIFO();
+			}
+		});
+		
+		$("#perpetual-fifo-btn-next").click( function() {
+			nomorSoal++;
+			tampilkanSoalPerpetualFIFO();
+		});
+		
+		var perpetualLIFO = [
+							 [
+							  "3 Januari",
+							  1,
+							  15,
+							  6,
+							  10,
+							  0,
+							  0,
+							  "152600000,00",
+							  "99190000,00",
+							  "99190000,00",
+							  "152600000,00",
+							  "",
+							  ""
+							 ],
+							 [
+							  "7 Januari",
+							  11,
+							  8,
+							  0,
+							  0,
+							  0,
+							  0,
+							  "154470000,00",
+							  "154470000,00",
+							  "",
+							  "",
+							  "",
+							  ""
+							 ],
+							 [
+							  "9 Januari",
+							  3,
+							  13,
+							  15,
+							  6,
+							  2,
+							  10,
+							  "108100000,00",
+							  "1081000,00",
+							  "67395000,00",
+							  "67395000,00",
+							  "1081000,00",
+							  "108100000,00"
+							 ],
+							 [
+							  "13 Januari",
+							  11,
+							  8,
+							  0,
+							  0,
+							  0,
+							  0,
+							  "93124000,00",
+							  "93124000,00",
+							  "",
+							  "",
+							  "",
+							  ""
+							 ],
+							 [
+							  "17 Januari",
+							  3,
+							  13,
+							  15,
+							  6,
+							  2,
+							  10,
+							  "193350000,00",
+							  "1933500,00",
+							  "118282000,00",
+							  "118282000,00",
+							  "1933500,00",
+							  "193350000,00"
+							 ],
+							 [
+							  "22 Januari",
+							  11,
+							  8,
+							  0,
+							  0,
+							  0,
+							  0,
+							  "73150000,00",
+							  "73150000,00",
+							  "",
+							  "",
+							  "",
+							  ""
+							 ],
+							 [
+							  "25 Januari",
+							  3,
+							  13,
+							  15,
+							  6,
+							  2,
+							  10,
+							  "82150000,00",
+							  "821500,00",
+							  "72603000,00",
+							  "72603000,00",
+							  "821500,00",
+							  "82150000,00"
+							 ],
+							];
+		
+		function mulaiSoalPerpetualLIFO(){
+			nomorSoal = 0;
+			$("#div-perpetual-lifo-next").hide();
+			tampilkanSoalPerpetualLIFO();
+		}
+		
+		function tampilkanSoalPerpetualLIFO(){
+			$("#select-perpetual-lifo-0").val(0).change();
+			$("#select-perpetual-lifo-1").val(0).change();
+			$("#select-perpetual-lifo-2").val(0).change();
+			$("#select-perpetual-lifo-3").val(0).change();
+			$("#uang-perpetual-lifo-0").val("");
+			$("#uang-perpetual-lifo-1").val("");
+			$("#uang-perpetual-lifo-2").val("");
+			$("#uang-perpetual-lifo-3").val("");
+			$("#div-perpetual-lifo-next").hide();
+			$("#perpetual-lifo-cek-jawaban").html("");
+			$("#perpetual-lifo-soal").html(perpetualLIFO[nomorSoal][0]);
+		}
+		
+		$("#perpetual-lifo-btn-cek").click( function() {
+			var cek = true;
+			cek &= ($("#select-perpetual-lifo-0").val() == perpetualLIFO[nomorSoal][1]);
+			cek &= ($("#select-perpetual-lifo-1").val() == perpetualLIFO[nomorSoal][2]);
+			cek &= ($("#select-perpetual-lifo-2").val() == perpetualLIFO[nomorSoal][3]);
+			cek &= ($("#select-perpetual-lifo-3").val() == perpetualLIFO[nomorSoal][4]);
+			cek &= (getUang($("#uang-perpetual-lifo-0").val()) == perpetualLIFO[nomorSoal][5]);
+			cek &= (getUang($("#uang-perpetual-lifo-1").val()) == perpetualLIFO[nomorSoal][6]);
+			cek &= (getUang($("#uang-perpetual-lifo-2").val()) == perpetualLIFO[nomorSoal][7]);
+			cek &= (getUang($("#uang-perpetual-lifo-3").val()) == perpetualLIFO[nomorSoal][8]);
+			console.log(cek);
+			console.log($("#select-perpetual-lifo-0").val())
+			if (cek) {
+				console.log("Jawaban Benar");
+				$("#perpetual-lifo-cek-jawaban").html("Jawabanmu Benar. Klik tombol di bawah untuk data selanjutnya!");
+				$("#div-perpetual-lifo-next").show();
+			} else {
+				console.log("Jawaban Salah");
+				mulaiSoalPerpetualLIFO();
+			}
+		});
+		
+		$("#perpetual-lifo-btn-next").click( function() {
+			nomorSoal++;
+			tampilkanSoalPerpetualLIFO();
+		});
+		
+		var perpetualBergerak = [
+							 [
+							  "3 Januari",
+							  1,
+							  15,
+							  6,
+							  10,
+							  0,
+							  0,
+							  "152600000,00",
+							  "99190000,00",
+							  "99190000,00",
+							  "152600000,00",
+							  "",
+							  ""
+							 ],
+							 [
+							  "7 Januari",
+							  11,
+							  8,
+							  0,
+							  0,
+							  0,
+							  0,
+							  "154470000,00",
+							  "154470000,00",
+							  "",
+							  "",
+							  "",
+							  ""
+							 ],
+							 [
+							  "9 Januari",
+							  3,
+							  13,
+							  15,
+							  6,
+							  2,
+							  10,
+							  "108100000,00",
+							  "1081000,00",
+							  "65671428,57",
+							  "65671428,57",
+							  "1081000,00",
+							  "108100000,00"
+							 ],
+							 [
+							  "13 Januari",
+							  11,
+							  8,
+							  0,
+							  0,
+							  0,
+							  0,
+							  "93124000,00",
+							  "93124000,00",
+							  "",
+							  "",
+							  "",
+							  ""
+							 ],
+							 [
+							  "17 Januari",
+							  3,
+							  13,
+							  15,
+							  6,
+							  2,
+							  10,
+							  "193350000,00",
+							  "1933500,00",
+							  "118548030,69",
+							  "118548030,69",
+							  "1933500,00",
+							  "193350000,00"
+							 ],
+							 [
+							  "22 Januari",
+							  11,
+							  8,
+							  0,
+							  0,
+							  0,
+							  0,
+							  "73150000,00",
+							  "73150000,00",
+							  "",
+							  "",
+							  "",
+							  ""
+							 ],
+							 [
+							  "25 Januari",
+							  3,
+							  13,
+							  15,
+							  6,
+							  2,
+							  10,
+							  "82150000,00",
+							  "821500,00",
+							  "71237637,74",
+							  "71237637,74",
+							  "821500,00",
+							  "82150000,00"
+							 ],
+							];
+		
+		function mulaiSoalPerpetualBergerak(){
+			nomorSoal = 0;
+			$("#div-perpetual-bergerak-next").hide();
+			tampilkanSoalPerpetualBergerak();
+		}
+		
+		function tampilkanSoalPerpetualBergerak(){
+			$("#select-perpetual-bergerak-0").val(0).change();
+			$("#select-perpetual-bergerak-1").val(0).change();
+			$("#select-perpetual-bergerak-2").val(0).change();
+			$("#select-perpetual-bergerak-3").val(0).change();
+			$("#uang-perpetual-bergerak-0").val("");
+			$("#uang-perpetual-bergerak-1").val("");
+			$("#uang-perpetual-bergerak-2").val("");
+			$("#uang-perpetual-bergerak-3").val("");
+			$("#div-perpetual-bergerak-next").hide();
+			$("#perpetual-bergerak-cek-jawaban").html("");
+			$("#perpetual-bergerak-soal").html(perpetualBergerak[nomorSoal][0]);
+		}
+		
+		$("#perpetual-bergerak-btn-cek").click( function() {
+			var cek = true;
+			cek &= ($("#select-perpetual-bergerak-0").val() == perpetualBergerak[nomorSoal][1]);
+			cek &= ($("#select-perpetual-bergerak-1").val() == perpetualBergerak[nomorSoal][2]);
+			cek &= ($("#select-perpetual-bergerak-2").val() == perpetualBergerak[nomorSoal][3]);
+			cek &= ($("#select-perpetual-bergerak-3").val() == perpetualBergerak[nomorSoal][4]);
+			cek &= (getUang($("#uang-perpetual-bergerak-0").val()) == perpetualBergerak[nomorSoal][5]);
+			cek &= (getUang($("#uang-perpetual-bergerak-1").val()) == perpetualBergerak[nomorSoal][6]);
+			cek &= (getUang($("#uang-perpetual-bergerak-2").val()) == perpetualBergerak[nomorSoal][7]);
+			cek &= (getUang($("#uang-perpetual-bergerak-3").val()) == perpetualBergerak[nomorSoal][8]);
+			console.log(cek);
+			console.log($("#select-perpetual-bergerak-0").val())
+			if (cek) {
+				console.log("Jawaban Benar");
+				$("#perpetual-bergerak-cek-jawaban").html("Jawabanmu Benar. Klik tombol di bawah untuk data selanjutnya!");
+				$("#div-perpetual-bergerak-next").show();
+			} else {
+				console.log("Jawaban Salah");
+				mulaiSoalPerpetualBergerak();
+			}
+		});
+		
+		$("#perpetual-bergerak-btn-next").click( function() {
+			nomorSoal++;
+			tampilkanSoalPerpetualBergerak();
+		});
+		
 	</script>
     </body>
 </html>
