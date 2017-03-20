@@ -125,3 +125,8 @@ margin: .8em 30% .8em;
 .txt-right-indent {
 	padding-right: 50px;
 }
+.bg-welcome {
+	background-image:  url('../img/bg/bg-welcome.jpg');
+	background-position: top left;
+	background-repeat: repeat;
+}

@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="com.promozzing.lenny" version="1.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
-    <name>SISTEM PENCATATAN DAN PENILAIAN PERSEDIAAN PADA PERUSAHAAN DAGANG</name>
+    <name>SP4D</name>
     <description>
-        Aplikasi yang berupa media pembelajaran kelistrikan dasar otomotif untuk siswa kelas X semester 1
+        SISTEM PENCATATAN DAN PENILAIAN PERSEDIAAN PADA PERUSAHAAN DAGANG
     </description>
     <author email="info@promozzing.com" href="http://promozzing.com">
         Promozzing
@@ -24,7 +24,7 @@
     <preference name="disable-cursor" value="false" />
     <preference name="android-minSdkVersion" value="14" />
     <preference name="android-installLocation" value="auto" />
-	<splash src="img/splash.png" />
+	<splash src="splash.png" />
     <icon src="img/icon.png" />
     <icon gap:platform="android" gap:qualifier="ldpi" src="res/icon/android/icon-36-ldpi.png" />
     <icon gap:platform="android" gap:qualifier="mdpi" src="res/icon/android/icon-48-mdpi.png" />

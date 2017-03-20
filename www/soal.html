@@ -28,38 +28,10 @@
 				<!-- Isi konten di sini --> 
 				<p>PT Adhi Tech merupakan perusahaan dagang yang memperdagangkan TV yang beralamat di JL Fatmawati no 20, Jakarta 12410 Telp: 012-7502457. Seluruh pembelian yang dilakukan oleh perusahaan dengan cara kredit. Penjualan yang dilakukan secara kredit perusahaan mengeluarkan kas untuk membayar biaya angkut sebesar 1% dari harga jual.</p>
 				<p>Barang Dagangan</p>
-				<table>
-					<tr>
-						<th>Kode Barang</th>
-						<th>Merk</th>
-						<th>Harga Beli</th>
-						<th>Harga Jual</th>
-						<th>Stok</th>
-					</tr>
-					<tr>
-						<td>MI-001</td>
-						<td>LG</td>
-						<td>Rp 1.586.000,00</td>
-						<td>RP 2.440.000,00</td>
-						<td>45</td>
-					</tr>
-					<tr>
-						<td>MI-002</td>
-						<td>Samsung</td>
-						<td>Rp 1.430.000,00</td>
-						<td>RP 2.200.000,00</td>
-						<td>30</td>
-					</tr>
-					<tr>
-						<td>MI-003</td>
-						<td>Sony</td>
-						<td>Rp 1.787.500,00</td>
-						<td>RP 2.750.000,00</td>
-						<td>10</td>
-					</tr>
-				</table>
+				<img src="img/barang-dagangan.png" style="width: 100%; max-width: 600px;"/>
 
 				<p>Buatlah jurnal yang diperlukan selama bulan februari terkait dengan persediaan. Berikut transaksi bulan februari:</p>
+				<img src="img/transaksi-februari.png" style="width: 100%; max-width: 600px;"/>
 				<div data-role="collapsible" data-collapsed-icon="arrow-d" data-expanded-icon="arrow-u" data-iconpos="right" data-theme="b">
 					<h3><b>Sistem Periodik</b></h3>
 					<a href="#periodik-fifo-page" data-theme="a"  data-role="button" onmousedown="mulaiSoalPeriodikFIFO()">FIFO (<i>First In First Out</i>)</a>
@@ -797,7 +769,7 @@
 			</div>
 		</div>
 		
-				<div  id="perpetual-bergerak-page" data-role="page" style="background: url('img/bg/bg-profil.png'); background-repeat: repeat-x repeat-y;">
+		<div  id="perpetual-bergerak-page" data-role="page" style="background: url('img/bg/bg-profil.png'); background-repeat: repeat-x repeat-y;">
 			<div data-role="header" data-id="header1" data-position="fixed" class="ui-header">
 				<a href="#" data-rel="back" data-role="button" data-icon="arrow-l" data-inline="true" >Back</a>
 				<h1>Periodik FIFO</h1>
@@ -914,6 +886,31 @@
 				<div id="div-perpetual-bergerak-next">
 					<button id="perpetual-bergerak-btn-next">Data Selanjutnya</button>
 				</div>
+			</div>
+		</div>
+		
+		<div  id="sekor-page" data-role="page" style="background-image: url('img/Icon%20Materi/background%20soal.jpg');background-size: 100% 100%;background-repeat: no-repeat;">
+			<div data-role="header" data-id="header" id="header" data-position="fixed" class="ui-header">
+				<a href="index.html#home-page"  data-role="button" data-icon="ms-home-bt" data-inline="true" >Home</a>
+				<h1 style="font-size: 24px;">EVALUASI</h1>
+			</div>
+			<div data-role="content" align="justify" style="font-size: 16px;">
+				<!-- Isi konten di sini -->	
+				<center>
+					<div id="divSekor" style="margin:auto;">
+						<div class="ui-corner-all custom-corner" style="width:200px">
+							<div data-role="header">
+								<h3>NILAI</h3>
+							</div>
+							<div data-role="content" style="background-color: rgba(255,255,255,0.7);">
+								<p id="sekor" style="text-align: center;font-size: 50px;">xxxxxxxxxxx</p>
+							</div>
+						</div>
+					</div>
+				</center>
+			</div>
+			<div data-role="footer" data-id="footer" id="footer" data-position="fixed" data-tap-toggle="false">
+				<a href="#home-page"  data-role="button" data-icon="arrow-l" data-inline="true" >Back</a>
 			</div>
 		</div>
     </div>

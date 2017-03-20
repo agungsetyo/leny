@@ -44,13 +44,18 @@
       	</div><!-- end Page--> 
 		
 		<!-- Welcome Page -->
-		<div id="Welcome-page" data-role="page" style="background-image:  url('img/Icon%20Materi/background%20project%20tanpa%20background.png'), url('img/Icon%20Materi/steelbackground3.jpg');background-position: center center, top left;background-size: 100%,100% 100%;background-repeat: no-repeat;"> 
-			<a href="#home-page" data-theme="d"  data-role="button" data-inline="true" style="margin-top: 100%;margin-left: 30%;">Masuk</a>
+		<div id="Welcome-page" data-role="page" class="bg-welcome" style="text-align: center;"> 
+				<img src="img/uny.png"  style="width: 150px; display:block; margin: 20px auto;"/>
+				<h3>Selamat Datang</h3>
+				<h2>Media Pembelajaran</h2>
+				<h1>SISTEM PENCATATAN DAN PENILAIAN PERSEDIAAN PADA PERUSAHAAN DAGANG</h1>
+				<br/>
+				<a href="#home-page" data-theme="d"  data-role="button" data-inline="true">Masuk</a>
 		</div>
 				    
         <!-- Home Page -->
 		<div id="home-page" data-role="page">
-			<img src="img/Icon%20Materi/background%20project.png"  style="width:100%" >
+				<img src="img/Icon%20Materi/Electrical-System.jpg" style="width:100%">
             <div data-role="content" >
 				<div id="menu">
 					<ul data-role="listview">
@@ -733,12 +738,6 @@
 									<p id="sekor" style="text-align: center;font-size: 50px;">xxxxxxxxxxx</p>
 								</div>
 							</div>
-							<br>
-							<br>
-							<div style="background-color: rgba(255,255,255,0.7);padding-left: 10px;padding-right: 10px;padding-top: 2px;padding-bottom: 2px;">
-								<p id="keterangan" style="text-align: center;font-size: 18px;">xxxxxxxxxxx</p>
-							</div>
-							<a style="visibility:hidden;" id="btn-pembahasan" href="#pembahasan" data-theme="b" data-role="button">Pembahasan Soal</a>
 						</div>
 					</center>
 				</div>
@@ -1205,8 +1204,8 @@
 					document.getElementById("divSoal").style.display = "none";
 					document.getElementById("divSekor").style.display = "initial";
 					document.getElementById("sekor").innerHTML = (sekor/2).toFixed(2);
-					var keterangan;
-					document.getElementById("keterangan").innerHTML = keterangan;
+					//var keterangan;
+					//document.getElementById("keterangan").innerHTML = keterangan;
 				}
 			}
 		</script>
