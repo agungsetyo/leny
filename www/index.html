@@ -14,7 +14,7 @@
 	<script type="text/javascript" src="js/index.js"></script>
 	<script type="text/javascript" src="js/function.js"></script>
     <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
-    <script type="text/javascript" charset="utf-8">
+    <!--<script type="text/javascript" charset="utf-8">
 
     // Call onDeviceReady when PhoneGap is loaded.
     //
@@ -31,12 +31,12 @@
 		document.getElementById("app").style.display = "initial";
     }
 
-    </script>
+    </script>-->
 
 	<title>SISTEM PENCATATAN DAN PENILAIAN PERSEDIAAN PADA PERUSAHAAN DAGANG</title>
 </head>
 <body>
-    <div id="app" style="display:none;">
+    <div id="app" style="display:initial;">
 		<!--<div id="dudu-pembuka" data-role="page" style="background-image:url('img/Icon%20Materi/DEPAN.png'); background-repeat:no-repeat;background-size:100% 100%">
       		<script type="text/JavaScript">
       			setTimeout("location.href = '#Welcome-page';",5000);
@@ -697,7 +697,24 @@
                 </div>
                 <div data-role="content" align="center" style="font-size: 16px;">
                     <!-- Isi konten di sini -->
+					<p>Menu bantuan ini adalah menu yang berisikan informasi untuk mengetahui fungsi tiap tombol pada media pembelajaran ini.</p>
+					<p>Berikut adalah penjelasannya:</p>
 										
+					<img src="img/help/home.PNG" width="74" height="49">
+					<p>Tombol ini terletak di pojok kiri atas, berfungsi sebagai tombol untuk kembali ke menu utama.</p>
+					<img src="img/help/back.PNG" width="66" height="32">
+					<p>tombol ini terletak di bagaian pojok kiri bawah, berfungsi untuk kembali ke menu sebelumnya.</p>
+					<img src="img/help/materi1.PNG" style="width:100%">
+					<p>Tombol ini merupakan tombol materi 1 untuk menuju ke materi pertama yang berisikan pengertian persediaan.</p>
+					<img src="img/help/materi2.PNG" style="width:100%">
+					<p>Tombol ini merupakan tombol materi 2 untuk menuju ke isi materi dua yang berisikan sistem pencatatan persediaan </p>
+					<img src="img/help/materi3.PNG" style="width:100%">
+					<p>Tombol ini merupakan tombol materi 3 untuk menuju ke isi materi tiga yang berisikan metode penilaian persediaan</p>
+					<img src="img/help/materi4.PNG" style="width:100%">
+					<p>Tombol ini merupakan tombol materi 3 untuk menuju ke isi materi tiga yang berisikan penilaian persediaan pada sistem periodik</p>
+					<img src="img/help/materi5.PNG" style="width:100%">
+					<p>Tombol ini merupakan tombol materi 3 untuk menuju ke isi materi tiga yang berisikan penilaian persediaan pada sistem peprpetual</p>
+					
 				</div>
 				<div data-role="footer" data-id="footer" id="footer" data-position="fixed" data-tap-toggle="false">
                     <a href="#home-page"  data-role="button" data-icon="arrow-l" data-inline="true" >Back</a>
@@ -713,7 +730,7 @@
 					<!-- Isi konten di sini -->
 					<div id="divMulai" style="display:initial">
 						<div style="background-color: rgba(255,255,255,0.7);padding-left: 10px;padding-right: 10px;padding-top: 2px;padding-bottom: 2px;">
-							<p><b>Halaman Evaluasi terdiri dari 30 soal berbentuk pilihan ganda. Setiap jawaban benar bernilai 10 poin dibagi 3 sehingga apabila semua jawaban benar akan mendapatkan
+							<p><b>Halaman Evaluasi terdiri dari 20 soal berbentuk pilihan ganda. Setiap jawaban benar bernilai 10 poin dibagi 2 sehingga apabila semua jawaban benar akan mendapatkan
 							nilai 100 poin. Tidak terdapat tombol kembali pada soal. Diharapkan untuk menjawab dengan hati-hati dan benar. Silakan klik tombol <i>"Mulai"</i> dibawah untuk mengerjakan soal.</b></p>
 						</div>
 						<a data-role="button" onclick="mulaiSoal()" style="text-align: center;">Mulai</a>
