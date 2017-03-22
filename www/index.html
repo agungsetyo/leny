@@ -14,29 +14,11 @@
 	<script type="text/javascript" src="js/index.js"></script>
 	<script type="text/javascript" src="js/function.js"></script>
     <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
-    <script type="text/javascript" charset="utf-8">
-
-    // Call onDeviceReady when PhoneGap is loaded.
-    //
-    // At this point, the document has loaded but phonegap-1.0.0.js has not.
-    // When PhoneGap is loaded and talking with the native device,
-    // it will call the event `deviceready`.
-    // 
-    document.addEventListener("deviceready", onDeviceReady, false);
-
-    // PhoneGap is loaded and it is now safe to make calls PhoneGap methods
-    //
-    function onDeviceReady() {
-        // Now safe to use the PhoneGap API
-		document.getElementById("app").style.display = "initial";
-    }
-
-    </script>
 
 	<title>SISTEM PENCATATAN DAN PENILAIAN PERSEDIAAN PADA PERUSAHAAN DAGANG</title>
 </head>
 <body>
-    <div id="app" style="display:none;">
+    <div id="app" >
 		<!--<div id="dudu-pembuka" data-role="page" style="background-image:url('img/Icon%20Materi/DEPAN.png'); background-repeat:no-repeat;background-size:100% 100%">
       		<script type="text/JavaScript">
       			setTimeout("location.href = '#Welcome-page';",5000);
@@ -66,15 +48,15 @@
 							</a>
 						</li>
 						<li class="btn-menu-utama">
-							<a href="soal.html">
+							<a href="#evaluasi-page">
 								<img src="img/Icon%20Materi/2%20evaluasi.png" alt="">
-								<h2><b>KUIS</b></h2>
+								<h2><b>EVALUASI</b></h2>
 							</a>
 						</li>	
 						<li class="btn-menu-utama">
-							<a href="#evaluasi-page" onclick="resetSoal()">
+							<a href="soal.html" onclick="resetSoal()">
 								<img src="img/Icon%20Materi/2%20evaluasi.png" alt="">
-								<h2><b>EVALUASI</b></h2>
+								<h2><b>KUIS</b></h2>
 							</a>
 						</li>	
 						<li class="btn-menu-utama">
@@ -503,7 +485,7 @@
 							<h3><b>4. Rata-Rata Tertimbang</b></h3>
 							<p>Dalam metode rata – rata tertimbang nilai per unit persediaan dihitung dengan cara harga total pembelian dibagi dengan total unit yang dibeli.<br/>
 							Rumus yang digunakan yaitu:</p>
-							<img src="img/tba2.png" style="width: 100%; max-width: 600px;"/>
+							<img src="img/tba2.PNG" style="width: 100%; max-width: 600px;"/>
 						</div>
 						<div data-role="collapsible" data-collapsed-icon="arrow-d" data-expanded-icon="arrow-u" data-iconpos="right" data-theme="a">
 							<h3><b>5. Identifikasi Khusus</b></h3>
@@ -587,7 +569,7 @@
 					</div>
 					<div data-role="collapsible" data-collapsed-icon="arrow-d" data-expanded-icon="arrow-u" data-iconpos="right" data-theme="b">
 						<h3><b>3. Rata-Rata Sederhana</b></h3><br/>
-						<img src="img/tb8-.png" style="width: 100%; max-width: 600px;"/><br/>
+						<img src="img/tb8-.PNG" style="width: 100%; max-width: 600px;"/><br/>
 						<img src="img/tb8.png" style="width: 100%; max-width: 600px;"/><br/>
 						<img src="img/tb9.png" style="width: 100%; max-width: 600px;"/><br/>
 					</div>
