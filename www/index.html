@@ -14,11 +14,26 @@
 	<script type="text/javascript" src="js/index.js"></script>
 	<script type="text/javascript" src="js/function.js"></script>
     <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
+	<script type="text/javascript" charset="utf-8">
+    // Call onDeviceReady when PhoneGap is loaded.
+    //
+    // At this point, the document has loaded but phonegap-1.0.0.js has not.
+    // When PhoneGap is loaded and talking with the native device,
+    // it will call the event `deviceready`.
+    // 
+    document.addEventListener("deviceready", onDeviceReady, false);
+    // PhoneGap is loaded and it is now safe to make calls PhoneGap methods
+    //
+    function onDeviceReady() {
+        // Now safe to use the PhoneGap API
+		document.getElementById("app").style.display = "initial";
+    }
+    </script>
 
 	<title>SISTEM PENCATATAN DAN PENILAIAN PERSEDIAAN PADA PERUSAHAAN DAGANG</title>
 </head>
 <body>
-    <div id="app" >
+    <div id="app" style="display:none;">
 		<!--<div id="dudu-pembuka" data-role="page" style="background-image:url('img/Icon%20Materi/DEPAN.png'); background-repeat:no-repeat;background-size:100% 100%">
       		<script type="text/JavaScript">
       			setTimeout("location.href = '#Welcome-page';",5000);
@@ -1680,7 +1695,17 @@
 				<a href="#home-page"  data-role="button" data-icon="arrow-l" data-inline="true" >Back</a>
 			</div>
 		</div>
-        </div>
+    </div>
+	<script>
+		$(document).ready(function(){
+			var sndClick = new Audio();
+			sndClick.src = 'sound/click.mp3';
+			$("a").mousedown(function() {
+				sndClick.play();
+			});
+		});
+	</script>
+
 				
 		<script type="text/javascript">
 			var nomorSoal = 0;
@@ -3188,12 +3213,5 @@
 		
 	</script>
 		
-		<script>
-			var sndClick = new Audio();
-			sndClick.src = 'sound/click.mp3';
-			$("a").mousedown(function() {
-				sndClick.play();
-			});
-		</script>
     </body>
 </html>
