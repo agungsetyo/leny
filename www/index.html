@@ -14,7 +14,7 @@
 	<script type="text/javascript" src="js/index.js"></script>
 	<script type="text/javascript" src="js/function.js"></script>
     <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
-	<!--<script type="text/javascript" charset="utf-8">
+	<script type="text/javascript" charset="utf-8">
     // Call onDeviceReady when PhoneGap is loaded.
     //
     // At this point, the document has loaded but phonegap-1.0.0.js has not.
@@ -28,7 +28,7 @@
         // Now safe to use the PhoneGap API
 		document.getElementById("app").style.display = "initial";
     }
-    </script>-->
+    </script>
 
 	<title>SISTEM PENCATATAN DAN PENILAIAN PERSEDIAAN PADA PERUSAHAAN DAGANG</title>
 </head>
@@ -69,7 +69,7 @@
 							</a>
 						</li>	
 						<li class="btn-menu-utama">
-							<a href="#evaluasi-page" onclick="resetSoal()">
+							<a href="#evaluasi-page" onmousedown="resetSoal()">
 								<img src="img/Icon%20Materi/2%20evaluasi.png" alt="">
 								<h2><b>KUIS</b></h2>
 							</a>
@@ -77,7 +77,7 @@
 						<li class="btn-menu-utama">
 							<a href="#silabus-page"  >
 								<img src="img/Icon%20Materi/1%20Silabus%20(1).png" alt="">
-								<h2><b>SILABUS</b></h2>
+								<h2><b>KOMPETENSI</b></h2>
 							</a>
 						</li>
 						<li class="btn-menu-utama">
@@ -658,7 +658,7 @@
 			<div  id="silabus-page" data-role="page" style="background-image:url('img/bg/bg-silabus.jpg'); background-repeat:repeat-y;background-size:100% 100%">
                 <div data-role="header" data-position="fixed" data-tap-toggle="false" data-transition="none" data-id="header">
 					<a href="#home-page"  data-role="button" data-icon="ms-home-bt" data-inline="true" >Home</a>
-                    <h1 style="font-size: 24px;">SILABUS</h1>
+                    <h1 style="font-size: 24px;">KOMPETENSI</h1>
                 </div>
                 <div data-role="content" align="justify" style="font-size: 16px;">
                     <!-- Isi konten di sini -->
@@ -752,6 +752,9 @@
 								</div>
 							</div>
 						</div>
+						<br/>
+						<br/>
+						<a data-role="button" href="#home-page" style="text-align: center;">Kembali ke Halman Utama</a>
 					</center>
 				</div>
 				<div data-role="footer" data-id="footer" id="footer" data-position="fixed" data-tap-toggle="false">
@@ -2086,7 +2089,6 @@
 				}
 			}
 			function resetSoal(){
-				sndClick.play();
 				nomorSoal = 0;
 				sekor = 0;
 				$('#divMulai').show();
@@ -2099,7 +2101,6 @@
 			function mulaiSoal(){
 				$('#divMulai').hide();
 				$('#divSoal').show();
-				resetSoal();
 				//document.getElementById("divMulai").style.display = "none";
 				//document.getElementById("divSoal").style.display = "initial";
 				shuffle(nomorAcak);
