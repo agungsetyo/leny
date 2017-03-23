@@ -8,7 +8,6 @@
         Promozzing
     </author>
     <content src="index.html" />
-	<preference name="SplashScreen" value="splash" />
     <preference name="permissions" value="none" />
     <preference name="orientation" value="default" />
     <preference name="target-device" value="universal" />
@@ -25,8 +24,20 @@
     <preference name="android-minSdkVersion" value="14" />
     <preference name="android-installLocation" value="auto" />
     <plugin name="cordova-plugin-splashscreen" source="npm" />
-	<splash src="splash.png" />
     <icon src="img/icon.png" />
+	<platform name="android">
+		<!-- you can use any density that exists in the Android project -->
+		<splash src="res/screen/android/splash-land-hdpi.png" density="land-hdpi"/>
+		<splash src="res/screen/android/splash-land-ldpi.png" density="land-ldpi"/>
+		<splash src="res/screen/android/splash-land-mdpi.png" density="land-mdpi"/>
+		<splash src="res/screen/android/splash-land-xhdpi.png" density="land-xhdpi"/>
+	 
+		<splash src="res/screen/android/splash-port-hdpi.png" density="port-hdpi"/>
+		<splash src="res/screen/android/splash-port-ldpi.png" density="port-ldpi"/>
+		<splash src="res/screen/android/splash-port-mdpi.png" density="port-mdpi"/>
+		<splash src="res/screen/android/splash-port-xhdpi.png" density="port-xhdpi"/>
+	</platform>
+	<preference name="AutoHideSplashScreen" value="true" />
     <preference name="SplashScreenDelay" value="5000" />
     <access origin="*" />
     <plugin name="cordova-plugin-whitelist" version="1" />
