@@ -14,7 +14,7 @@
 	<script type="text/javascript" src="js/index.js"></script>
 	<script type="text/javascript" src="js/function.js"></script>
     <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
-	<script type="text/javascript" charset="utf-8">
+	<!--<script type="text/javascript" charset="utf-8">
     // Call onDeviceReady when PhoneGap is loaded.
     //
     // At this point, the document has loaded but phonegap-1.0.0.js has not.
@@ -28,12 +28,12 @@
         // Now safe to use the PhoneGap API
 		document.getElementById("app").style.display = "initial";
     }
-    </script>
+    </script>-->
 
 	<title>SISTEM PENCATATAN DAN PENILAIAN PERSEDIAAN PADA PERUSAHAAN DAGANG</title>
 </head>
 <body>
-    <div id="app" style="display:none;">
+    <div id="app" style="display:initial;">
 		<!--<div id="dudu-pembuka" data-role="page" style="background-image:url('img/Icon%20Materi/DEPAN.png'); background-repeat:no-repeat;background-size:100% 100%">
       		<script type="text/JavaScript">
       			setTimeout("location.href = '#Welcome-page';",5000);
@@ -824,35 +824,32 @@
 				<img src="img/transaksi-februari.png" style="width: 100%; max-width: 600px;"/>
 				<!-- Isi konten di sini -->
 				<center><b id="periodik-fifo-soal">Tanggal 3 Januari</b></center>
-				<table>
-					<tr>
-						<td>
-							<select id="select-priodik-fifo-0">
-								<option value="0">Pilih</option>
-								<option value="1">Kas (D)</option>
-								<option value="2">Kas (K)</option>
-								<option value="3">Piutang Dagang (D)</option>
-								<option value="4">Piutang Dagang (K)</option>
-								<option value="5">Persediaan Barang Dagangan (D)</option>
-								<option value="6">Persediaan Barang Dagangan (K)</option>
-								<option value="7">Hutang Dagang (D)</option>
-								<option value="8">Hutang Dagang (K)</option>
-								<option value="9">Penjualan (D)</option>
-								<option value="10">Penjualan (K)</option>
-								<option value="11">Pembelian (D)</option>
-								<option value="12">Pembelian (K)</option>
-								<option value="13">Biaya Angkut Penjualan (D)</option>
-								<option value="14">Biaya Angkut Penjualan (K)</option>
-								<option value="15">Harga Pokok Penjualan (D)</option>
-								<option value="16">Harga Pokok Penjualan (K)</option>
-							</select>
-						</td>
-						<td><input type="text" class="uang" id="uang-periodik-fifo-0"></input></td>
-					</tr>
-				</table>
-				<table>
-					<tr>
-						<td>
+				<select id="select-priodik-fifo-0">
+					<option value="0">Pilih</option>
+					<option value="1">Kas (D)</option>
+					<option value="2">Kas (K)</option>
+					<option value="3">Piutang Dagang (D)</option>
+					<option value="4">Piutang Dagang (K)</option>
+					<option value="5">Persediaan Barang Dagangan (D)</option>
+					<option value="6">Persediaan Barang Dagangan (K)</option>
+					<option value="7">Hutang Dagang (D)</option>
+					<option value="8">Hutang Dagang (K)</option>
+					<option value="9">Penjualan (D)</option>
+					<option value="10">Penjualan (K)</option>
+					<option value="11">Pembelian (D)</option>
+					<option value="12">Pembelian (K)</option>
+					<option value="13">Biaya Angkut Penjualan (D)</option>
+					<option value="14">Biaya Angkut Penjualan (K)</option>
+					<option value="15">Harga Pokok Penjualan (D)</option>
+					<option value="16">Harga Pokok Penjualan (K)</option>
+				</select>
+						
+						<input type="text" class="uang" id="uang-periodik-fifo-0"></input>
+					
+				
+				
+					
+						
 							<select id="select-priodik-fifo-1">
 								<option value="0">Pilih</option>
 								<option value="1">Kas (D)</option>
@@ -872,13 +869,13 @@
 								<option value="15">Harga Pokok Penjualan (D)</option>
 								<option value="16">Harga Pokok Penjualan (K)</option>
 							</select>
-						</td>
-						<td><input type="text" class="uang" id="uang-periodik-fifo-1"></input></td>
-					</tr>
-				</table>
-				<table>
-					<tr>
-						<td>
+						
+						<input type="text" class="uang" id="uang-periodik-fifo-1"></input>
+					
+				
+				
+					
+						
 							<select id="select-priodik-fifo-2">
 								<option value="0">Pilih</option>
 								<option value="1">Kas (D)</option>
@@ -898,13 +895,13 @@
 								<option value="15">Harga Pokok Penjualan (D)</option>
 								<option value="16">Harga Pokok Penjualan (K)</option>
 							</select>
-						</td>
-						<td><input type="text" class="uang" id="uang-periodik-fifo-2"></input></td>
-					</tr>
-				</table>
-				<table>
-					<tr>
-						<td>
+						
+						<input type="text" class="uang" id="uang-periodik-fifo-2"></input>
+					
+				
+				
+					
+						
 							<select id="select-priodik-fifo-3">
 								<option value="0">Pilih</option>
 								<option value="1">Kas (D)</option>
@@ -924,10 +921,10 @@
 								<option value="15">Harga Pokok Penjualan (D)</option>
 								<option value="16">Harga Pokok Penjualan (K)</option>
 							</select>
-						</td>
-						<td><input type="text" class="uang" id="uang-periodik-fifo-3"></input></td>
-					</tr>
-				</table>
+						
+						<input type="text" class="uang" id="uang-periodik-fifo-3"></input>
+					
+				
 				<button id="periodik-fifo-btn-cek">Cek Jawaban</button>
 				<p id="periodik-fifo-cek-jawaban"></p>
 				<div id="div-periodik-fifo-next">
@@ -946,9 +943,9 @@
 				<img src="img/transaksi-februari.png" style="width: 100%; max-width: 600px;"/>
 				<!-- Isi konten di sini -->
 				<center><b id="periodik-lifo-soal">Tanggal 3 Januari</b></center>
-				<table>
-					<tr>
-						<td>
+				
+					
+						
 							<select id="select-priodik-lifo-0">
 								<option value="0">Pilih</option>
 								<option value="1">Kas (D)</option>
@@ -968,13 +965,13 @@
 								<option value="15">Harga Pokok Penjualan (D)</option>
 								<option value="16">Harga Pokok Penjualan (K)</option>
 							</select>
-						</td>
-						<td><input type="text" class="uang" id="uang-periodik-lifo-0"></input></td>
-					</tr>
-				</table>
-				<table>
-					<tr>
-						<td>
+						
+						<input type="text" class="uang" id="uang-periodik-lifo-0"></input>
+					
+				
+				
+					
+						
 							<select id="select-priodik-lifo-1">
 								<option value="0">Pilih</option>
 								<option value="1">Kas (D)</option>
@@ -994,13 +991,13 @@
 								<option value="15">Harga Pokok Penjualan (D)</option>
 								<option value="16">Harga Pokok Penjualan (K)</option>
 							</select>
-						</td>
-						<td><input type="text" class="uang" id="uang-periodik-lifo-1"></input></td>
-					</tr>
-				</table>
-				<table>
-					<tr>
-						<td>
+						
+						<input type="text" class="uang" id="uang-periodik-lifo-1"></input>
+					
+				
+				
+					
+						
 							<select id="select-priodik-lifo-2">
 								<option value="0">Pilih</option>
 								<option value="1">Kas (D)</option>
@@ -1020,13 +1017,13 @@
 								<option value="15">Harga Pokok Penjualan (D)</option>
 								<option value="16">Harga Pokok Penjualan (K)</option>
 							</select>
-						</td>
-						<td><input type="text" class="uang" id="uang-periodik-lifo-2"></input></td>
-					</tr>
-				</table>
-				<table>
-					<tr>
-						<td>
+						
+						<input type="text" class="uang" id="uang-periodik-lifo-2"></input>
+					
+				
+				
+					
+						
 							<select id="select-priodik-lifo-3">
 								<option value="0">Pilih</option>
 								<option value="1">Kas (D)</option>
@@ -1046,10 +1043,10 @@
 								<option value="15">Harga Pokok Penjualan (D)</option>
 								<option value="16">Harga Pokok Penjualan (K)</option>
 							</select>
-						</td>
-						<td><input type="text" class="uang" id="uang-periodik-lifo-3"></input></td>
-					</tr>
-				</table>
+						
+						<input type="text" class="uang" id="uang-periodik-lifo-3"></input>
+					
+				
 				<button id="periodik-lifo-btn-cek">Cek Jawaban</button>
 				<p id="periodik-lifo-cek-jawaban"></p>
 				<div id="div-periodik-lifo-next">
@@ -1069,9 +1066,9 @@
 				<img src="img/transaksi-februari.png" style="width: 100%; max-width: 600px;"/>
 				<!-- Isi konten di sini -->
 				<center><b id="periodik-sederhana-soal">Tanggal 3 Januari</b></center>
-				<table>
-					<tr>
-						<td>
+				
+					
+						
 							<select id="select-priodik-sederhana-0">
 								<option value="0">Pilih</option>
 								<option value="1">Kas (D)</option>
@@ -1091,13 +1088,13 @@
 								<option value="15">Harga Pokok Penjualan (D)</option>
 								<option value="16">Harga Pokok Penjualan (K)</option>
 							</select>
-						</td>
-						<td><input type="text" class="uang" id="uang-periodik-sederhana-0"></input></td>
-					</tr>
-				</table>
-				<table>
-					<tr>
-						<td>
+						
+						<input type="text" class="uang" id="uang-periodik-sederhana-0"></input>
+					
+				
+				
+					
+						
 							<select id="select-priodik-sederhana-1">
 								<option value="0">Pilih</option>
 								<option value="1">Kas (D)</option>
@@ -1117,13 +1114,13 @@
 								<option value="15">Harga Pokok Penjualan (D)</option>
 								<option value="16">Harga Pokok Penjualan (K)</option>
 							</select>
-						</td>
-						<td><input type="text" class="uang" id="uang-periodik-sederhana-1"></input></td>
-					</tr>
-				</table>
-				<table>
-					<tr>
-						<td>
+						
+						<input type="text" class="uang" id="uang-periodik-sederhana-1"></input>
+					
+				
+				
+					
+						
 							<select id="select-priodik-sederhana-2">
 								<option value="0">Pilih</option>
 								<option value="1">Kas (D)</option>
@@ -1143,13 +1140,13 @@
 								<option value="15">Harga Pokok Penjualan (D)</option>
 								<option value="16">Harga Pokok Penjualan (K)</option>
 							</select>
-						</td>
-						<td><input type="text" class="uang" id="uang-periodik-sederhana-2"></input></td>
-					</tr>
-				</table>
-				<table>
-					<tr>
-						<td>
+						
+						<input type="text" class="uang" id="uang-periodik-sederhana-2"></input>
+					
+				
+				
+					
+						
 							<select id="select-priodik-sederhana-3">
 								<option value="0">Pilih</option>
 								<option value="1">Kas (D)</option>
@@ -1169,10 +1166,10 @@
 								<option value="15">Harga Pokok Penjualan (D)</option>
 								<option value="16">Harga Pokok Penjualan (K)</option>
 							</select>
-						</td>
-						<td><input type="text" class="uang" id="uang-periodik-sederhana-3"></input></td>
-					</tr>
-				</table>
+						
+						<input type="text" class="uang" id="uang-periodik-sederhana-3"></input>
+					
+				
 				<button id="periodik-sederhana-btn-cek">Cek Jawaban</button>
 				<p id="periodik-sederhana-cek-jawaban"></p>
 				<div id="div-periodik-sederhana-next">
@@ -1192,9 +1189,9 @@
 				<img src="img/transaksi-februari.png" style="width: 100%; max-width: 600px;"/>
 				<!-- Isi konten di sini -->
 				<center><b id="periodik-tertimbang-soal">Tanggal 3 Januari</b></center>
-				<table>
-					<tr>
-						<td>
+				
+					
+						
 							<select id="select-priodik-tertimbang-0">
 								<option value="0">Pilih</option>
 								<option value="1">Kas (D)</option>
@@ -1214,13 +1211,13 @@
 								<option value="15">Harga Pokok Penjualan (D)</option>
 								<option value="16">Harga Pokok Penjualan (K)</option>
 							</select>
-						</td>
-						<td><input type="text" class="uang" id="uang-periodik-tertimbang-0"></input></td>
-					</tr>
-				</table>
-				<table>
-					<tr>
-						<td>
+						
+						<input type="text" class="uang" id="uang-periodik-tertimbang-0"></input>
+					
+				
+				
+					
+						
 							<select id="select-priodik-tertimbang-1">
 								<option value="0">Pilih</option>
 								<option value="1">Kas (D)</option>
@@ -1240,13 +1237,13 @@
 								<option value="15">Harga Pokok Penjualan (D)</option>
 								<option value="16">Harga Pokok Penjualan (K)</option>
 							</select>
-						</td>
-						<td><input type="text" class="uang" id="uang-periodik-tertimbang-1"></input></td>
-					</tr>
-				</table>
-				<table>
-					<tr>
-						<td>
+						
+						<input type="text" class="uang" id="uang-periodik-tertimbang-1"></input>
+					
+				
+				
+					
+						
 							<select id="select-priodik-tertimbang-2">
 								<option value="0">Pilih</option>
 								<option value="1">Kas (D)</option>
@@ -1266,13 +1263,13 @@
 								<option value="15">Harga Pokok Penjualan (D)</option>
 								<option value="16">Harga Pokok Penjualan (K)</option>
 							</select>
-						</td>
-						<td><input type="text" class="uang" id="uang-periodik-tertimbang-2"></input></td>
-					</tr>
-				</table>
-				<table>
-					<tr>
-						<td>
+						
+						<input type="text" class="uang" id="uang-periodik-tertimbang-2"></input>
+					
+				
+				
+					
+						
 							<select id="select-priodik-tertimbang-3">
 								<option value="0">Pilih</option>
 								<option value="1">Kas (D)</option>
@@ -1292,10 +1289,10 @@
 								<option value="15">Harga Pokok Penjualan (D)</option>
 								<option value="16">Harga Pokok Penjualan (K)</option>
 							</select>
-						</td>
-						<td><input type="text" class="uang" id="uang-periodik-tertimbang-3"></input></td>
-					</tr>
-				</table>
+						
+						<input type="text" class="uang" id="uang-periodik-tertimbang-3"></input>
+					
+				
 				<button id="periodik-tertimbang-btn-cek">Cek Jawaban</button>
 				<p id="periodik-tertimbang-cek-jawaban"></p>
 				<div id="div-periodik-tertimbang-next">
@@ -1314,9 +1311,9 @@
 				<img src="img/transaksi-februari.png" style="width: 100%; max-width: 600px;"/>
 				<!-- Isi konten di sini -->
 				<center><b id="perpetual-fifo-soal">Tanggal 3 Januari</b></center>
-				<table>
-					<tr>
-						<td>
+				
+					
+						
 							<select id="select-perpetual-fifo-0">
 								<option value="0">Pilih</option>
 								<option value="1">Kas (D)</option>
@@ -1336,13 +1333,13 @@
 								<option value="15">Harga Pokok Penjualan (D)</option>
 								<option value="16">Harga Pokok Penjualan (K)</option>
 							</select>
-						</td>
-						<td><input type="text" class="uang" id="uang-perpetual-fifo-0"></input></td>
-					</tr>
-				</table>
-				<table>
-					<tr>
-						<td>
+						
+						<input type="text" class="uang" id="uang-perpetual-fifo-0"></input>
+					
+				
+				
+					
+						
 							<select id="select-perpetual-fifo-1">
 								<option value="0">Pilih</option>
 								<option value="1">Kas (D)</option>
@@ -1362,13 +1359,13 @@
 								<option value="15">Harga Pokok Penjualan (D)</option>
 								<option value="16">Harga Pokok Penjualan (K)</option>
 							</select>
-						</td>
-						<td><input type="text" class="uang" id="uang-perpetual-fifo-1"></input></td>
-					</tr>
-				</table>
-				<table>
-					<tr>
-						<td>
+						
+						<input type="text" class="uang" id="uang-perpetual-fifo-1"></input>
+					
+				
+				
+					
+						
 							<select id="select-perpetual-fifo-2">
 								<option value="0">Pilih</option>
 								<option value="1">Kas (D)</option>
@@ -1388,13 +1385,13 @@
 								<option value="15">Harga Pokok Penjualan (D)</option>
 								<option value="16">Harga Pokok Penjualan (K)</option>
 							</select>
-						</td>
-						<td><input type="text" class="uang" id="uang-perpetual-fifo-2"></input></td>
-					</tr>
-				</table>
-				<table>
-					<tr>
-						<td>
+						
+						<input type="text" class="uang" id="uang-perpetual-fifo-2"></input>
+					
+				
+				
+					
+						
 							<select id="select-perpetual-fifo-3">
 								<option value="0">Pilih</option>
 								<option value="1">Kas (D)</option>
@@ -1414,10 +1411,10 @@
 								<option value="15">Harga Pokok Penjualan (D)</option>
 								<option value="16">Harga Pokok Penjualan (K)</option>
 							</select>
-						</td>
-						<td><input type="text" class="uang" id="uang-perpetual-fifo-3"></input></td>
-					</tr>
-				</table>
+						
+						<input type="text" class="uang" id="uang-perpetual-fifo-3"></input>
+					
+				
 				<button id="perpetual-fifo-btn-cek">Cek Jawaban</button>
 				<p id="perpetual-fifo-cek-jawaban"></p>
 				<div id="div-perpetual-fifo-next">
@@ -1436,9 +1433,9 @@
 				<img src="img/transaksi-februari.png" style="width: 100%; max-width: 600px;"/>
 				<!-- Isi konten di sini -->
 				<center><b id="perpetual-lifo-soal">Tanggal 3 Januari</b></center>
-				<table>
-					<tr>
-						<td>
+				
+					
+						
 							<select id="select-perpetual-lifo-0">
 								<option value="0">Pilih</option>
 								<option value="1">Kas (D)</option>
@@ -1458,13 +1455,13 @@
 								<option value="15">Harga Pokok Penjualan (D)</option>
 								<option value="16">Harga Pokok Penjualan (K)</option>
 							</select>
-						</td>
-						<td><input type="text" class="uang" id="uang-perpetual-lifo-0"></input></td>
-					</tr>
-				</table>
-				<table>
-					<tr>
-						<td>
+						
+						<input type="text" class="uang" id="uang-perpetual-lifo-0"></input>
+					
+				
+				
+					
+						
 							<select id="select-perpetual-lifo-1">
 								<option value="0">Pilih</option>
 								<option value="1">Kas (D)</option>
@@ -1484,13 +1481,13 @@
 								<option value="15">Harga Pokok Penjualan (D)</option>
 								<option value="16">Harga Pokok Penjualan (K)</option>
 							</select>
-						</td>
-						<td><input type="text" class="uang" id="uang-perpetual-lifo-1"></input></td>
-					</tr>
-				</table>
-				<table>
-					<tr>
-						<td>
+						
+						<input type="text" class="uang" id="uang-perpetual-lifo-1"></input>
+					
+				
+				
+					
+						
 							<select id="select-perpetual-lifo-2">
 								<option value="0">Pilih</option>
 								<option value="1">Kas (D)</option>
@@ -1510,13 +1507,13 @@
 								<option value="15">Harga Pokok Penjualan (D)</option>
 								<option value="16">Harga Pokok Penjualan (K)</option>
 							</select>
-						</td>
-						<td><input type="text" class="uang" id="uang-perpetual-lifo-2"></input></td>
-					</tr>
-				</table>
-				<table>
-					<tr>
-						<td>
+						
+						<input type="text" class="uang" id="uang-perpetual-lifo-2"></input>
+					
+				
+				
+					
+						
 							<select id="select-perpetual-lifo-3">
 								<option value="0">Pilih</option>
 								<option value="1">Kas (D)</option>
@@ -1536,10 +1533,10 @@
 								<option value="15">Harga Pokok Penjualan (D)</option>
 								<option value="16">Harga Pokok Penjualan (K)</option>
 							</select>
-						</td>
-						<td><input type="text" class="uang" id="uang-perpetual-lifo-3"></input></td>
-					</tr>
-				</table>
+						
+						<input type="text" class="uang" id="uang-perpetual-lifo-3"></input>
+					
+				
 				<button id="perpetual-lifo-btn-cek">Cek Jawaban</button>
 				<p id="perpetual-lifo-cek-jawaban"></p>
 				<div id="div-perpetual-lifo-next">
@@ -1558,9 +1555,9 @@
 				<img src="img/transaksi-februari.png" style="width: 100%; max-width: 600px;"/>
 				<!-- Isi konten di sini -->
 				<center><b id="perpetual-bergerak-soal">Tanggal 3 Januari</b></center>
-				<table>
-					<tr>
-						<td>
+				
+					
+						
 							<select id="select-perpetual-bergerak-0">
 								<option value="0">Pilih</option>
 								<option value="1">Kas (D)</option>
@@ -1580,13 +1577,13 @@
 								<option value="15">Harga Pokok Penjualan (D)</option>
 								<option value="16">Harga Pokok Penjualan (K)</option>
 							</select>
-						</td>
-						<td><input type="text" class="uang" id="uang-perpetual-bergerak-0"></input></td>
-					</tr>
-				</table>
-				<table>
-					<tr>
-						<td>
+						
+						<input type="text" class="uang" id="uang-perpetual-bergerak-0"></input>
+					
+				
+				
+					
+						
 							<select id="select-perpetual-bergerak-1">
 								<option value="0">Pilih</option>
 								<option value="1">Kas (D)</option>
@@ -1606,13 +1603,13 @@
 								<option value="15">Harga Pokok Penjualan (D)</option>
 								<option value="16">Harga Pokok Penjualan (K)</option>
 							</select>
-						</td>
-						<td><input type="text" class="uang" id="uang-perpetual-bergerak-1"></input></td>
-					</tr>
-				</table>
-				<table>
-					<tr>
-						<td>
+						
+						<input type="text" class="uang" id="uang-perpetual-bergerak-1"></input>
+					
+				
+				
+					
+						
 							<select id="select-perpetual-bergerak-2">
 								<option value="0">Pilih</option>
 								<option value="1">Kas (D)</option>
@@ -1632,13 +1629,13 @@
 								<option value="15">Harga Pokok Penjualan (D)</option>
 								<option value="16">Harga Pokok Penjualan (K)</option>
 							</select>
-						</td>
-						<td><input type="text" class="uang" id="uang-perpetual-bergerak-2"></input></td>
-					</tr>
-				</table>
-				<table>
-					<tr>
-						<td>
+						
+						<input type="text" class="uang" id="uang-perpetual-bergerak-2"></input>
+					
+				
+				
+					
+						
 							<select id="select-perpetual-bergerak-3">
 								<option value="0">Pilih</option>
 								<option value="1">Kas (D)</option>
@@ -1658,10 +1655,10 @@
 								<option value="15">Harga Pokok Penjualan (D)</option>
 								<option value="16">Harga Pokok Penjualan (K)</option>
 							</select>
-						</td>
-						<td><input type="text" class="uang" id="uang-perpetual-bergerak-3"></input></td>
-					</tr>
-				</table>
+						
+						<input type="text" class="uang" id="uang-perpetual-bergerak-3"></input>
+					
+				
 				<button id="perpetual-bergerak-btn-cek">Cek Jawaban</button>
 				<p id="perpetual-bergerak-cek-jawaban"></p>
 				<div id="div-perpetual-bergerak-next">
