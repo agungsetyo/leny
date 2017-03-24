@@ -2101,11 +2101,15 @@
 			function mulaiSoal(){
 				alert("Berhasil Klik");
 				$('#divMulai').hide();
+				alert("debug code : 1");
 				$('#divSoal').show();
+				alert("debug code : 2");
 				//document.getElementById("divMulai").style.display = "none";
 				//document.getElementById("divSoal").style.display = "initial";
 				shuffle(nomorAcak);
+				alert("debug code : 3");
 				tampilkanSoal();
+				alert("debug code : 4");
 			}
 			function tampilkanSoal(){
 				document.getElementById("textSoal").innerHTML = nomorSoal+1 +". "+soal[nomorAcak[nomorSoal]];
