@@ -733,6 +733,9 @@
 						<a href="#periodik-fifo-page" data-theme="a"  data-role="button" onmousedown="mulaiSoalPeriodikFIFO()">FIFO (<i>First In First Out</i>)</a>
 						<a href="#" data-theme="a"  data-role="button" onmousedown="alert('FIFO')">FIFO (<i>First In First Out</i>)</a>
 						<a href="#" data-theme="a"  data-role="button" onmousedown="debugKuis()">FIFO (<i>First In First Out</i>)</a>
+						<a href="#" data-theme="a"  data-role="button" onmousedown="debugKuis1()">FIFO (<i>First In First Out</i>)</a>
+						<a href="#" data-theme="a"  data-role="button" onmousedown="debugKuis2()">FIFO (<i>First In First Out</i>)</a>
+						<a href="#" data-theme="a"  data-role="button" onmousedown="debugKuis3()">FIFO (<i>First In First Out</i>)</a>
 					</div>
 					<div id="divSoal" style="display:none">
 						<div style="background-color: rgba(255,255,255,0.7);padding-left: 10px;padding-right: 10px;padding-top: 2px;padding-bottom: 2px;">
@@ -1666,6 +1669,9 @@
 		</div>
     </div>
 	<script>
+			function debugKuis() {
+				alert("OK!");
+			}
 		$(document).ready(function(){
 			var sndClick = new Audio();
 			sndClick.src = 'sound/click.mp3';
@@ -1677,6 +1683,9 @@
 
 				
 		<script>
+			function debugKuis1() {
+				alert("OK!");
+			}
 			var nomorSoal = 0;
 			var sekor = 0;
 			var pengali = 5;
@@ -2067,9 +2076,6 @@
 				//document.getElementById("divSoal").style.display = "none";
 				//document.getElementById("divSekor").style.display = "none";
 			}
-			function debugKuis() {
-				alert("OK!");
-			}
 			function mulaiSoal(){
 				alert("Berhasil Klik");
 				$('#divMulai').hide();
@@ -2134,6 +2140,9 @@
 		}
 	</script>
 	<script>
+			function debugKuis2() {
+				alert("OK!");
+			}
 		function gotohome() {
 			location.href = "index.html#home-page";
 		}
