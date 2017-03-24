@@ -657,28 +657,60 @@
 			<div  id="silabus-page" data-role="page" style="background-image:url('img/bg/bg-silabus.jpg'); background-repeat:repeat-y;background-size:100% 100%">
                 <div data-role="header" data-position="fixed" data-tap-toggle="false" data-transition="none" data-id="header">
 					<a href="#home-page"  data-role="button" data-icon="ms-home-bt" data-inline="true" >Home</a>
-                    <h1 style="font-size: 24px;">KOMPETENSI</h1>
+                    <h2>KOMPETENSI</h2>
                 </div>
                 <div data-role="content" align="justify" style="font-size: 16px;">
                     <!-- Isi konten di sini -->
-					<b>A.	STANDAR KOMPETENSI</b><br/>
-					<p>Memahami akuntansi persediaan pada perusahaan dagang.</p>
-					<b>B.	KOMPETENSI DASAR</b><br/>
-					<p>Menjelaskan akuntansi persediaan pada perusahaan dagang.</p>
-					<b>C.	INDIKATOR</b><br/>
-					<ol>
-						<li>Memahami pengertian persediaan, klasifikasi persediaan, dan sistem pencatatan persediaan.</li>
-						<li>Memahami sistem penilaian persediaan pada sistem periodik dan perpetual.</li>
-						<li>Membuat perhitungan nilai persediaan pada sistem pencatatan periodik.</li>
-						<li>Membuat perhitungan nilai persediaan pada sistem pencatatan perpetual.</li>
-					</ol>
-					<b>D.	TUJUAN PEMBELAJARAN</b><br/>
-					<ol>
-						<li>Siswa dapat memahami pengertian persediaan, klasifikasi persediaan, dan sistem pencatatan persediaan.</li>
-						<li>Siswa dapat memahami sistem penilaian persediaan pada sistem periodik dan perpetual.</li>
-						<li>Siswa dapat membuat perhitungan nilai persediaan pada sistem pencatatan periodik.</li>
-						<li>Siswa dapat membuat perhitungan nilai persediaan pada sistem pencatatan perpetual.</li>
-					</ol>	
+					<table>
+						<tr>
+							<td style="vertical-align: text-top;">KI-1</td>
+							<td colspan="2">Memahami dan menerapkan pengetahuan faktual, konseptual, prosedural, dan metakognitif berdasarkan rasa ingin tahunya tentang ilmu pengetahuan, teknologi, seni, budaya, dan humaniora dalam wawasan kemanusiaan,  kebangsaan, kenegaraan, dan peradaban terkait penyebab fenomena dan kejadian dalam bidangkerja yang spesifik untuk memecahkan masalah.</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td style="vertical-align: text-top;">KD-1</td>
+							<td>Menjelaskan metode-metode yang digunakan dalam menentukan nilai persediaan</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td style="vertical-align: text-top;">KD-2</td>
+							<td>Menjelaskan perhitungan nilai persediaan sistem pencatatan periodik untuk berbagai metode penilaian persediaan.</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td style="vertical-align: text-top;">KD-3</td>
+							<td>KD-3.	Menjelaskan perhitungan nilai persediaan sistem pencatatan perpetual untuk berbagai metode penentuan harga pokok.</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td style="vertical-align: text-top;"></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td style="vertical-align: text-top;">KI-2</td>
+							<td colspan="2">Mengolah, menyaji, dan menalar dalam ranah konkret dan ranah abstrak terkait dengan pengembangan dari yang dipelajarinya di sekolah secara mandiri, bertindak secara efektif dan kreatif, dan mampu melaksanakan tugas spesifik di bawah pengawasan langsung.</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td style="vertical-align: text-top;">KD-1</td>
+							<td>Mengidentifikasi klasifikasi persediaan dan sitem pencatatannya</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td style="vertical-align: text-top;">KD-2</td>
+							<td>Mengidentifikasi penggunaan metode dalam menentukan nilai persediaan</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td style="vertical-align: text-top;">KD-3</td>
+							<td>Menghitung nilai persediaan sistem pencatatan periodik untuk berbagai metode penentuan harga pokok.</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td style="vertical-align: text-top;">KD-4</td>
+							<td>Menghitung nilai persediaan sistem pencatatan perpetual untuk berbagai metode penentuan harga pokok</td>
+						</tr>
+					</table>
 				</div>
 				<div data-role="footer" data-id="footer" id="footer" data-position="fixed" data-tap-toggle="false">
                     <a href="#home-page"  data-role="button" data-icon="arrow-l" data-inline="true" >Back</a>
@@ -826,6 +858,8 @@
 				<img src="img/transaksi-februari.png" style="width: 100%; max-width: 600px;"/>
 				<!-- Isi konten di sini -->
 				<center><b id="periodik-fifo-soal">Tanggal 3 Januari</b></center>
+				<p>Isikan nominal uang dengan 2 (dua) angka di belakang koma.</p>
+				
 				<select id="select-priodik-fifo-0">
 					<option value="0">Pilih</option>
 					<option value="1">Kas (D)</option>
@@ -929,6 +963,7 @@
 				<img src="img/transaksi-februari.png" style="width: 100%; max-width: 600px;"/>
 				<!-- Isi konten di sini -->
 				<center><b id="periodik-lifo-soal">Tanggal 3 Januari</b></center>
+				<p>Isikan nominal uang dengan 2 (dua) angka di belakang koma.</p>
 				
 				<select id="select-priodik-lifo-0">
 					<option value="0">Pilih</option>
@@ -1034,108 +1069,91 @@
 				<img src="img/transaksi-februari.png" style="width: 100%; max-width: 600px;"/>
 				<!-- Isi konten di sini -->
 				<center><b id="periodik-sederhana-soal">Tanggal 3 Januari</b></center>
+				<p>Isikan nominal uang dengan 2 (dua) angka di belakang koma.</p>
 				
-					
-						
-							<select id="select-priodik-sederhana-0">
-								<option value="0">Pilih</option>
-								<option value="1">Kas (D)</option>
-								<option value="2">Kas (K)</option>
-								<option value="3">Piutang Dagang (D)</option>
-								<option value="4">Piutang Dagang (K)</option>
-								<option value="5">Persediaan Barang Dagangan (D)</option>
-								<option value="6">Persediaan Barang Dagangan (K)</option>
-								<option value="7">Hutang Dagang (D)</option>
-								<option value="8">Hutang Dagang (K)</option>
-								<option value="9">Penjualan (D)</option>
-								<option value="10">Penjualan (K)</option>
-								<option value="11">Pembelian (D)</option>
-								<option value="12">Pembelian (K)</option>
-								<option value="13">Biaya Angkut Penjualan (D)</option>
-								<option value="14">Biaya Angkut Penjualan (K)</option>
-								<option value="15">Harga Pokok Penjualan (D)</option>
-								<option value="16">Harga Pokok Penjualan (K)</option>
-							</select>
-						
-						<input type="text" class="uang" id="uang-periodik-sederhana-0"></input>
-					
+				<select id="select-priodik-sederhana-0">
+					<option value="0">Pilih</option>
+					<option value="1">Kas (D)</option>
+					<option value="2">Kas (K)</option>
+					<option value="3">Piutang Dagang (D)</option>
+					<option value="4">Piutang Dagang (K)</option>
+					<option value="5">Persediaan Barang Dagangan (D)</option>
+					<option value="6">Persediaan Barang Dagangan (K)</option>
+					<option value="7">Hutang Dagang (D)</option>
+					<option value="8">Hutang Dagang (K)</option>
+					<option value="9">Penjualan (D)</option>
+					<option value="10">Penjualan (K)</option>
+					<option value="11">Pembelian (D)</option>
+					<option value="12">Pembelian (K)</option>
+					<option value="13">Biaya Angkut Penjualan (D)</option>
+					<option value="14">Biaya Angkut Penjualan (K)</option>
+					<option value="15">Harga Pokok Penjualan (D)</option>
+					<option value="16">Harga Pokok Penjualan (K)</option>
+				</select>
+				<input type="text" class="uang" id="uang-periodik-sederhana-0"></input>
 				
+				<select id="select-priodik-sederhana-1">
+					<option value="0">Pilih</option>
+					<option value="1">Kas (D)</option>
+					<option value="2">Kas (K)</option>
+					<option value="3">Piutang Dagang (D)</option>
+					<option value="4">Piutang Dagang (K)</option>
+					<option value="5">Persediaan Barang Dagangan (D)</option>
+					<option value="6">Persediaan Barang Dagangan (K)</option>
+					<option value="7">Hutang Dagang (D)</option>
+					<option value="8">Hutang Dagang (K)</option>
+					<option value="9">Penjualan (D)</option>
+					<option value="10">Penjualan (K)</option>
+					<option value="11">Pembelian (D)</option>
+					<option value="12">Pembelian (K)</option>
+					<option value="13">Biaya Angkut Penjualan (D)</option>
+					<option value="14">Biaya Angkut Penjualan (K)</option>
+					<option value="15">Harga Pokok Penjualan (D)</option>
+					<option value="16">Harga Pokok Penjualan (K)</option>
+				</select>
+				<input type="text" class="uang" id="uang-periodik-sederhana-1"></input>
 				
-					
-						
-							<select id="select-priodik-sederhana-1">
-								<option value="0">Pilih</option>
-								<option value="1">Kas (D)</option>
-								<option value="2">Kas (K)</option>
-								<option value="3">Piutang Dagang (D)</option>
-								<option value="4">Piutang Dagang (K)</option>
-								<option value="5">Persediaan Barang Dagangan (D)</option>
-								<option value="6">Persediaan Barang Dagangan (K)</option>
-								<option value="7">Hutang Dagang (D)</option>
-								<option value="8">Hutang Dagang (K)</option>
-								<option value="9">Penjualan (D)</option>
-								<option value="10">Penjualan (K)</option>
-								<option value="11">Pembelian (D)</option>
-								<option value="12">Pembelian (K)</option>
-								<option value="13">Biaya Angkut Penjualan (D)</option>
-								<option value="14">Biaya Angkut Penjualan (K)</option>
-								<option value="15">Harga Pokok Penjualan (D)</option>
-								<option value="16">Harga Pokok Penjualan (K)</option>
-							</select>
-						
-						<input type="text" class="uang" id="uang-periodik-sederhana-1"></input>
-					
+				<select id="select-priodik-sederhana-2">
+					<option value="0">Pilih</option>
+					<option value="1">Kas (D)</option>
+					<option value="2">Kas (K)</option>
+					<option value="3">Piutang Dagang (D)</option>
+					<option value="4">Piutang Dagang (K)</option>
+					<option value="5">Persediaan Barang Dagangan (D)</option>
+					<option value="6">Persediaan Barang Dagangan (K)</option>
+					<option value="7">Hutang Dagang (D)</option>
+					<option value="8">Hutang Dagang (K)</option>
+					<option value="9">Penjualan (D)</option>
+					<option value="10">Penjualan (K)</option>
+					<option value="11">Pembelian (D)</option>
+					<option value="12">Pembelian (K)</option>
+					<option value="13">Biaya Angkut Penjualan (D)</option>
+					<option value="14">Biaya Angkut Penjualan (K)</option>
+					<option value="15">Harga Pokok Penjualan (D)</option>
+					<option value="16">Harga Pokok Penjualan (K)</option>
+				</select>
+				<input type="text" class="uang" id="uang-periodik-sederhana-2"></input>
 				
-				
-					
-						
-							<select id="select-priodik-sederhana-2">
-								<option value="0">Pilih</option>
-								<option value="1">Kas (D)</option>
-								<option value="2">Kas (K)</option>
-								<option value="3">Piutang Dagang (D)</option>
-								<option value="4">Piutang Dagang (K)</option>
-								<option value="5">Persediaan Barang Dagangan (D)</option>
-								<option value="6">Persediaan Barang Dagangan (K)</option>
-								<option value="7">Hutang Dagang (D)</option>
-								<option value="8">Hutang Dagang (K)</option>
-								<option value="9">Penjualan (D)</option>
-								<option value="10">Penjualan (K)</option>
-								<option value="11">Pembelian (D)</option>
-								<option value="12">Pembelian (K)</option>
-								<option value="13">Biaya Angkut Penjualan (D)</option>
-								<option value="14">Biaya Angkut Penjualan (K)</option>
-								<option value="15">Harga Pokok Penjualan (D)</option>
-								<option value="16">Harga Pokok Penjualan (K)</option>
-							</select>
-						
-						<input type="text" class="uang" id="uang-periodik-sederhana-2"></input>
-					
-				
-				
-					
-						
-							<select id="select-priodik-sederhana-3">
-								<option value="0">Pilih</option>
-								<option value="1">Kas (D)</option>
-								<option value="2">Kas (K)</option>
-								<option value="3">Piutang Dagang (D)</option>
-								<option value="4">Piutang Dagang (K)</option>
-								<option value="5">Persediaan Barang Dagangan (D)</option>
-								<option value="6">Persediaan Barang Dagangan (K)</option>
-								<option value="7">Hutang Dagang (D)</option>
-								<option value="8">Hutang Dagang (K)</option>
-								<option value="9">Penjualan (D)</option>
-								<option value="10">Penjualan (K)</option>
-								<option value="11">Pembelian (D)</option>
-								<option value="12">Pembelian (K)</option>
-								<option value="13">Biaya Angkut Penjualan (D)</option>
-								<option value="14">Biaya Angkut Penjualan (K)</option>
-								<option value="15">Harga Pokok Penjualan (D)</option>
-								<option value="16">Harga Pokok Penjualan (K)</option>
-							</select>
-						
-						<input type="text" class="uang" id="uang-periodik-sederhana-3"></input>
+				<select id="select-priodik-sederhana-3">
+					<option value="0">Pilih</option>
+					<option value="1">Kas (D)</option>
+					<option value="2">Kas (K)</option>
+					<option value="3">Piutang Dagang (D)</option>
+					<option value="4">Piutang Dagang (K)</option>
+					<option value="5">Persediaan Barang Dagangan (D)</option>
+					<option value="6">Persediaan Barang Dagangan (K)</option>
+					<option value="7">Hutang Dagang (D)</option>
+					<option value="8">Hutang Dagang (K)</option>
+					<option value="9">Penjualan (D)</option>
+					<option value="10">Penjualan (K)</option>
+					<option value="11">Pembelian (D)</option>
+					<option value="12">Pembelian (K)</option>
+					<option value="13">Biaya Angkut Penjualan (D)</option>
+					<option value="14">Biaya Angkut Penjualan (K)</option>
+					<option value="15">Harga Pokok Penjualan (D)</option>
+					<option value="16">Harga Pokok Penjualan (K)</option>
+				</select>
+				<input type="text" class="uang" id="uang-periodik-sederhana-3"></input>
 					
 				
 				<button id="periodik-sederhana-btn-cek">Cek Jawaban</button>
@@ -1157,108 +1175,90 @@
 				<img src="img/transaksi-februari.png" style="width: 100%; max-width: 600px;"/>
 				<!-- Isi konten di sini -->
 				<center><b id="periodik-tertimbang-soal">Tanggal 3 Januari</b></center>
+				<p>Isikan nominal uang dengan 2 (dua) angka di belakang koma.</p>
+				<select id="select-priodik-tertimbang-0">
+					<option value="0">Pilih</option>
+					<option value="1">Kas (D)</option>
+					<option value="2">Kas (K)</option>
+					<option value="3">Piutang Dagang (D)</option>
+					<option value="4">Piutang Dagang (K)</option>
+					<option value="5">Persediaan Barang Dagangan (D)</option>
+					<option value="6">Persediaan Barang Dagangan (K)</option>
+					<option value="7">Hutang Dagang (D)</option>
+					<option value="8">Hutang Dagang (K)</option>
+					<option value="9">Penjualan (D)</option>
+					<option value="10">Penjualan (K)</option>
+					<option value="11">Pembelian (D)</option>
+					<option value="12">Pembelian (K)</option>
+					<option value="13">Biaya Angkut Penjualan (D)</option>
+					<option value="14">Biaya Angkut Penjualan (K)</option>
+					<option value="15">Harga Pokok Penjualan (D)</option>
+					<option value="16">Harga Pokok Penjualan (K)</option>
+				</select>
+				<input type="text" class="uang" id="uang-periodik-tertimbang-0"></input>
 				
-					
-						
-							<select id="select-priodik-tertimbang-0">
-								<option value="0">Pilih</option>
-								<option value="1">Kas (D)</option>
-								<option value="2">Kas (K)</option>
-								<option value="3">Piutang Dagang (D)</option>
-								<option value="4">Piutang Dagang (K)</option>
-								<option value="5">Persediaan Barang Dagangan (D)</option>
-								<option value="6">Persediaan Barang Dagangan (K)</option>
-								<option value="7">Hutang Dagang (D)</option>
-								<option value="8">Hutang Dagang (K)</option>
-								<option value="9">Penjualan (D)</option>
-								<option value="10">Penjualan (K)</option>
-								<option value="11">Pembelian (D)</option>
-								<option value="12">Pembelian (K)</option>
-								<option value="13">Biaya Angkut Penjualan (D)</option>
-								<option value="14">Biaya Angkut Penjualan (K)</option>
-								<option value="15">Harga Pokok Penjualan (D)</option>
-								<option value="16">Harga Pokok Penjualan (K)</option>
-							</select>
-						
-						<input type="text" class="uang" id="uang-periodik-tertimbang-0"></input>
-					
+				<select id="select-priodik-tertimbang-1">
+					<option value="0">Pilih</option>
+					<option value="1">Kas (D)</option>
+					<option value="2">Kas (K)</option>
+					<option value="3">Piutang Dagang (D)</option>
+					<option value="4">Piutang Dagang (K)</option>
+					<option value="5">Persediaan Barang Dagangan (D)</option>
+					<option value="6">Persediaan Barang Dagangan (K)</option>
+					<option value="7">Hutang Dagang (D)</option>
+					<option value="8">Hutang Dagang (K)</option>
+					<option value="9">Penjualan (D)</option>
+					<option value="10">Penjualan (K)</option>
+					<option value="11">Pembelian (D)</option>
+					<option value="12">Pembelian (K)</option>
+					<option value="13">Biaya Angkut Penjualan (D)</option>
+					<option value="14">Biaya Angkut Penjualan (K)</option>
+					<option value="15">Harga Pokok Penjualan (D)</option>
+					<option value="16">Harga Pokok Penjualan (K)</option>
+				</select>
+				<input type="text" class="uang" id="uang-periodik-tertimbang-1"></input>
 				
-				
-					
+				<select id="select-priodik-tertimbang-2">
+					<option value="0">Pilih</option>
+					<option value="1">Kas (D)</option>
+					<option value="2">Kas (K)</option>
+					<option value="3">Piutang Dagang (D)</option>
+					<option value="4">Piutang Dagang (K)</option>
+					<option value="5">Persediaan Barang Dagangan (D)</option>
+					<option value="6">Persediaan Barang Dagangan (K)</option>
+					<option value="7">Hutang Dagang (D)</option>
+					<option value="8">Hutang Dagang (K)</option>
+					<option value="9">Penjualan (D)</option>
+					<option value="10">Penjualan (K)</option>
+					<option value="11">Pembelian (D)</option>
+					<option value="12">Pembelian (K)</option>
+					<option value="13">Biaya Angkut Penjualan (D)</option>
+					<option value="14">Biaya Angkut Penjualan (K)</option>
+					<option value="15">Harga Pokok Penjualan (D)</option>
+					<option value="16">Harga Pokok Penjualan (K)</option>
+				</select>
+				<input type="text" class="uang" id="uang-periodik-tertimbang-2"></input>
 						
-							<select id="select-priodik-tertimbang-1">
-								<option value="0">Pilih</option>
-								<option value="1">Kas (D)</option>
-								<option value="2">Kas (K)</option>
-								<option value="3">Piutang Dagang (D)</option>
-								<option value="4">Piutang Dagang (K)</option>
-								<option value="5">Persediaan Barang Dagangan (D)</option>
-								<option value="6">Persediaan Barang Dagangan (K)</option>
-								<option value="7">Hutang Dagang (D)</option>
-								<option value="8">Hutang Dagang (K)</option>
-								<option value="9">Penjualan (D)</option>
-								<option value="10">Penjualan (K)</option>
-								<option value="11">Pembelian (D)</option>
-								<option value="12">Pembelian (K)</option>
-								<option value="13">Biaya Angkut Penjualan (D)</option>
-								<option value="14">Biaya Angkut Penjualan (K)</option>
-								<option value="15">Harga Pokok Penjualan (D)</option>
-								<option value="16">Harga Pokok Penjualan (K)</option>
-							</select>
-						
-						<input type="text" class="uang" id="uang-periodik-tertimbang-1"></input>
-					
-				
-				
-					
-						
-							<select id="select-priodik-tertimbang-2">
-								<option value="0">Pilih</option>
-								<option value="1">Kas (D)</option>
-								<option value="2">Kas (K)</option>
-								<option value="3">Piutang Dagang (D)</option>
-								<option value="4">Piutang Dagang (K)</option>
-								<option value="5">Persediaan Barang Dagangan (D)</option>
-								<option value="6">Persediaan Barang Dagangan (K)</option>
-								<option value="7">Hutang Dagang (D)</option>
-								<option value="8">Hutang Dagang (K)</option>
-								<option value="9">Penjualan (D)</option>
-								<option value="10">Penjualan (K)</option>
-								<option value="11">Pembelian (D)</option>
-								<option value="12">Pembelian (K)</option>
-								<option value="13">Biaya Angkut Penjualan (D)</option>
-								<option value="14">Biaya Angkut Penjualan (K)</option>
-								<option value="15">Harga Pokok Penjualan (D)</option>
-								<option value="16">Harga Pokok Penjualan (K)</option>
-							</select>
-						
-						<input type="text" class="uang" id="uang-periodik-tertimbang-2"></input>
-					
-				
-				
-					
-						
-							<select id="select-priodik-tertimbang-3">
-								<option value="0">Pilih</option>
-								<option value="1">Kas (D)</option>
-								<option value="2">Kas (K)</option>
-								<option value="3">Piutang Dagang (D)</option>
-								<option value="4">Piutang Dagang (K)</option>
-								<option value="5">Persediaan Barang Dagangan (D)</option>
-								<option value="6">Persediaan Barang Dagangan (K)</option>
-								<option value="7">Hutang Dagang (D)</option>
-								<option value="8">Hutang Dagang (K)</option>
-								<option value="9">Penjualan (D)</option>
-								<option value="10">Penjualan (K)</option>
-								<option value="11">Pembelian (D)</option>
-								<option value="12">Pembelian (K)</option>
-								<option value="13">Biaya Angkut Penjualan (D)</option>
-								<option value="14">Biaya Angkut Penjualan (K)</option>
-								<option value="15">Harga Pokok Penjualan (D)</option>
-								<option value="16">Harga Pokok Penjualan (K)</option>
-							</select>
-						
-						<input type="text" class="uang" id="uang-periodik-tertimbang-3"></input>
+				<select id="select-priodik-tertimbang-3">
+					<option value="0">Pilih</option>
+					<option value="1">Kas (D)</option>
+					<option value="2">Kas (K)</option>
+					<option value="3">Piutang Dagang (D)</option>
+					<option value="4">Piutang Dagang (K)</option>
+					<option value="5">Persediaan Barang Dagangan (D)</option>
+					<option value="6">Persediaan Barang Dagangan (K)</option>
+					<option value="7">Hutang Dagang (D)</option>
+					<option value="8">Hutang Dagang (K)</option>
+					<option value="9">Penjualan (D)</option>
+					<option value="10">Penjualan (K)</option>
+					<option value="11">Pembelian (D)</option>
+					<option value="12">Pembelian (K)</option>
+					<option value="13">Biaya Angkut Penjualan (D)</option>
+					<option value="14">Biaya Angkut Penjualan (K)</option>
+					<option value="15">Harga Pokok Penjualan (D)</option>
+					<option value="16">Harga Pokok Penjualan (K)</option>
+				</select>
+				<input type="text" class="uang" id="uang-periodik-tertimbang-3"></input>
 					
 				
 				<button id="periodik-tertimbang-btn-cek">Cek Jawaban</button>
@@ -1279,6 +1279,7 @@
 				<img src="img/transaksi-februari.png" style="width: 100%; max-width: 600px;"/>
 				<!-- Isi konten di sini -->
 				<center><b id="perpetual-fifo-soal">Tanggal 3 Januari</b></center>
+				<p>Isikan nominal uang dengan 2 (dua) angka di belakang koma.</p>
 				
 				<select id="select-perpetual-fifo-0">
 					<option value="0">Pilih</option>
@@ -1424,6 +1425,7 @@
 				<img src="img/transaksi-februari.png" style="width: 100%; max-width: 600px;"/>
 				<!-- Isi konten di sini -->
 				<center><b id="perpetual-lifo-soal">Tanggal 3 Januari</b></center>
+				<p>Isikan nominal uang dengan 2 (dua) angka di belakang koma.</p>
 				
 				<select id="select-perpetual-lifo-0">
 					<option value="0">Pilih</option>
@@ -1570,6 +1572,7 @@
 				<img src="img/transaksi-februari.png" style="width: 100%; max-width: 600px;"/>
 				<!-- Isi konten di sini -->
 				<center><b id="perpetual-bergerak-soal">Tanggal 3 Januari</b></center>
+				<p>Isikan nominal uang dengan 2 (dua) angka di belakang koma.</p>
 				
 				<select id="select-perpetual-bergerak-0">
 					<option value="0">Pilih</option>
