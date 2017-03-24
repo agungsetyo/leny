@@ -735,7 +735,7 @@
 						<a href="#" data-theme="a"  data-role="button" onmousedown="debugKuis()">FIFO (<i>First In First Out</i>)</a>
 						<a href="#" data-theme="a"  data-role="button" onmousedown="debugKuis1()">FIFO (<i>First In First Out</i>)</a>
 						<a href="#" data-theme="a"  data-role="button" onmousedown="debugKuis2()">FIFO (<i>First In First Out</i>)</a>
-						<a href="#" data-theme="a"  data-role="button" onmousedown="debugKuis3()">FIFO (<i>First In First Out</i>)</a>
+						<a href="#" data-theme="a"  data-role="button" onmousedown="mulaiSoal()">FIFO (<i>First In First Out</i>)</a>
 					</div>
 					<div id="divSoal" style="display:none">
 						<div style="background-color: rgba(255,255,255,0.7);padding-left: 10px;padding-right: 10px;padding-top: 2px;padding-bottom: 2px;">
@@ -2059,12 +2059,27 @@
 								"e",
 								"e"
 								];
+		</script>
+		
+		
+	<script>	
+		function getUang(str) {
+			var res = str.replace(/[^\d.,-]/g, '');
+			res = res.replace(/\./g, "");
+			//res = res.replace(",", "");
+			return res;
+		}
+	</script>
+	<script>
 			var jumlahSoal = 20;//soal.length;
 			function shuffle(a) {
 				for (let i = a.length; i; i--) {
 					let j = Math.floor(Math.random() * i);
 					[a[i - 1], a[j]] = [a[j], a[i - 1]];
 				}
+			}
+			function debugKuis2() {
+				alert("OK!");
 			}
 			function resetSoal(){
 				nomorSoal = 0;
@@ -2127,21 +2142,6 @@
 					//var keterangan;
 					//document.getElementById("keterangan").innerHTML = keterangan;
 				}
-			}
-		</script>
-		
-		
-	<script>	
-		function getUang(str) {
-			var res = str.replace(/[^\d.,-]/g, '');
-			res = res.replace(/\./g, "");
-			//res = res.replace(",", "");
-			return res;
-		}
-	</script>
-	<script>
-			function debugKuis2() {
-				alert("OK!");
 			}
 		function gotohome() {
 			location.href = "index.html#home-page";
