@@ -729,7 +729,7 @@
 						<div style="background-color: rgba(255,255,255,0.7);padding-left: 10px;padding-right: 10px;padding-top: 2px;padding-bottom: 2px;">
 							<p><b>Pada Halaman Kuis terdapat berbagai kumpulan soal pilihan ganda yang tiap sesi akan ditampilkan 20 soal. Nilai jawaban benar 5 poin dengan total 100 poin. Tidak terdapat tombol kembali pada tiap soal. Diharapkan untuk menjawab dengan hati - hati dan benar. Silahkan Klik <i>Mulai</i> untuk mengerjakan soal.</b></p>
 						</div>
-						<a data-role="button" onclick="mulaiSoal()" style="text-align: center;">Mulai</a>
+						<a data-role="button" onmousedown="mulaiSoal()" style="text-align: center;">Mulai</a>
 					</div>
 					<div id="divSoal" style="display:none">
 						<div style="background-color: rgba(255,255,255,0.7);padding-left: 10px;padding-right: 10px;padding-top: 2px;padding-bottom: 2px;">
@@ -753,7 +753,7 @@
 							</div>
 							<br/>
 							<br/>
-							<a data-role="button" href="#home-page" style="text-align: center;">Kembali ke Halman Utama</a>
+							<a data-role="button" href="#home-page" style="text-align: center;">Kembali ke Halaman Utama</a>
 							</div>
 					</center>
 				</div>
@@ -2099,6 +2099,7 @@
 				//document.getElementById("divSekor").style.display = "none";
 			}
 			function mulaiSoal(){
+				alert("Berhasil Klik");
 				$('#divMulai').hide();
 				$('#divSoal').show();
 				//document.getElementById("divMulai").style.display = "none";
