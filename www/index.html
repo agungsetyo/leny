@@ -728,8 +728,8 @@
 					<div id="divMulai" style="display:initial">
 						<div style="background-color: rgba(255,255,255,0.7);padding-left: 10px;padding-right: 10px;padding-top: 2px;padding-bottom: 2px;">
 							<p><b>Pada Halaman Kuis terdapat berbagai kumpulan soal pilihan ganda yang tiap sesi akan ditampilkan 20 soal. Nilai jawaban benar 5 poin dengan total 100 poin. Tidak terdapat tombol kembali pada tiap soal. Diharapkan untuk menjawab dengan hati - hati dan benar. Silahkan Klik <i>Mulai</i> untuk mengerjakan soal.</b></p>
-						</div>
-						<a href="#" data-role="button" onmousedown="mulaiSoal()" style="text-align: center;">Mulai</a>
+						</div><br/>
+						<a href="#" data-role="button" onclick="mulaiSoal()" style="text-align: center;">Mulai Kuis</a>
 					</div>
 					<div id="divSoal" style="display:none">
 						<div style="background-color: rgba(255,255,255,0.7);padding-left: 10px;padding-right: 10px;padding-top: 2px;padding-bottom: 2px;">
@@ -868,58 +868,48 @@
 					<option value="16">Harga Pokok Penjualan (K)</option>
 				</select>
 				<input type="text" class="uang" id="uang-periodik-fifo-1"></input>
-					
 				
+				<select id="select-priodik-fifo-2">
+					<option value="0">Pilih</option>
+					<option value="1">Kas (D)</option>
+					<option value="2">Kas (K)</option>
+					<option value="3">Piutang Dagang (D)</option>
+					<option value="4">Piutang Dagang (K)</option>
+					<option value="5">Persediaan Barang Dagangan (D)</option>
+					<option value="6">Persediaan Barang Dagangan (K)</option>
+					<option value="7">Hutang Dagang (D)</option>
+					<option value="8">Hutang Dagang (K)</option>
+					<option value="9">Penjualan (D)</option>
+					<option value="10">Penjualan (K)</option>
+					<option value="11">Pembelian (D)</option>
+					<option value="12">Pembelian (K)</option>
+					<option value="13">Biaya Angkut Penjualan (D)</option>
+					<option value="14">Biaya Angkut Penjualan (K)</option>
+					<option value="15">Harga Pokok Penjualan (D)</option>
+					<option value="16">Harga Pokok Penjualan (K)</option>
+				</select>
+				<input type="text" class="uang" id="uang-periodik-fifo-2"></input>
 				
-					
-						
-							<select id="select-priodik-fifo-2">
-								<option value="0">Pilih</option>
-								<option value="1">Kas (D)</option>
-								<option value="2">Kas (K)</option>
-								<option value="3">Piutang Dagang (D)</option>
-								<option value="4">Piutang Dagang (K)</option>
-								<option value="5">Persediaan Barang Dagangan (D)</option>
-								<option value="6">Persediaan Barang Dagangan (K)</option>
-								<option value="7">Hutang Dagang (D)</option>
-								<option value="8">Hutang Dagang (K)</option>
-								<option value="9">Penjualan (D)</option>
-								<option value="10">Penjualan (K)</option>
-								<option value="11">Pembelian (D)</option>
-								<option value="12">Pembelian (K)</option>
-								<option value="13">Biaya Angkut Penjualan (D)</option>
-								<option value="14">Biaya Angkut Penjualan (K)</option>
-								<option value="15">Harga Pokok Penjualan (D)</option>
-								<option value="16">Harga Pokok Penjualan (K)</option>
-							</select>
-						
-						<input type="text" class="uang" id="uang-periodik-fifo-2"></input>
-					
-				
-				
-					
-						
-							<select id="select-priodik-fifo-3">
-								<option value="0">Pilih</option>
-								<option value="1">Kas (D)</option>
-								<option value="2">Kas (K)</option>
-								<option value="3">Piutang Dagang (D)</option>
-								<option value="4">Piutang Dagang (K)</option>
-								<option value="5">Persediaan Barang Dagangan (D)</option>
-								<option value="6">Persediaan Barang Dagangan (K)</option>
-								<option value="7">Hutang Dagang (D)</option>
-								<option value="8">Hutang Dagang (K)</option>
-								<option value="9">Penjualan (D)</option>
-								<option value="10">Penjualan (K)</option>
-								<option value="11">Pembelian (D)</option>
-								<option value="12">Pembelian (K)</option>
-								<option value="13">Biaya Angkut Penjualan (D)</option>
-								<option value="14">Biaya Angkut Penjualan (K)</option>
-								<option value="15">Harga Pokok Penjualan (D)</option>
-								<option value="16">Harga Pokok Penjualan (K)</option>
-							</select>
-						
-						<input type="text" class="uang" id="uang-periodik-fifo-3"></input>
+				<select id="select-priodik-fifo-3">
+					<option value="0">Pilih</option>
+					<option value="1">Kas (D)</option>
+					<option value="2">Kas (K)</option>
+					<option value="3">Piutang Dagang (D)</option>
+					<option value="4">Piutang Dagang (K)</option>
+					<option value="5">Persediaan Barang Dagangan (D)</option>
+					<option value="6">Persediaan Barang Dagangan (K)</option>
+					<option value="7">Hutang Dagang (D)</option>
+					<option value="8">Hutang Dagang (K)</option>
+					<option value="9">Penjualan (D)</option>
+					<option value="10">Penjualan (K)</option>
+					<option value="11">Pembelian (D)</option>
+					<option value="12">Pembelian (K)</option>
+					<option value="13">Biaya Angkut Penjualan (D)</option>
+					<option value="14">Biaya Angkut Penjualan (K)</option>
+					<option value="15">Harga Pokok Penjualan (D)</option>
+					<option value="16">Harga Pokok Penjualan (K)</option>
+				</select>
+				<input type="text" class="uang" id="uang-periodik-fifo-3"></input>
 					
 				
 				<button id="periodik-fifo-btn-cek">Cek Jawaban</button>
@@ -941,79 +931,67 @@
 				<!-- Isi konten di sini -->
 				<center><b id="periodik-lifo-soal">Tanggal 3 Januari</b></center>
 				
-					
-						
-							<select id="select-priodik-lifo-0">
-								<option value="0">Pilih</option>
-								<option value="1">Kas (D)</option>
-								<option value="2">Kas (K)</option>
-								<option value="3">Piutang Dagang (D)</option>
-								<option value="4">Piutang Dagang (K)</option>
-								<option value="5">Persediaan Barang Dagangan (D)</option>
-								<option value="6">Persediaan Barang Dagangan (K)</option>
-								<option value="7">Hutang Dagang (D)</option>
-								<option value="8">Hutang Dagang (K)</option>
-								<option value="9">Penjualan (D)</option>
-								<option value="10">Penjualan (K)</option>
-								<option value="11">Pembelian (D)</option>
-								<option value="12">Pembelian (K)</option>
-								<option value="13">Biaya Angkut Penjualan (D)</option>
-								<option value="14">Biaya Angkut Penjualan (K)</option>
-								<option value="15">Harga Pokok Penjualan (D)</option>
-								<option value="16">Harga Pokok Penjualan (K)</option>
-							</select>
-						
-						<input type="text" class="uang" id="uang-periodik-lifo-0"></input>
-					
+				<select id="select-priodik-lifo-0">
+					<option value="0">Pilih</option>
+					<option value="1">Kas (D)</option>
+					<option value="2">Kas (K)</option>
+					<option value="3">Piutang Dagang (D)</option>
+					<option value="4">Piutang Dagang (K)</option>
+					<option value="5">Persediaan Barang Dagangan (D)</option>
+					<option value="6">Persediaan Barang Dagangan (K)</option>
+					<option value="7">Hutang Dagang (D)</option>
+					<option value="8">Hutang Dagang (K)</option>
+					<option value="9">Penjualan (D)</option>
+					<option value="10">Penjualan (K)</option>
+					<option value="11">Pembelian (D)</option>
+					<option value="12">Pembelian (K)</option>
+					<option value="13">Biaya Angkut Penjualan (D)</option>
+					<option value="14">Biaya Angkut Penjualan (K)</option>
+					<option value="15">Harga Pokok Penjualan (D)</option>
+					<option value="16">Harga Pokok Penjualan (K)</option>
+				</select>
+				<input type="text" class="uang" id="uang-periodik-lifo-0"></input>
 				
+				<select id="select-priodik-lifo-1">
+					<option value="0">Pilih</option>
+					<option value="1">Kas (D)</option>
+					<option value="2">Kas (K)</option>
+					<option value="3">Piutang Dagang (D)</option>
+					<option value="4">Piutang Dagang (K)</option>
+					<option value="5">Persediaan Barang Dagangan (D)</option>
+					<option value="6">Persediaan Barang Dagangan (K)</option>
+					<option value="7">Hutang Dagang (D)</option>
+					<option value="8">Hutang Dagang (K)</option>
+					<option value="9">Penjualan (D)</option>
+					<option value="10">Penjualan (K)</option>
+					<option value="11">Pembelian (D)</option>
+					<option value="12">Pembelian (K)</option>
+					<option value="13">Biaya Angkut Penjualan (D)</option>
+					<option value="14">Biaya Angkut Penjualan (K)</option>
+					<option value="15">Harga Pokok Penjualan (D)</option>
+					<option value="16">Harga Pokok Penjualan (K)</option>
+				</select>
+				<input type="text" class="uang" id="uang-periodik-lifo-1"></input>
 				
-					
-						
-							<select id="select-priodik-lifo-1">
-								<option value="0">Pilih</option>
-								<option value="1">Kas (D)</option>
-								<option value="2">Kas (K)</option>
-								<option value="3">Piutang Dagang (D)</option>
-								<option value="4">Piutang Dagang (K)</option>
-								<option value="5">Persediaan Barang Dagangan (D)</option>
-								<option value="6">Persediaan Barang Dagangan (K)</option>
-								<option value="7">Hutang Dagang (D)</option>
-								<option value="8">Hutang Dagang (K)</option>
-								<option value="9">Penjualan (D)</option>
-								<option value="10">Penjualan (K)</option>
-								<option value="11">Pembelian (D)</option>
-								<option value="12">Pembelian (K)</option>
-								<option value="13">Biaya Angkut Penjualan (D)</option>
-								<option value="14">Biaya Angkut Penjualan (K)</option>
-								<option value="15">Harga Pokok Penjualan (D)</option>
-								<option value="16">Harga Pokok Penjualan (K)</option>
-							</select>
-						
-						<input type="text" class="uang" id="uang-periodik-lifo-1"></input>
-					
-				
-				
-					
-						
-							<select id="select-priodik-lifo-2">
-								<option value="0">Pilih</option>
-								<option value="1">Kas (D)</option>
-								<option value="2">Kas (K)</option>
-								<option value="3">Piutang Dagang (D)</option>
-								<option value="4">Piutang Dagang (K)</option>
-								<option value="5">Persediaan Barang Dagangan (D)</option>
-								<option value="6">Persediaan Barang Dagangan (K)</option>
-								<option value="7">Hutang Dagang (D)</option>
-								<option value="8">Hutang Dagang (K)</option>
-								<option value="9">Penjualan (D)</option>
-								<option value="10">Penjualan (K)</option>
-								<option value="11">Pembelian (D)</option>
-								<option value="12">Pembelian (K)</option>
-								<option value="13">Biaya Angkut Penjualan (D)</option>
-								<option value="14">Biaya Angkut Penjualan (K)</option>
-								<option value="15">Harga Pokok Penjualan (D)</option>
-								<option value="16">Harga Pokok Penjualan (K)</option>
-							</select>
+				<select id="select-priodik-lifo-2">
+					<option value="0">Pilih</option>
+					<option value="1">Kas (D)</option>
+					<option value="2">Kas (K)</option>
+					<option value="3">Piutang Dagang (D)</option>
+					<option value="4">Piutang Dagang (K)</option>
+					<option value="5">Persediaan Barang Dagangan (D)</option>
+					<option value="6">Persediaan Barang Dagangan (K)</option>
+					<option value="7">Hutang Dagang (D)</option>
+					<option value="8">Hutang Dagang (K)</option>
+					<option value="9">Penjualan (D)</option>
+					<option value="10">Penjualan (K)</option>
+					<option value="11">Pembelian (D)</option>
+					<option value="12">Pembelian (K)</option>
+					<option value="13">Biaya Angkut Penjualan (D)</option>
+					<option value="14">Biaya Angkut Penjualan (K)</option>
+					<option value="15">Harga Pokok Penjualan (D)</option>
+					<option value="16">Harga Pokok Penjualan (K)</option>
+				</select>
 						
 						<input type="text" class="uang" id="uang-periodik-lifo-2"></input>
 					
