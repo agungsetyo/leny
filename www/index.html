@@ -729,7 +729,10 @@
 						<div style="background-color: rgba(255,255,255,0.7);padding-left: 10px;padding-right: 10px;padding-top: 2px;padding-bottom: 2px;">
 							<p><b>Pada Halaman Kuis terdapat berbagai kumpulan soal pilihan ganda yang tiap sesi akan ditampilkan 20 soal. Nilai jawaban benar 5 poin dengan total 100 poin. Tidak terdapat tombol kembali pada tiap soal. Diharapkan untuk menjawab dengan hati - hati dan benar. Silahkan Klik <i>Mulai</i> untuk mengerjakan soal.</b></p>
 						</div><br/>
-						<a href="#" data-role="button" onclick="mulaiSoal()" style="text-align: center;">Mulai Kuis</a>
+						<a href="#" data-role="button" onclick="debugKuis()" style="text-align: center;">Mulai Kuis</a>
+						<a href="#home-page" data-role="button" onclick="debugKuis()" style="text-align: center;">Mulai Home</a>
+						<a href="#periodik-fifo-page" data-theme="a"  data-role="button" onmousedown="mulaiSoalPeriodikFIFO()">FIFO (<i>First In First Out</i>)</a>
+						<a href="#" data-theme="a"  data-role="button" onmousedown="alert('FIFO')">FIFO (<i>First In First Out</i>)</a>
 					</div>
 					<div id="divSoal" style="display:none">
 						<div style="background-color: rgba(255,255,255,0.7);padding-left: 10px;padding-right: 10px;padding-top: 2px;padding-bottom: 2px;">
@@ -2070,6 +2073,9 @@
 				//document.getElementById("divSoal").style.display = "none";
 				//document.getElementById("divSekor").style.display = "none";
 			}
+			function debugKuis() {
+				alert("OK!");
+			}
 			function mulaiSoal(){
 				alert("Berhasil Klik");
 				$('#divMulai').hide();
@@ -2831,10 +2837,14 @@
 			$("#select-perpetual-fifo-1").val(0).change();
 			$("#select-perpetual-fifo-2").val(0).change();
 			$("#select-perpetual-fifo-3").val(0).change();
+			$("#select-perpetual-fifo-4").val(0).change();
+			$("#select-perpetual-fifo-5").val(0).change();
 			$("#uang-perpetual-fifo-0").val("");
 			$("#uang-perpetual-fifo-1").val("");
 			$("#uang-perpetual-fifo-2").val("");
 			$("#uang-perpetual-fifo-3").val("");
+			$("#uang-perpetual-fifo-4").val("");
+			$("#uang-perpetual-fifo-5").val("");
 			$("#div-perpetual-fifo-next").hide();
 			$("#perpetual-fifo-cek-jawaban").html("");
 			$("#perpetual-fifo-soal").html(perpetualFIFO[nomorSoal][0]);
