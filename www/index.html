@@ -134,35 +134,35 @@
 					<div id="menu" style=" font-size: 12px; vertical-align: center;">
                         <ul data-role="listview">
 							<li class="btn-menu-utama">
-								<a href="#materi1"  >
+								<a onmousedown="$('[data-role=collapsible]').trigger('collapse');" href="#materi1"  >
 									<img src="img/Icon%20Materi/pengertian.png" alt="">
 									<h2><b>Materi 1</b></h2>
 									<p>Pengertian Persediaan</p>
 								</a>
                             </li>	
 							<li class="btn-menu-utama">											
-								<a href="#materi2"    >
+								<a onmousedown="$('[data-role=collapsible]').trigger('collapse');" href="#materi2" >
 									<img src="img/Icon%20Materi/sistem.png" alt="">
 									<h2>Materi 2</h2>
 									<p>Sistem Pencatatan Persediaan</p>
 								</a>
                             </li>	
 							<li class="btn-menu-utama">
-                                <a  href="#materi3"  >
+                                <a  onmousedown="$('[data-role=collapsible]').trigger('collapse');" href="#materi3"  >
 									<img src="img/Icon%20Materi/metode.png" alt="">
 									<h2>Materi 3</h2>
 									<p>Metode Penilaian Persediaan</p>
 								</a>
                             </li>	
 							<li class="btn-menu-utama">
-                                <a  href="#materi4"   >
+                                <a  onmousedown="$('[data-role=collapsible]').trigger('collapse');" href="#materi4"   >
 									<img src="img/Icon%20Materi/penilaian.png" alt="">
 									<h2>Materi 4</h2>
 									<p>Penilaian Persediaan pada Sistem Periodik</p>
 								</a>
                             </li>
 							<li class="btn-menu-utama">
-                                <a  href="#materi5"   >
+                                <a  onmousedown="$('[data-role=collapsible]').trigger('collapse');" href="#materi5"   >
 									<img src="img/Icon%20Materi/penilaian.png" alt="">
 									<h2>Materi 5</h2>
 									<p>Penilaian Persediaan pada Sistem Perseptual</p>
@@ -209,7 +209,7 @@
                 <div data-role="content" align="justify" style="font-size: 16px;">
                     <!-- Isi konten di sini -->
 					<h3>SISTEM PENCATATATAN PERSEDIAAN</h3>
-					<div data-role="collapsible" data-collapsed-icon="arrow-d" data-expanded-icon="arrow-u" data-iconpos="right" data-theme="b">
+					<div data-role="collapsible" data-collapsed-icon="arrow-d" data-expanded-icon="arrow-u" data-iconpos="right" data-theme="b" id="xx">
 						<h3><b>a. Sistem Periodik</b></h3>
 						<p>Sistem periodik yaitu pada setiap akhir periode dilakukan perhitungan secara phisik untuk menentukan jumlah persediaan akhir. Perhitungan tersebut meliputi pengukuran dan penimbangan barang-barang yang ada pada akhir suatu periode untuk kemudian dikalikan dengan suatu tingkat harga/biaya.</p>
 					</div>
@@ -810,7 +810,7 @@
 								</div>
 							</div>
 							<br/>
-							<div class="ui-corner-all custom-corner" style="width:100%">
+							<div class="ui-corner-all custom-corner" style="width:100%" onclick="resetSoal()">
 								<div id="lulus-kkm" data-role="content" style="background-color: rgba(45,204,112,0.7);">
 									<p style="font-size: 16px; color: white;"><b>Selamat, coba kuis lainnya?</b></p>
 								</div>
