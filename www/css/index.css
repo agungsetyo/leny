@@ -130,3 +130,86 @@ margin: .8em 30% .8em;
 	background-position: top left;
 	background-repeat: repeat;
 }
+ol.list-ki{
+	counter-reset: item;
+	margin: 0;
+	padding: 0;
+}
+.list-ki li{
+	counter-increment:item;
+	display: table;
+	margin-bottom: 0.6em;
+}
+.list-ki li::before{
+	content: "KI-"counter(item)".";
+	display: table-cell;
+	margin-right: 0.7em;
+}
+ol.list-kd1{
+	counter-reset: item1;
+	margin: 0;
+	padding: 0;
+}
+.list-kd1 li{
+	list-style-type: lower-alpha;
+	counter-increment:item1;
+	display: table;
+	margin-bottom: 0.6em;
+}
+.list-kd1 li::before{
+	content: "KD1."counter(item1,lower-alpha)".";
+	display: table-cell;
+	white-space: no-wrap;
+	margin-right: 0.9em;
+}
+ol.list-kd2{
+	counter-reset: item1;
+	margin: 0;
+	padding: 0;
+}
+.list-kd2 li{
+	list-style-type: lower-latin;
+	counter-increment:item1;
+	display: table;
+	margin-bottom: 0.6em;
+}
+.list-kd2 li::before{
+	content: "KD2."counter(item1,lower-alpha)".";
+	display: table-cell;
+	white-space: no-wrap;
+	margin-right: 0.9em;
+}
+ol.list-kd3{
+	counter-reset: item1;
+	margin: 0;
+	padding: 0;
+}
+.list-kd3 li{
+	list-style-type: lower-alpha;
+	counter-increment:item1;
+	display: table;
+	margin-bottom: 0.6em;
+}
+.list-kd3 li::before{
+	content: "KD3."counter(item1,lower-alpha)".";
+	display: table-cell;
+	white-space: no-wrap;
+	margin-right: 0.9em;
+}
+ol.list-kd4{
+	counter-reset: item1;
+	margin: 0;
+	padding: 0;
+}
+.list-kd4 li{
+	list-style-type: lower-latin;
+	counter-increment:item1;
+	display: table;
+	margin-bottom: 0.6em;
+}
+.list-kd4 li::before{
+	content: "KD4."counter(item1,lower-alpha)".";
+	display: table-cell;
+	white-space: no-wrap;
+	margin-right: 0.9em;
+}
